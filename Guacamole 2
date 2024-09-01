@@ -1,0 +1,476 @@
+[root@AKL-1425 guacamole-server-1.5.5]# sudo make && sudo make install
+make  all-recursive
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5'
+Making all in src/libguac
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/libguac'
+Making all in .
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/libguac'
+  CC       libguac_la-argv.lo
+  CC       libguac_la-audio.lo
+  CC       libguac_la-client.lo
+  CC       libguac_la-encode-jpeg.lo
+  CC       libguac_la-encode-png.lo
+  CC       libguac_la-error.lo
+  CC       libguac_la-fips.lo
+  CC       libguac_la-hash.lo
+  CC       libguac_la-id.lo
+  CC       libguac_la-mem.lo
+  CC       libguac_la-rwlock.lo
+  CC       libguac_la-palette.lo
+  CC       libguac_la-parser.lo
+  CC       libguac_la-pool.lo
+  CC       libguac_la-protocol.lo
+  CC       libguac_la-raw_encoder.lo
+  CC       libguac_la-recording.lo
+  CC       libguac_la-socket.lo
+  CC       libguac_la-socket-broadcast.lo
+  CC       libguac_la-socket-fd.lo
+  CC       libguac_la-socket-nest.lo
+  CC       libguac_la-socket-tee.lo
+  CC       libguac_la-string.lo
+  CC       libguac_la-timestamp.lo
+  CC       libguac_la-unicode.lo
+  CC       libguac_la-user.lo
+  CC       libguac_la-user-handlers.lo
+  CC       libguac_la-user-handshake.lo
+  CC       libguac_la-wait-fd.lo
+  CC       libguac_la-wol.lo
+  CC       libguac_la-encode-webp.lo
+  CC       libguac_la-socket-ssl.lo
+  CCLD     libguac.la
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/libguac'
+Making all in tests
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/libguac/tests'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/libguac/tests'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/libguac'
+Making all in src/common
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common'
+Making all in .
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common'
+  CC       libguac_common_la-io.lo
+  CC       libguac_common_la-blank_cursor.lo
+  CC       libguac_common_la-clipboard.lo
+  CC       libguac_common_la-cursor.lo
+  CC       libguac_common_la-display.lo
+  CC       libguac_common_la-dot_cursor.lo
+  CC       libguac_common_la-ibar_cursor.lo
+  CC       libguac_common_la-iconv.lo
+  CC       libguac_common_la-json.lo
+  CC       libguac_common_la-list.lo
+  CC       libguac_common_la-pointer_cursor.lo
+  CC       libguac_common_la-rect.lo
+  CC       libguac_common_la-string.lo
+  CC       libguac_common_la-surface.lo
+  CCLD     libguac_common.la
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common'
+Making all in tests
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common/tests'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common/tests'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common'
+Making all in src/common-ssh
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common-ssh'
+Making all in .
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common-ssh'
+  CC       libguac_common_ssh_la-buffer.lo
+  CC       libguac_common_ssh_la-sftp.lo
+  CC       libguac_common_ssh_la-ssh.lo
+  CC       libguac_common_ssh_la-key.lo
+  CC       libguac_common_ssh_la-user.lo
+  CCLD     libguac_common_ssh.la
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common-ssh'
+Making all in tests
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common-ssh/tests'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common-ssh/tests'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common-ssh'
+Making all in src/terminal
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/terminal'
+  CC       libguac_terminal_la-buffer.lo
+  CC       libguac_terminal_la-char-mappings.lo
+  CC       libguac_terminal_la-color-scheme.lo
+  CC       libguac_terminal_la-common.lo
+  CC       libguac_terminal_la-display.lo
+  CC       libguac_terminal_la-named-colors.lo
+  CC       libguac_terminal_la-palette.lo
+  CC       libguac_terminal_la-scrollbar.lo
+  CC       libguac_terminal_la-select.lo
+  CC       libguac_terminal_la-terminal.lo
+  CC       libguac_terminal_la-terminal-handlers.lo
+  CC       libguac_terminal_la-terminal-stdin-stream.lo
+  CC       libguac_terminal_la-typescript.lo
+  CC       libguac_terminal_la-xparsecolor.lo
+  CCLD     libguac-terminal.la
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/terminal'
+Making all in src/pulse
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/pulse'
+  CC       libguac_pulse_la-pulse.lo
+  CCLD     libguac_pulse.la
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/pulse'
+Making all in src/protocols/kubernetes
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes'
+Making all in .
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes'
+  CC       libguac_client_kubernetes_la-argv.lo
+  CC       libguac_client_kubernetes_la-client.lo
+  CC       libguac_client_kubernetes_la-clipboard.lo
+  CC       libguac_client_kubernetes_la-input.lo
+  CC       libguac_client_kubernetes_la-io.lo
+  CC       libguac_client_kubernetes_la-pipe.lo
+  CC       libguac_client_kubernetes_la-settings.lo
+  CC       libguac_client_kubernetes_la-ssl.lo
+  CC       libguac_client_kubernetes_la-kubernetes.lo
+  CC       libguac_client_kubernetes_la-url.lo
+  CC       libguac_client_kubernetes_la-user.lo
+  CCLD     libguac-client-kubernetes.la
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes'
+Making all in tests
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes/tests'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes/tests'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes'
+Making all in src/protocols/rdp
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+  GEN      _generated_channel_entry_wrappers.c
+  GEN      _generated_keymaps.c
+Added: base
+Added: failsafe
+Added: de-de-qwertz
+Added: de-ch-qwertz
+Added: en-gb-qwerty
+Added: en-us-qwerty
+Added: es-es-qwerty
+Added: es-latam-qwerty
+Added: fr-be-azerty
+Added: fr-ch-qwertz
+Added: fr-fr-azerty
+Added: hu-hu-qwertz
+Added: it-it-qwerty
+Added: ja-jp-qwerty
+Added: no-no-qwerty
+Added: pl-pl-qwerty
+Added: pt-br-qwerty
+Added: sv-se-qwerty
+Added: da-dk-qwerty
+Added: tr-tr-qwerty
+make  all-recursive
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+Making all in .
+make[4]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+  CC       plugins/guac-common-svc/libguac_common_svc_client_la-guac-common-svc.lo
+  CCLD     libguac-common-svc-client.la
+  CC       channels/audio-input/libguacai_client_la-audio-buffer.lo
+  CC       plugins/guacai/libguacai_client_la-guacai-messages.lo
+  CC       plugins/guacai/libguacai_client_la-guacai.lo
+  CC       plugins/libguacai_client_la-ptr-string.lo
+  CCLD     libguacai-client.la
+  CC       libguac_client_rdp_la-argv.lo
+  CC       libguac_client_rdp_la-beep.lo
+  CC       libguac_client_rdp_la-bitmap.lo
+  CC       channels/audio-input/libguac_client_rdp_la-audio-buffer.lo
+  CC       channels/audio-input/libguac_client_rdp_la-audio-input.lo
+  CC       channels/libguac_client_rdp_la-cliprdr.lo
+  CC       channels/libguac_client_rdp_la-common-svc.lo
+  CC       channels/libguac_client_rdp_la-disp.lo
+  CC       channels/libguac_client_rdp_la-pipe-svc.lo
+  CC       channels/libguac_client_rdp_la-rail.lo
+  CC       channels/rdpdr/libguac_client_rdp_la-rdpdr-fs-messages-dir-info.lo
+  CC       channels/rdpdr/libguac_client_rdp_la-rdpdr-fs-messages-file-info.lo
+  CC       channels/rdpdr/libguac_client_rdp_la-rdpdr-fs-messages-vol-info.lo
+  CC       channels/rdpdr/libguac_client_rdp_la-rdpdr-fs-messages.lo
+  CC       channels/rdpdr/libguac_client_rdp_la-rdpdr-fs.lo
+  CC       channels/rdpdr/libguac_client_rdp_la-rdpdr-messages.lo
+  CC       channels/rdpdr/libguac_client_rdp_la-rdpdr-printer.lo
+  CC       channels/rdpdr/libguac_client_rdp_la-rdpdr.lo
+  CC       channels/libguac_client_rdp_la-rdpei.lo
+  CC       channels/rdpsnd/libguac_client_rdp_la-rdpsnd-messages.lo
+  CC       channels/rdpsnd/libguac_client_rdp_la-rdpsnd.lo
+  CC       libguac_client_rdp_la-client.lo
+  CC       libguac_client_rdp_la-color.lo
+  CC       libguac_client_rdp_la-decompose.lo
+  CC       libguac_client_rdp_la-download.lo
+  CC       libguac_client_rdp_la-error.lo
+  CC       libguac_client_rdp_la-fs.lo
+  CC       libguac_client_rdp_la-gdi.lo
+  CC       libguac_client_rdp_la-glyph.lo
+  CC       libguac_client_rdp_la-input.lo
+  CC       libguac_client_rdp_la-keyboard.lo
+  CC       libguac_client_rdp_la-keymap.lo
+  CC       libguac_client_rdp_la-log.lo
+  CC       libguac_client_rdp_la-ls.lo
+  CC       plugins/libguac_client_rdp_la-channels.lo
+  CC       plugins/libguac_client_rdp_la-ptr-string.lo
+  CC       libguac_client_rdp_la-pointer.lo
+  CC       libguac_client_rdp_la-print-job.lo
+  CC       libguac_client_rdp_la-rdp.lo
+  CC       libguac_client_rdp_la-resolution.lo
+  CC       libguac_client_rdp_la-settings.lo
+  CC       libguac_client_rdp_la-unicode.lo
+  CC       libguac_client_rdp_la-upload.lo
+  CC       libguac_client_rdp_la-user.lo
+  CC       libguac_client_rdp_la-sftp.lo
+  CC       libguac_client_rdp_la-_generated_channel_entry_wrappers.lo
+  CC       libguac_client_rdp_la-_generated_keymaps.lo
+  CCLD     libguac-client-rdp.la
+make[4]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+Making all in tests
+make[4]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp/tests'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp/tests'
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+Making all in src/protocols/ssh
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/ssh'
+  CC       libguac_client_ssh_la-argv.lo
+  CC       libguac_client_ssh_la-client.lo
+  CC       libguac_client_ssh_la-clipboard.lo
+  CC       libguac_client_ssh_la-input.lo
+  CC       libguac_client_ssh_la-pipe.lo
+  CC       libguac_client_ssh_la-settings.lo
+  CC       libguac_client_ssh_la-sftp.lo
+  CC       libguac_client_ssh_la-ssh.lo
+  CC       libguac_client_ssh_la-ttymode.lo
+  CC       libguac_client_ssh_la-user.lo
+  CCLD     libguac-client-ssh.la
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/ssh'
+Making all in src/protocols/telnet
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/telnet'
+  CC       libguac_client_telnet_la-argv.lo
+  CC       libguac_client_telnet_la-client.lo
+  CC       libguac_client_telnet_la-clipboard.lo
+  CC       libguac_client_telnet_la-input.lo
+  CC       libguac_client_telnet_la-pipe.lo
+  CC       libguac_client_telnet_la-settings.lo
+  CC       libguac_client_telnet_la-telnet.lo
+  CC       libguac_client_telnet_la-user.lo
+  CCLD     libguac-client-telnet.la
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/telnet'
+Making all in src/protocols/vnc
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/vnc'
+  CC       libguac_client_vnc_la-argv.lo
+  CC       libguac_client_vnc_la-auth.lo
+  CC       libguac_client_vnc_la-client.lo
+  CC       libguac_client_vnc_la-clipboard.lo
+  CC       libguac_client_vnc_la-cursor.lo
+  CC       libguac_client_vnc_la-display.lo
+  CC       libguac_client_vnc_la-input.lo
+  CC       libguac_client_vnc_la-log.lo
+  CC       libguac_client_vnc_la-settings.lo
+  CC       libguac_client_vnc_la-user.lo
+  CC       libguac_client_vnc_la-vnc.lo
+  CC       libguac_client_vnc_la-sftp.lo
+  CCLD     libguac-client-vnc.la
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/vnc'
+Making all in src/guacd
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/guacd'
+  CC       guacd-conf-args.o
+  CC       guacd-conf-file.o
+  CC       guacd-conf-parse.o
+  CC       guacd-connection.o
+  CC       guacd-daemon.o
+  CC       guacd-log.o
+  CC       guacd-move-fd.o
+  CC       guacd-proc.o
+  CC       guacd-proc-map.o
+  CCLD     guacd
+sed -e 's,[@]sbindir[@],/usr/local/sbin,g' < systemd/guacd.service.in > systemd/guacd.service
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/guacd'
+Making all in src/guacenc
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/guacenc'
+  CC       guacenc-buffer.o
+  CC       guacenc-cursor.o
+  CC       guacenc-display.o
+  CC       guacenc-display-buffers.o
+  CC       guacenc-display-image-streams.o
+  CC       guacenc-display-flatten.o
+  CC       guacenc-display-layers.o
+  CC       guacenc-display-sync.o
+  CC       guacenc-encode.o
+  CC       guacenc-ffmpeg-compat.o
+  CC       guacenc-guacenc.o
+  CC       guacenc-image-stream.o
+  CC       guacenc-instructions.o
+  CC       guacenc-instruction-blob.o
+  CC       guacenc-instruction-cfill.o
+  CC       guacenc-instruction-copy.o
+  CC       guacenc-instruction-cursor.o
+  CC       guacenc-instruction-dispose.o
+  CC       guacenc-instruction-end.o
+  CC       guacenc-instruction-img.o
+  CC       guacenc-instruction-mouse.o
+  CC       guacenc-instruction-move.o
+  CC       guacenc-instruction-rect.o
+  CC       guacenc-instruction-shade.o
+  CC       guacenc-instruction-size.o
+  CC       guacenc-instruction-sync.o
+  CC       guacenc-instruction-transfer.o
+  CC       guacenc-jpeg.o
+  CC       guacenc-layer.o
+  CC       guacenc-log.o
+  CC       guacenc-parse.o
+  CC       guacenc-png.o
+  CC       guacenc-video.o
+  CC       guacenc-webp.o
+  CCLD     guacenc
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/guacenc'
+Making all in src/guaclog
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/guaclog'
+  CC       guaclog-guaclog.o
+  CC       guaclog-instructions.o
+  CC       guaclog-instruction-key.o
+  CC       guaclog-interpret.o
+  CC       guaclog-keydef.o
+  CC       guaclog-log.o
+  CC       guaclog-state.o
+  CCLD     guaclog
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/guaclog'
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5'
+Making install in src/libguac
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/libguac'
+Making install in .
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/libguac'
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/libguac'
+ /usr/bin/mkdir -p '/usr/local/lib'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libguac.la '/usr/local/lib'
+libtool: install: /usr/bin/install -c .libs/libguac.so.24.0.0 /usr/local/lib/libguac.so.24.0.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac.so.24.0.0 libguac.so.24 || { rm -f libguac.so.24 && ln -s libguac.so.24.0.0 libguac.so.24; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac.so.24.0.0 libguac.so || { rm -f libguac.so && ln -s libguac.so.24.0.0 libguac.so; }; })
+libtool: install: /usr/bin/install -c .libs/libguac.lai /usr/local/lib/libguac.la
+libtool: install: /usr/bin/install -c .libs/libguac.a /usr/local/lib/libguac.a
+libtool: install: chmod 644 /usr/local/lib/libguac.a
+libtool: install: ranlib /usr/local/lib/libguac.a
+libtool: finish: PATH="/sbin:/bin:/usr/sbin:/usr/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/usr/local/include/guacamole'
+ /usr/bin/install -c -m 644 guacamole/argv.h guacamole/argv-constants.h guacamole/argv-fntypes.h guacamole/audio.h guacamole/audio-fntypes.h guacamole/audio-types.h guacamole/client-constants.h guacamole/client.h guacamole/client-fntypes.h guacamole/client-types.h guacamole/error.h guacamole/error-types.h guacamole/fips.h guacamole/hash.h guacamole/layer.h guacamole/layer-types.h guacamole/mem.h guacamole/object.h guacamole/object-types.h guacamole/parser-constants.h guacamole/parser.h guacamole/parser-types.h guacamole/plugin-constants.h guacamole/plugin.h guacamole/pool.h guacamole/pool-types.h guacamole/protocol.h guacamole/protocol-constants.h guacamole/protocol-types.h guacamole/recording.h guacamole/rwlock.h guacamole/socket-constants.h guacamole/socket.h guacamole/socket-fntypes.h guacamole/socket-types.h guacamole/stream.h guacamole/stream-types.h guacamole/string.h guacamole/timestamp.h guacamole/timestamp-types.h '/usr/local/include/guacamole'
+ /usr/bin/install -c -m 644 guacamole/unicode.h guacamole/user.h guacamole/user-constants.h guacamole/user-fntypes.h guacamole/user-types.h guacamole/wol.h guacamole/wol-constants.h guacamole/socket-ssl.h '/usr/local/include/guacamole'
+ /usr/bin/mkdir -p '/usr/local/include/guacamole/private'
+ /usr/bin/install -c -m 644 guacamole/private/mem.h '/usr/local/include/guacamole/private'
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/libguac'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/libguac'
+Making install in tests
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/libguac/tests'
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/libguac/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/libguac/tests'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/libguac/tests'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/libguac'
+Making install in src/common
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common'
+Making install in .
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common'
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common'
+Making install in tests
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common/tests'
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common/tests'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common/tests'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common'
+Making install in src/common-ssh
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common-ssh'
+Making install in .
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common-ssh'
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common-ssh'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common-ssh'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common-ssh'
+Making install in tests
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common-ssh/tests'
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/common-ssh/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common-ssh/tests'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common-ssh/tests'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/common-ssh'
+Making install in src/terminal
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/terminal'
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/terminal'
+ /usr/bin/mkdir -p '/usr/local/lib'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libguac-terminal.la '/usr/local/lib'
+libtool: warning: relinking 'libguac-terminal.la'
+libtool: install: (cd /usr/src/guacamole-server-1.5.5/src/terminal; /bin/sh "/usr/src/guacamole-server-1.5.5/libtool"  --silent --tag CC --mode=relink gcc -Werror -Wall -I../../src/common -I../../src/libguac -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/libxml2 -I/usr/include/cairo -I/usr/include/pixman-1 -pthread -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/libxml2 -I/usr/include/cairo -I/usr/include/pixman-1 -pthread -g -O2 -version-info 1:0:1 -no-undefined -lcairo -lm -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lpangocairo-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lcairo -lpthread -o libguac-terminal.la -rpath /usr/local/lib libguac_terminal_la-buffer.lo libguac_terminal_la-char-mappings.lo libguac_terminal_la-color-scheme.lo libguac_terminal_la-common.lo libguac_terminal_la-display.lo libguac_terminal_la-named-colors.lo libguac_terminal_la-palette.lo libguac_terminal_la-scrollbar.lo libguac_terminal_la-select.lo libguac_terminal_la-terminal.lo libguac_terminal_la-terminal-handlers.lo libguac_terminal_la-terminal-stdin-stream.lo libguac_terminal_la-typescript.lo libguac_terminal_la-xparsecolor.lo ../../src/common/libguac_common.la ../../src/libguac/libguac.la )
+libtool: install: /usr/bin/install -c .libs/libguac-terminal.so.0.1.0T /usr/local/lib/libguac-terminal.so.0.1.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-terminal.so.0.1.0 libguac-terminal.so.0 || { rm -f libguac-terminal.so.0 && ln -s libguac-terminal.so.0.1.0 libguac-terminal.so.0; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-terminal.so.0.1.0 libguac-terminal.so || { rm -f libguac-terminal.so && ln -s libguac-terminal.so.0.1.0 libguac-terminal.so; }; })
+libtool: install: /usr/bin/install -c .libs/libguac-terminal.lai /usr/local/lib/libguac-terminal.la
+libtool: install: /usr/bin/install -c .libs/libguac-terminal.a /usr/local/lib/libguac-terminal.a
+libtool: install: chmod 644 /usr/local/lib/libguac-terminal.a
+libtool: install: ranlib /usr/local/lib/libguac-terminal.a
+libtool: finish: PATH="/sbin:/bin:/usr/sbin:/usr/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/usr/local/include/guacamole/terminal'
+ /usr/bin/install -c -m 644 terminal/terminal.h '/usr/local/include/guacamole/terminal'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/terminal'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/terminal'
+Making install in src/pulse
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/pulse'
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/pulse'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/pulse'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/pulse'
+Making install in src/protocols/kubernetes
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes'
+Making install in .
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes'
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes'
+ /usr/bin/mkdir -p '/usr/local/lib'
+ /bin/sh ../../../libtool   --mode=install /usr/bin/install -c   libguac-client-kubernetes.la '/usr/local/lib'
+libtool: warning: relinking 'libguac-client-kubernetes.la'
+libtool: install: (cd /usr/src/guacamole-server-1.5.5/src/protocols/kubernetes; /bin/sh "/usr/src/guacamole-server-1.5.5/libtool"  --silent --tag CC --mode=relink gcc -Werror -Wall -Iinclude -I../../../src/libguac -I../../../src/terminal -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/libxml2 -I/usr/include/cairo -I/usr/include/pixman-1 -pthread -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/libxml2 -I/usr/include/cairo -I/usr/include/pixman-1 -pthread -I../../../src/common -g -O2 -version-info 0:0:0 -lpthread -lssl -lcrypto -lwebsockets -o libguac-client-kubernetes.la -rpath /usr/local/lib libguac_client_kubernetes_la-argv.lo libguac_client_kubernetes_la-client.lo libguac_client_kubernetes_la-clipboard.lo libguac_client_kubernetes_la-input.lo libguac_client_kubernetes_la-io.lo libguac_client_kubernetes_la-pipe.lo libguac_client_kubernetes_la-settings.lo libguac_client_kubernetes_la-ssl.lo libguac_client_kubernetes_la-kubernetes.lo libguac_client_kubernetes_la-url.lo libguac_client_kubernetes_la-user.lo ../../../src/common/libguac_common.la ../../../src/libguac/libguac.la ../../../src/terminal/libguac-terminal.la )
+libtool: install: /usr/bin/install -c .libs/libguac-client-kubernetes.so.0.0.0T /usr/local/lib/libguac-client-kubernetes.so.0.0.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-client-kubernetes.so.0.0.0 libguac-client-kubernetes.so.0 || { rm -f libguac-client-kubernetes.so.0 && ln -s libguac-client-kubernetes.so.0.0.0 libguac-client-kubernetes.so.0; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-client-kubernetes.so.0.0.0 libguac-client-kubernetes.so || { rm -f libguac-client-kubernetes.so && ln -s libguac-client-kubernetes.so.0.0.0 libguac-client-kubernetes.so; }; })
+libtool: install: /usr/bin/install -c .libs/libguac-client-kubernetes.lai /usr/local/lib/libguac-client-kubernetes.la
+libtool: install: /usr/bin/install -c .libs/libguac-client-kubernetes.a /usr/local/lib/libguac-client-kubernetes.a
+libtool: install: chmod 644 /usr/local/lib/libguac-client-kubernetes.a
+libtool: install: ranlib /usr/local/lib/libguac-client-kubernetes.a
+libtool: finish: PATH="/sbin:/bin:/usr/sbin:/usr/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
