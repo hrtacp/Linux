@@ -1,0 +1,239 @@
+Installing       : almalinux-logos-httpd-90.5.1-1.1.el9.noarch                                                18/20 
+  Installing       : nginx-1:1.20.1-14.el9_2.1.alma.1.x86_64                                                    19/20 
+  Running scriptlet: nginx-1:1.20.1-14.el9_2.1.alma.1.x86_64                                                    19/20 
+  Installing       : python3-certbot-nginx-2.11.0-1.el9.noarch                                                  20/20 
+  Running scriptlet: python3-certbot-nginx-2.11.0-1.el9.noarch                                                  20/20 
+  Verifying        : almalinux-logos-httpd-90.5.1-1.1.el9.noarch                                                 1/20 
+  Verifying        : fontawesome-fonts-1:4.7.0-13.el9.noarch                                                     2/20 
+  Verifying        : nginx-1:1.20.1-14.el9_2.1.alma.1.x86_64                                                     3/20 
+  Verifying        : nginx-core-1:1.20.1-14.el9_2.1.alma.1.x86_64                                                4/20 
+  Verifying        : nginx-filesystem-1:1.20.1-14.el9_2.1.alma.1.noarch                                          5/20 
+  Verifying        : python3-configobj-5.0.6-25.el9.noarch                                                       6/20 
+  Verifying        : python3-pytz-2021.1-5.el9.noarch                                                            7/20 
+  Verifying        : python3-pyparsing-2.4.7-9.el9.noarch                                                        8/20 
+  Verifying        : certbot-2.11.0-1.el9.noarch                                                                 9/20 
+  Verifying        : python-josepy-doc-1.13.0-1.el9.noarch                                                      10/20 
+  Verifying        : python3-acme-2.11.0-1.el9.noarch                                                           11/20 
+  Verifying        : python3-certbot-2.11.0-1.el9.noarch                                                        12/20 
+  Verifying        : python3-certbot-nginx-2.11.0-1.el9.noarch                                                  13/20 
+  Verifying        : python3-configargparse-1.7-1.el9.noarch                                                    14/20 
+  Verifying        : python3-importlib-metadata-4.12.0-2.el9.noarch                                             15/20 
+  Verifying        : python3-josepy-1.13.0-1.el9.noarch                                                         16/20 
+  Verifying        : python3-parsedatetime-2.6-5.el9.noarch                                                     17/20 
+  Verifying        : python3-pyOpenSSL-21.0.0-1.el9.noarch                                                      18/20 
+  Verifying        : python3-pyrfc3339-1.1-11.el9.noarch                                                        19/20 
+  Verifying        : python3-zipp-0.5.1-1.el9.noarch                                                            20/20 
+
+Installed:
+  almalinux-logos-httpd-90.5.1-1.1.el9.noarch             certbot-2.11.0-1.el9.noarch                                
+  fontawesome-fonts-1:4.7.0-13.el9.noarch                 nginx-1:1.20.1-14.el9_2.1.alma.1.x86_64                    
+  nginx-core-1:1.20.1-14.el9_2.1.alma.1.x86_64            nginx-filesystem-1:1.20.1-14.el9_2.1.alma.1.noarch         
+  python-josepy-doc-1.13.0-1.el9.noarch                   python3-acme-2.11.0-1.el9.noarch                           
+  python3-certbot-2.11.0-1.el9.noarch                     python3-certbot-nginx-2.11.0-1.el9.noarch                  
+  python3-configargparse-1.7-1.el9.noarch                 python3-configobj-5.0.6-25.el9.noarch                      
+  python3-importlib-metadata-4.12.0-2.el9.noarch          python3-josepy-1.13.0-1.el9.noarch                         
+  python3-parsedatetime-2.6-5.el9.noarch                  python3-pyOpenSSL-21.0.0-1.el9.noarch                      
+  python3-pyparsing-2.4.7-9.el9.noarch                    python3-pyrfc3339-1.1-11.el9.noarch                        
+  python3-pytz-2021.1-5.el9.noarch                        python3-zipp-0.5.1-1.el9.noarch                            
+
+Complete!
+[root@AKL-1425 ~]# sudo systemctl start nginx
+[root@AKL-1425 ~]# sudo systemctl enable nginx
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
+[root@AKL-1425 ~]# sudo systemctl status nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: disabled)
+     Active: active (running) since Mon 2024-08-05 18:31:35 NZST; 5s ago
+   Main PID: 51440 (nginx)
+      Tasks: 9 (limit: 99206)
+     Memory: 8.6M
+        CPU: 81ms
+     CGroup: /system.slice/nginx.service
+             ├─51440 "nginx: master process /usr/sbin/nginx"
+             ├─51441 "nginx: worker process"
+             ├─51442 "nginx: worker process"
+             ├─51443 "nginx: worker process"
+             ├─51444 "nginx: worker process"
+             ├─51445 "nginx: worker process"
+             ├─51446 "nginx: worker process"
+             ├─51447 "nginx: worker process"
+             └─51448 "nginx: worker process"
+
+Aug 05 18:31:35 AKL-1425 systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Aug 05 18:31:35 AKL-1425 nginx[51438]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Aug 05 18:31:35 AKL-1425 nginx[51438]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Aug 05 18:31:35 AKL-1425 systemd[1]: Started The nginx HTTP and reverse proxy server.
+[root@AKL-1425 ~]# ^C
+[root@AKL-1425 ~]# sudo firewall-cmd --add-service={http,https} --permanent
+success
+[root@AKL-1425 ~]# sudo firewall-cmd --reload
+success
+[root@AKL-1425 ~]# sudo firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: enp2s0f1
+  sources: 
+  services: cockpit dhcpv6-client http https ssh
+  ports: 3389/tcp
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+[root@AKL-1425 ~]# sudo mariadb-secure-installation
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user. If you've just installed MariaDB, and
+haven't set the root password yet, you should just press enter here.
+
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password or using the unix_socket ensures that nobody
+can log into the MariaDB root user without the proper authorisation.
+
+You already have your root account protected, so you can safely answer 'n'.
+
+Switch to unix_socket authentication [Y/n] Y
+Enabled successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+You already have your root account protected, so you can safely answer 'n'.
+
+Change the root password? [Y/n] n
+ ... skipping.
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] n
+ ... skipping.
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] ^C
+Aborting!
+
+Cleaning up...
+[root@AKL-1425 ~]# sudo mariadb-secure-installation
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user. If you've just installed MariaDB, and
+haven't set the root password yet, you should just press enter here.
+
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password or using the unix_socket ensures that nobody
+can log into the MariaDB root user without the proper authorisation.
+
+You already have your root account protected, so you can safely answer 'n'.
+
+Switch to unix_socket authentication [Y/n] n
+ ... skipping.
+
+You already have your root account protected, so you can safely answer 'n'.
+
+Change the root password? [Y/n] RamTam@2411
+You already have your root account protected, so you can safely answer 'n'.
+
+Change the root password? [Y/n] y   
+New password: 
+Re-enter new password: 
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] y
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] y
+ ... Success!
+
+By default, MariaDB comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] y
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] y
+ ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB!
+[root@AKL-1425 ~]# sudo mariadb -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 14
+Server version: 10.5.22-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CREATE DATABASE guacamoledb;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> CREATE USER 'guacamole'@'localhost' IDENTIFIED BY 'GuacamolePassword';
+Query OK, 0 rows affected (0.004 sec)
+
+MariaDB [(none)]> GRANT SELECT,INSERT,UPDATE,DELETE ON guacamoledb.* TO 'guacamole'@'localhost';
+Query OK, 0 rows affected (0.004 sec)
+
+MariaDB [(none)]> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [(none)]> SHOW GRANTS FOR 'guacamole'@'localhost';
++------------------------------------------------------------------------------------------------------------------+
+| Grants for guacamole@localhost                                                                                   |
++------------------------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO `guacamole`@`localhost` IDENTIFIED BY PASSWORD '*591F5C929ECD16FA96622752687BBD2F54E1130D' |
+| GRANT SELECT, INSERT, UPDATE, DELETE ON `guacamoledb`.* TO `guacamole`@`localhost`                               |
++------------------------------------------------------------------------------------------------------------------+
+2 rows in set (0.000 sec)
+
+MariaDB [(none)]> quit
+Bye
+[root@AKL-1425 ~]# cd /usr/src
+[root@AKL-1425 src]# wget https://dlcdn.apache.org/guacamole/1.5.2/source/guacamole-server-1.5.2.tar.gz
+--2024-08-05 18:34:04--  https://dlcdn.apache.org/guacamole/1.5.2/source/guacamole-server-1.5.2.tar.gz
+Resolving dlcdn.apache.org (dlcdn.apache.org)... 151.101.2.132, 2a04:4e42::644
+Connecting to dlcdn.apache.org (dlcdn.apache.org)|151.101.2.132|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2024-08-05 18:34:05 ERROR 404: Not Found.
