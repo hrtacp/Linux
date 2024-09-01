@@ -1,0 +1,150 @@
+× owncast.service - Owncast Service
+Loaded: loaded (/etc/systemd/system/owncast.service; enabled; preset: disabled)
+Active: failed (Result: exit-code) since Wed 2024-08-07 17:09:16 AEST; 3h 26min ago
+Duration: 1.501s
+Main PID: 2288 (code=exited, status=1/FAILURE)
+CPU: 1.519s
+
+Aug 07 17:09:16 AKL-1425 systemd[1]: owncast.service: Scheduled restart job, restart counter is at 5.
+Aug 07 17:09:16 AKL-1425 systemd[1]: Stopped Owncast Service.
+Aug 07 17:09:16 AKL-1425 systemd[1]: owncast.service: Consumed 1.519s CPU time.
+Aug 07 17:09:16 AKL-1425 systemd[1]: owncast.service: Start request repeated too quickly.
+Aug 07 17:09:16 AKL-1425 systemd[1]: owncast.service: Failed with result 'exit-code'.
+Aug 07 17:09:16 AKL-1425 systemd[1]: Failed to start Owncast Service.
+[root@AKL-1425 ~]# sudo systemctl restart owncast
+[root@AKL-1425 ~]# sudo systemctl status owncast
+● owncast.service - Owncast Service
+Loaded: loaded (/etc/systemd/system/owncast.service; enabled; preset: disabled)
+Active: active (running) since Wed 2024-08-07 20:35:47 AEST; 911ms ago
+Main PID: 17320 (owncast)
+Tasks: 1 (limit: 99220)
+Memory: 76.5M
+CPU: 908ms
+CGroup: /system.slice/owncast.service
+└─17320 /root/owncast/owncast
+
+Aug 07 20:35:47 AKL-1425 systemd[1]: Started Owncast Service.
+[root@AKL-1425 ~]# sudo systemctl status owncast
+× owncast.service - Owncast Service
+Loaded: loaded (/etc/systemd/system/owncast.service; enabled; preset: disabled)
+Active: failed (Result: exit-code) since Wed 2024-08-07 20:35:55 AEST; 815ms ago
+Duration: 1.183s
+Process: 17385 ExecStart=/root/owncast/owncast (code=exited, status=1/FAILURE)
+Main PID: 17385 (code=exited, status=1/FAILURE)
+CPU: 1.217s
+
+Aug 07 20:35:55 AKL-1425 systemd[1]: owncast.service: Scheduled restart job, restart counter is at 5.
+Aug 07 20:35:55 AKL-1425 systemd[1]: Stopped Owncast Service.
+Aug 07 20:35:55 AKL-1425 systemd[1]: owncast.service: Consumed 1.217s CPU time.
+Aug 07 20:35:55 AKL-1425 systemd[1]: owncast.service: Start request repeated too quickly.
+Aug 07 20:35:55 AKL-1425 systemd[1]: owncast.service: Failed with result 'exit-code'.
+Aug 07 20:35:55 AKL-1425 systemd[1]: Failed to start Owncast Service.
+[root@AKL-1425 ~]# [root@AKL-1425 ~]# sudo systemctl status owncast
+× owncast.service - Owncast Service
+Loaded: loaded (/etc/systemd/system/owncast.service; enabled; preset: disabled)
+Active: failed (Result: exit-code) since Wed 2024-08-07 20:35:55 AEST; 815ms ago
+Duration: 1.183s
+Process: 17385 ExecStart=/root/owncast/owncast (code=exited, status=1/FAILURE)
+Main PID: 17385 (code=exited, status=1/FAILURE)
+CPU: 1.217s
+
+Aug 07 20:35:55 AKL-1425 systemd[1]: owncast.service: Scheduled restart job, restart counter is at 5.
+Aug 07 20:35:55 AKL-1425 systemd[1]: Stopped Owncast Service.
+Aug 07 20:35:55 AKL-1425 systemd[1]: owncast.service: Consumed 1.217s CPU time.
+Aug 07 20:35:55 AKL-1425 systemd[1]: owncast.service: Start request repeated too quickly.
+Aug 07 20:35:55 AKL-1425 systemd[1]: owncast.service: Failed with result 'exit-code'.
+Aug 07 20:35:55 AKL-1425 systemd[1]: Failed to start Owncast Service.^C
+[root@AKL-1425 ~]# sudo chmod +x /root/owncast/owncast
+[root@AKL-1425 ~]# sudo chown root:root /root/owncast/owncast
+[root@AKL-1425 ~]# sudo setenforce 0
+[root@AKL-1425 ~]# sudo systemctl restart owncast
+[root@AKL-1425 ~]# sudo systemctl status owncast
+● owncast.service - Owncast Service
+Loaded: loaded (/etc/systemd/system/owncast.service; enabled; preset: disabled)
+Active: active (running) since Wed 2024-08-07 20:37:58 AEST; 822ms ago
+Main PID: 17501 (owncast)
+Tasks: 1 (limit: 99220)
+Memory: 38.6M
+CPU: 819ms
+CGroup: /system.slice/owncast.service
+└─17501 /root/owncast/owncast
+
+Aug 07 20:37:58 AKL-1425 systemd[1]: Started Owncast Service.
+[root@AKL-1425 ~]# sudo systemctl status owncast
+● owncast.service - Owncast Service
+Loaded: loaded (/etc/systemd/system/owncast.service; enabled; preset: disabled)
+Active: active (running) since Wed 2024-08-07 20:38:01 AEST; 95ms ago
+Main PID: 17593 (owncast)
+Tasks: 1 (limit: 99220)
+Memory: 2.8M
+CPU: 95ms
+CGroup: /system.slice/owncast.service
+└─17593 /root/owncast/owncast
+
+Aug 07 20:38:01 AKL-1425 systemd[1]: Started Owncast Service.
+[root@AKL-1425 ~]# sudo systemctl status owncast
+× owncast.service - Owncast Service
+Loaded: loaded (/etc/systemd/system/owncast.service; enabled; preset: disabled)
+Active: failed (Result: exit-code) since Wed 2024-08-07 20:38:04 AEST; 4s ago
+Duration: 1.210s
+Process: 17641 ExecStart=/root/owncast/owncast (code=exited, status=1/FAILURE)
+Main PID: 17641 (code=exited, status=1/FAILURE)
+CPU: 1.246s
+
+Aug 07 20:38:04 AKL-1425 systemd[1]: owncast.service: Scheduled restart job, restart counter is at 5.
+Aug 07 20:38:04 AKL-1425 systemd[1]: Stopped Owncast Service.
+Aug 07 20:38:04 AKL-1425 systemd[1]: owncast.service: Consumed 1.246s CPU time.
+Aug 07 20:38:04 AKL-1425 systemd[1]: owncast.service: Start request repeated too quickly.
+Aug 07 20:38:04 AKL-1425 systemd[1]: owncast.service: Failed with result 'exit-code'.
+Aug 07 20:38:04 AKL-1425 systemd[1]: Failed to start Owncast Service.
+[root@AKL-1425 ~]# nano /etc/systemd/system/owncast.service
+[root@AKL-1425 ~]# sudo systemctl restart owncast
+Warning: The unit file, source configuration file or drop-ins of owncast.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+[root@AKL-1425 ~]# sudo systemctl daemon-reload
+[root@AKL-1425 ~]# sudo systemctl restart owncast
+[root@AKL-1425 ~]# sudo systemctl daemon-reload
+[root@AKL-1425 ~]# nano /etc/systemd/system/owncast.service
+[root@AKL-1425 ~]# sudo systemctl start owncast
+Job for owncast.service failed because the control process exited with error code.
+See "systemctl status owncast.service" and "journalctl -xeu owncast.service" for details.
+[root@AKL-1425 ~]# sudo journalctl -xeu owncast.service
+░░
+░░ A stop job for unit owncast.service has finished.
+░░
+░░ The job identifier is 11639 and the job result is done.
+Aug 07 20:39:09 AKL-1425 systemd[1]: owncast.service: Consumed 1.263s CPU time.
+░░ Subject: Resources consumed by unit runtime
+░░ Defined-By: systemd
+░░ Support: https://access.redhat.com/support
+░░
+░░ The unit owncast.service completed and consumed the indicated resources.
+Aug 07 20:39:09 AKL-1425 systemd[1]: owncast.service: Start request repeated too quickly.
+Aug 07 20:39:09 AKL-1425 systemd[1]: owncast.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://access.redhat.com/support
+░░
+░░ The unit owncast.service has entered the 'failed' state with result 'exit-code'.
+Aug 07 20:39:09 AKL-1425 systemd[1]: Failed to start Owncast Service.
+░░ Subject: A start job for unit owncast.service has failed
+░░ Defined-By: systemd
+░░ Support: https://access.redhat.com/support
+░░
+░░ A start job for unit owncast.service has finished with a failure.
+░░
+░░ The job identifier is 11639 and the job result is failed.
+Aug 07 20:39:11 AKL-1425 systemd[1]: owncast.service: Start request repeated too quickly.
+Aug 07 20:39:11 AKL-1425 systemd[1]: owncast.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://access.redhat.com/support
+░░
+░░ The unit owncast.service has entered the 'failed' state with result 'exit-code'.
+Aug 07 20:39:11 AKL-1425 systemd[1]: Failed to start Owncast Service.
+░░ Subject: A start job for unit owncast.service has failed
+░░ Defined-By: systemd
+░░ Support: https://access.redhat.com/support
+░░
+░░ A start job for unit owncast.service has finished with a failure.
+░░
+░░ The job identifier is 11738 and the job result is failed.
