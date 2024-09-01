@@ -1,0 +1,213 @@
+Installed:
+  augeas-libs-1.13.0-5.el9.x86_64                                                                                     
+  boost-iostreams-1.75.0-8.el9.x86_64                                                                                 
+  boost-system-1.75.0-8.el9.x86_64                                                                                    
+  boost-thread-1.75.0-8.el9.x86_64                                                                                    
+  capstone-4.0.2-10.el9.x86_64                                                                                        
+  cyrus-sasl-2.1.27-21.el9.x86_64                                                                                     
+  daxctl-libs-71.1-8.el9.x86_64                                                                                       
+  dhcp-client-12:4.4.2-19.b1.el9.x86_64                                                                               
+  dhcp-common-12:4.4.2-19.b1.el9.noarch                                                                               
+  edk2-ovmf-20231122-6.el9_4.2.noarch                                                                                 
+  geolite2-city-20191217-6.el9.noarch                                                                                 
+  geolite2-country-20191217-6.el9.noarch                                                                              
+  gnutls-dane-3.8.3-4.el9_4.x86_64                                                                                    
+  gnutls-utils-3.8.3-4.el9_4.x86_64                                                                                   
+  gssproxy-0.8.4-6.el9.x86_64                                                                                         
+  gtk-vnc2-1.3.0-2.el9.x86_64                                                                                         
+  gvnc-1.3.0-2.el9.x86_64                                                                                             
+  hexedit-1.6-1.el9.x86_64                                                                                            
+  hivex-libs-1.3.21-3.el9.x86_64                                                                                      
+  ipcalc-1.0.0-5.el9.x86_64                                                                                           
+  ipxe-roms-qemu-20200823-9.git4bd064de.el9_0.noarch                                                                  
+  keyutils-1.6.3-1.el9.x86_64                                                                                         
+  libblkio-1.3.0-1.el9.x86_64                                                                                         
+  libburn-1.5.4-4.el9.x86_64                                                                                          
+  libev-4.33-5.el9.x86_64                                                                                             
+  libfdt-1.6.0-7.el9.x86_64                                                                                           
+  libguestfs-1:1.50.1-7.el9.alma.1.x86_64                                                                             
+  libguestfs-appliance-1:1.50.1-7.el9.alma.1.x86_64                                                                   
+  libisoburn-1.5.4-4.el9.x86_64                                                                                       
+  libisofs-1.5.4-4.el9.x86_64                                                                                         
+  libnbd-1.18.1-3.el9.x86_64                                                                                          
+  libnfsidmap-1:2.5.4-25.el9.x86_64                                                                                   
+  libpmem-1.12.1-1.el9.x86_64                                                                                         
+  librados2-2:16.2.4-5.el9.x86_64                                                                                     
+  librbd1-2:16.2.4-5.el9.x86_64                                                                                       
+  librdmacm-48.0-1.el9.x86_64                                                                                         
+  libtpms-0.9.1-3.20211126git1ff6fe1f43.el9_2.x86_64                                                                  
+  libverto-libev-0.3.2-3.el9.x86_64                                                                                   
+  libvirt-10.0.0-6.6.el9_4.alma.1.x86_64                                                                              
+  libvirt-client-10.0.0-6.6.el9_4.alma.1.x86_64                                                                       
+  libvirt-client-qemu-10.0.0-6.6.el9_4.alma.1.x86_64                                                                  
+  libvirt-daemon-10.0.0-6.6.el9_4.alma.1.x86_64                                                                       
+  libvirt-daemon-common-10.0.0-6.6.el9_4.alma.1.x86_64                                                                
+  libvirt-daemon-config-network-10.0.0-6.6.el9_4.alma.1.x86_64                                                        
+  libvirt-daemon-config-nwfilter-10.0.0-6.6.el9_4.alma.1.x86_64                                                       
+  libvirt-daemon-driver-interface-10.0.0-6.6.el9_4.alma.1.x86_64                                                      
+  libvirt-daemon-driver-network-10.0.0-6.6.el9_4.alma.1.x86_64                                                        
+  libvirt-daemon-driver-nodedev-10.0.0-6.6.el9_4.alma.1.x86_64                                                        
+  libvirt-daemon-driver-nwfilter-10.0.0-6.6.el9_4.alma.1.x86_64                                                       
+  libvirt-daemon-driver-qemu-10.0.0-6.6.el9_4.alma.1.x86_64                                                           
+  libvirt-daemon-driver-secret-10.0.0-6.6.el9_4.alma.1.x86_64                                                         
+  libvirt-daemon-driver-storage-10.0.0-6.6.el9_4.alma.1.x86_64                                                        
+  libvirt-daemon-driver-storage-core-10.0.0-6.6.el9_4.alma.1.x86_64                                                   
+  libvirt-daemon-driver-storage-disk-10.0.0-6.6.el9_4.alma.1.x86_64                                                   
+  libvirt-daemon-driver-storage-iscsi-10.0.0-6.6.el9_4.alma.1.x86_64                                                  
+  libvirt-daemon-driver-storage-logical-10.0.0-6.6.el9_4.alma.1.x86_64                                                
+  libvirt-daemon-driver-storage-mpath-10.0.0-6.6.el9_4.alma.1.x86_64                                                  
+  libvirt-daemon-driver-storage-rbd-10.0.0-6.6.el9_4.alma.1.x86_64                                                    
+  libvirt-daemon-driver-storage-scsi-10.0.0-6.6.el9_4.alma.1.x86_64                                                   
+  libvirt-daemon-kvm-10.0.0-6.6.el9_4.alma.1.x86_64                                                                   
+  libvirt-daemon-lock-10.0.0-6.6.el9_4.alma.1.x86_64                                                                  
+  libvirt-daemon-log-10.0.0-6.6.el9_4.alma.1.x86_64                                                                   
+  libvirt-daemon-plugin-lockd-10.0.0-6.6.el9_4.alma.1.x86_64                                                          
+  libvirt-daemon-proxy-10.0.0-6.6.el9_4.alma.1.x86_64                                                                 
+  libvirt-glib-4.0.0-3.el9.x86_64                                                                                     
+  libvirt-libs-10.0.0-6.6.el9_4.alma.1.x86_64                                                                         
+  lzop-1.04-8.el9.x86_64                                                                                              
+  mdevctl-1.1.0-4.el9.x86_64                                                                                          
+  mtools-4.0.26-4.el9_0.x86_64                                                                                        
+  nbdkit-1.36.2-1.el9.x86_64                                                                                          
+  nbdkit-basic-filters-1.36.2-1.el9.x86_64                                                                            
+  nbdkit-basic-plugins-1.36.2-1.el9.x86_64                                                                            
+  nbdkit-curl-plugin-1.36.2-1.el9.x86_64                                                                              
+  nbdkit-server-1.36.2-1.el9.x86_64                                                                                   
+  nbdkit-ssh-plugin-1.36.2-1.el9.x86_64                                                                               
+  ndctl-libs-71.1-8.el9.x86_64                                                                                        
+  nfs-utils-1:2.5.4-25.el9.x86_64                                                                                     
+  numad-0.5-37.20150602git.el9.x86_64                                                                                 
+  passt-0^20231204.gb86afe3-1.el9.x86_64                                                                              
+  passt-selinux-0^20231204.gb86afe3-1.el9.noarch                                                                      
+  perl-Class-Inspector-1.36-7.el9.noarch                                                                              
+  perl-Exporter-Tiny-1.002002-6.el9.noarch                                                                            
+  perl-File-ShareDir-1.118-4.el9.noarch                                                                               
+  perl-I18N-Langinfo-0.19-481.el9.x86_64                                                                              
+  perl-List-MoreUtils-0.430-4.el9.noarch                                                                              
+  perl-List-MoreUtils-XS-0.430-5.el9.x86_64                                                                           
+  perl-Params-Util-1.102-5.el9.x86_64                                                                                 
+  perl-Sys-Guestfs-1:1.50.1-7.el9.alma.1.x86_64                                                                       
+  perl-hivex-1.3.21-3.el9.x86_64                                                                                      
+  perl-libintl-perl-1.32-4.el9.x86_64                                                                                 
+  python3-argcomplete-1.12.0-5.el9.noarch                                                                             
+  python3-cffi-1.14.5-5.el9.x86_64                                                                                    
+  python3-cryptography-36.0.1-4.el9.x86_64                                                                            
+  python3-libvirt-10.0.0-1.el9.x86_64                                                                                 
+  python3-ply-3.11-14.el9.noarch                                                                                      
+  python3-pycparser-2.20-6.el9.noarch                                                                                 
+  qemu-img-17:8.2.0-11.el9_4.4.x86_64                                                                                 
+  qemu-kvm-17:8.2.0-11.el9_4.4.x86_64                                                                                 
+  qemu-kvm-audio-pa-17:8.2.0-11.el9_4.4.x86_64                                                                        
+  qemu-kvm-block-blkio-17:8.2.0-11.el9_4.4.x86_64                                                                     
+  qemu-kvm-block-rbd-17:8.2.0-11.el9_4.4.x86_64                                                                       
+  qemu-kvm-common-17:8.2.0-11.el9_4.4.x86_64                                                                          
+  qemu-kvm-core-17:8.2.0-11.el9_4.4.x86_64                                                                            
+  qemu-kvm-device-display-virtio-gpu-17:8.2.0-11.el9_4.4.x86_64                                                       
+  qemu-kvm-device-display-virtio-gpu-pci-17:8.2.0-11.el9_4.4.x86_64                                                   
+  qemu-kvm-device-display-virtio-vga-17:8.2.0-11.el9_4.4.x86_64                                                       
+  qemu-kvm-device-usb-host-17:8.2.0-11.el9_4.4.x86_64                                                                 
+  qemu-kvm-device-usb-redirect-17:8.2.0-11.el9_4.4.x86_64                                                             
+  qemu-kvm-docs-17:8.2.0-11.el9_4.4.x86_64                                                                            
+  qemu-kvm-tools-17:8.2.0-11.el9_4.4.x86_64                                                                           
+  qemu-kvm-ui-egl-headless-17:8.2.0-11.el9_4.4.x86_64                                                                 
+  qemu-kvm-ui-opengl-17:8.2.0-11.el9_4.4.x86_64                                                                       
+  qemu-pr-helper-17:8.2.0-11.el9_4.4.x86_64                                                                           
+  rpcbind-1.2.6-7.el9.x86_64                                                                                          
+  scrub-2.6.1-4.el9.x86_64                                                                                            
+  seabios-bin-1.16.3-2.el9.noarch                                                                                     
+  seavgabios-bin-1.16.3-2.el9.noarch                                                                                  
+  sssd-nfs-idmap-2.9.4-6.el9_4.1.alma.1.x86_64                                                                        
+  supermin-5.3.3-1.el9.x86_64                                                                                         
+  swtpm-0.8.0-2.el9_4.x86_64                                                                                          
+  swtpm-libs-0.8.0-2.el9_4.x86_64                                                                                     
+  swtpm-tools-0.8.0-2.el9_4.x86_64                                                                                    
+  syslinux-6.04-0.20.el9.x86_64                                                                                       
+  syslinux-extlinux-6.04-0.20.el9.x86_64                                                                              
+  syslinux-extlinux-nonlinux-6.04-0.20.el9.noarch                                                                     
+  syslinux-nonlinux-6.04-0.20.el9.noarch                                                                              
+  systemd-container-252-32.el9_4.6.x86_64                                                                             
+  unbound-libs-1.16.2-3.el9_3.5.x86_64                                                                                
+  usbredir-0.13.0-2.el9.x86_64                                                                                        
+  virt-install-4.1.0-5.el9.noarch                                                                                     
+  virt-manager-4.1.0-5.el9.noarch                                                                                     
+  virt-manager-common-4.1.0-5.el9.noarch                                                                              
+  virt-top-1.1.1-9.el9.x86_64                                                                                         
+  virt-viewer-11.0-1.el9.x86_64                                                                                       
+  virt-win-reg-1.51.6-2.el9.noarch                                                                                    
+  virtiofsd-1.10.1-1.el9.x86_64                                                                                       
+  xorriso-1.5.4-4.el9.x86_64                                                                                          
+  zstd-1.5.1-2.el9.x86_64                                                                                             
+
+Complete!
+[root@AKL-1425 ~]# sudo systemctl start libvirtd
+[root@AKL-1425 ~]# sudo systemctl enable libvirtd 
+Created symlink /etc/systemd/system/multi-user.target.wants/libvirtd.service → /usr/lib/systemd/system/libvirtd.service.
+Created symlink /etc/systemd/system/sockets.target.wants/libvirtd.socket → /usr/lib/systemd/system/libvirtd.socket.
+Created symlink /etc/systemd/system/sockets.target.wants/libvirtd-ro.socket → /usr/lib/systemd/system/libvirtd-ro.socket.
+Created symlink /etc/systemd/system/sockets.target.wants/libvirtd-admin.socket → /usr/lib/systemd/system/libvirtd-admin.socket.
+[root@AKL-1425 ~]# sudo systemctl status libvirtd
+● libvirtd.service - libvirt legacy monolithic daemon
+     Loaded: loaded (/usr/lib/systemd/system/libvirtd.service; enabled; preset: disabled)
+     Active: active (running) since Mon 2024-08-05 18:25:09 NZST; 7s ago
+TriggeredBy: ● libvirtd-ro.socket
+             ● libvirtd-admin.socket
+             ● libvirtd.socket
+       Docs: man:libvirtd(8)
+             https://libvirt.org/
+   Main PID: 24153 (libvirtd)
+      Tasks: 21 (limit: 32768)
+     Memory: 25.3M
+        CPU: 359ms
+     CGroup: /system.slice/libvirtd.service
+             ├─24153 /usr/sbin/libvirtd --timeout 120
+             ├─24256 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script>
+             └─24257 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script>
+
+Aug 05 18:25:09 AKL-1425 dnsmasq[24256]: started, version 2.85 cachesize 150
+Aug 05 18:25:09 AKL-1425 dnsmasq[24256]: compile time options: IPv6 GNU-getopt DBus no-UBus no-i18n IDN2 DHCP DHCPv6 >
+Aug 05 18:25:09 AKL-1425 dnsmasq-dhcp[24256]: DHCP, IP range 192.168.122.2 -- 192.168.122.254, lease time 1h
+Aug 05 18:25:09 AKL-1425 dnsmasq-dhcp[24256]: DHCP, sockets bound exclusively to interface virbr0
+Aug 05 18:25:09 AKL-1425 dnsmasq[24256]: reading /etc/resolv.conf
+Aug 05 18:25:09 AKL-1425 dnsmasq[24256]: using nameserver 8.8.8.8#53
+Aug 05 18:25:09 AKL-1425 dnsmasq[24256]: using nameserver 8.8.4.4#53
+Aug 05 18:25:09 AKL-1425 dnsmasq[24256]: read /etc/hosts - 2 addresses
+Aug 05 18:25:09 AKL-1425 dnsmasq[24256]: read /var/lib/libvirt/dnsmasq/default.addnhosts - 0 addresses
+Aug 05 18:25:09 AKL-1425 dnsmasq-dhcp[24256]: read /var/lib/libvirt/dnsmasq/default.hostsfile
+
+[root@AKL-1425 ~]# sudo dnf install wget nano epel-release dnf-utils
+Last metadata expiration check: 0:03:59 ago on Mon 05 Aug 2024 06:24:16 PM NZST.
+Package wget-1.21.1-7.el9.x86_64 is already installed.
+Package nano-5.6.1-5.el9.x86_64 is already installed.
+Package epel-release-9-7.el9.noarch is already installed.
+Dependencies resolved.
+======================================================================================================================
+ Package                     Architecture             Version                          Repository                Size
+======================================================================================================================
+Installing:
+ yum-utils                   noarch                   4.3.0-13.el9                     baseos                    35 k
+
+Transaction Summary
+======================================================================================================================
+Install  1 Package
+
+Total download size: 35 k
+Installed size: 23 k
+Is this ok [y/N]: y
+Downloading Packages:
+yum-utils-4.3.0-13.el9.noarch.rpm                                                     243 kB/s |  35 kB     00:00    
+----------------------------------------------------------------------------------------------------------------------
+Total                                                                                  35 kB/s |  35 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                              1/1 
+  Installing       : yum-utils-4.3.0-13.el9.noarch                                                                1/1 
+  Running scriptlet: yum-utils-4.3.0-13.el9.noarch                                                                1/1 
+  Verifying        : yum-utils-4.3.0-13.el9.noarch                                                                1/1 
+
+Installed:
+  yum-utils-4.3.0-13.el9.noarch                                                                                       
+
+Complete!
