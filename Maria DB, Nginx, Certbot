@@ -1,0 +1,211 @@
+[root@AKL-1425 ~]# sudo dnf install mariadb-server
+Last metadata expiration check: 0:01:19 ago on Mon 05 Aug 2024 06:29:39 PM NZST.
+Dependencies resolved.
+======================================================================================================================
+ Package                              Architecture     Version                              Repository           Size
+======================================================================================================================
+Installing:
+ mariadb-server                       x86_64           3:10.5.22-1.el9_2.alma.1             appstream           9.6 M
+Installing dependencies:
+ mariadb                              x86_64           3:10.5.22-1.el9_2.alma.1             appstream           1.6 M
+ mariadb-common                       x86_64           3:10.5.22-1.el9_2.alma.1             appstream            27 k
+ mariadb-connector-c                  x86_64           3.2.6-1.el9_0                        appstream           194 k
+ mariadb-connector-c-config           noarch           3.2.6-1.el9_0                        appstream           9.7 k
+ mariadb-errmsg                       x86_64           3:10.5.22-1.el9_2.alma.1             appstream           211 k
+ mysql-selinux                        noarch           1.0.10-1.el9                         appstream            36 k
+ perl-DBD-MariaDB                     x86_64           1.21-16.el9_0                        appstream           151 k
+ perl-Sys-Hostname                    x86_64           1.23-481.el9                         appstream            16 k
+Installing weak dependencies:
+ mariadb-backup                       x86_64           3:10.5.22-1.el9_2.alma.1             appstream           6.4 M
+ mariadb-gssapi-server                x86_64           3:10.5.22-1.el9_2.alma.1             appstream            14 k
+ mariadb-server-utils                 x86_64           3:10.5.22-1.el9_2.alma.1             appstream           209 k
+
+Transaction Summary
+======================================================================================================================
+Install  12 Packages
+
+Total download size: 18 M
+Installed size: 109 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/12): mariadb-common-10.5.22-1.el9_2.alma.1.x86_64.rpm                              217 kB/s |  27 kB     00:00    
+(2/12): mariadb-10.5.22-1.el9_2.alma.1.x86_64.rpm                                     6.7 MB/s | 1.6 MB     00:00    
+(3/12): mariadb-connector-c-3.2.6-1.el9_0.x86_64.rpm                                  1.7 MB/s | 194 kB     00:00    
+(4/12): mariadb-connector-c-config-3.2.6-1.el9_0.noarch.rpm                            94 kB/s | 9.7 kB     00:00    
+(5/12): mariadb-errmsg-10.5.22-1.el9_2.alma.1.x86_64.rpm                              1.8 MB/s | 211 kB     00:00    
+(6/12): mariadb-backup-10.5.22-1.el9_2.alma.1.x86_64.rpm                               16 MB/s | 6.4 MB     00:00    
+(7/12): mariadb-gssapi-server-10.5.22-1.el9_2.alma.1.x86_64.rpm                       179 kB/s |  14 kB     00:00    
+(8/12): mariadb-server-utils-10.5.22-1.el9_2.alma.1.x86_64.rpm                        3.1 MB/s | 209 kB     00:00    
+(9/12): mysql-selinux-1.0.10-1.el9.noarch.rpm                                         363 kB/s |  36 kB     00:00    
+(10/12): perl-Sys-Hostname-1.23-481.el9.x86_64.rpm                                    739 kB/s |  16 kB     00:00    
+(11/12): perl-DBD-MariaDB-1.21-16.el9_0.x86_64.rpm                                    2.4 MB/s | 151 kB     00:00    
+(12/12): mariadb-server-10.5.22-1.el9_2.alma.1.x86_64.rpm                              20 MB/s | 9.6 MB     00:00    
+----------------------------------------------------------------------------------------------------------------------
+Total                                                                                  12 MB/s |  18 MB     00:01     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                              1/1 
+  Installing       : mariadb-connector-c-config-3.2.6-1.el9_0.noarch                                             1/12 
+  Installing       : mariadb-common-3:10.5.22-1.el9_2.alma.1.x86_64                                              2/12 
+  Installing       : mariadb-connector-c-3.2.6-1.el9_0.x86_64                                                    3/12 
+  Installing       : perl-Sys-Hostname-1.23-481.el9.x86_64                                                       4/12 
+  Installing       : perl-DBD-MariaDB-1.21-16.el9_0.x86_64                                                       5/12 
+  Installing       : mariadb-errmsg-3:10.5.22-1.el9_2.alma.1.x86_64                                              6/12 
+  Running scriptlet: mysql-selinux-1.0.10-1.el9.noarch                                                           7/12 
+  Installing       : mysql-selinux-1.0.10-1.el9.noarch                                                           7/12 
+  Running scriptlet: mysql-selinux-1.0.10-1.el9.noarch                                                           7/12 
+libsemanage.semanage_direct_install_info: Overriding mysql module at lower priority 100 with module at priority 200.
+
+  Installing       : mariadb-backup-3:10.5.22-1.el9_2.alma.1.x86_64                                              8/12 
+  Installing       : mariadb-gssapi-server-3:10.5.22-1.el9_2.alma.1.x86_64                                       9/12 
+  Installing       : mariadb-server-utils-3:10.5.22-1.el9_2.alma.1.x86_64                                       10/12 
+  Running scriptlet: mariadb-server-3:10.5.22-1.el9_2.alma.1.x86_64                                             11/12 
+  Installing       : mariadb-server-3:10.5.22-1.el9_2.alma.1.x86_64                                             11/12 
+  Running scriptlet: mariadb-server-3:10.5.22-1.el9_2.alma.1.x86_64                                             11/12 
+  Installing       : mariadb-3:10.5.22-1.el9_2.alma.1.x86_64                                                    12/12 
+  Running scriptlet: mysql-selinux-1.0.10-1.el9.noarch                                                          12/12 
+  Running scriptlet: mariadb-3:10.5.22-1.el9_2.alma.1.x86_64                                                    12/12 
+  Verifying        : mariadb-3:10.5.22-1.el9_2.alma.1.x86_64                                                     1/12 
+  Verifying        : mariadb-backup-3:10.5.22-1.el9_2.alma.1.x86_64                                              2/12 
+  Verifying        : mariadb-common-3:10.5.22-1.el9_2.alma.1.x86_64                                              3/12 
+  Verifying        : mariadb-connector-c-3.2.6-1.el9_0.x86_64                                                    4/12 
+  Verifying        : mariadb-connector-c-config-3.2.6-1.el9_0.noarch                                             5/12 
+  Verifying        : mariadb-errmsg-3:10.5.22-1.el9_2.alma.1.x86_64                                              6/12 
+  Verifying        : mariadb-gssapi-server-3:10.5.22-1.el9_2.alma.1.x86_64                                       7/12 
+  Verifying        : mariadb-server-3:10.5.22-1.el9_2.alma.1.x86_64                                              8/12 
+  Verifying        : mariadb-server-utils-3:10.5.22-1.el9_2.alma.1.x86_64                                        9/12 
+  Verifying        : mysql-selinux-1.0.10-1.el9.noarch                                                          10/12 
+  Verifying        : perl-DBD-MariaDB-1.21-16.el9_0.x86_64                                                      11/12 
+  Verifying        : perl-Sys-Hostname-1.23-481.el9.x86_64                                                      12/12 
+
+Installed:
+  mariadb-3:10.5.22-1.el9_2.alma.1.x86_64                       mariadb-backup-3:10.5.22-1.el9_2.alma.1.x86_64        
+  mariadb-common-3:10.5.22-1.el9_2.alma.1.x86_64                mariadb-connector-c-3.2.6-1.el9_0.x86_64              
+  mariadb-connector-c-config-3.2.6-1.el9_0.noarch               mariadb-errmsg-3:10.5.22-1.el9_2.alma.1.x86_64        
+  mariadb-gssapi-server-3:10.5.22-1.el9_2.alma.1.x86_64         mariadb-server-3:10.5.22-1.el9_2.alma.1.x86_64        
+  mariadb-server-utils-3:10.5.22-1.el9_2.alma.1.x86_64          mysql-selinux-1.0.10-1.el9.noarch                     
+  perl-DBD-MariaDB-1.21-16.el9_0.x86_64                         perl-Sys-Hostname-1.23-481.el9.x86_64                 
+
+Complete!
+[root@AKL-1425 ~]# sudo systemctl start mariadb
+[root@AKL-1425 ~]# sudo systemctl enable mariadb
+Created symlink /etc/systemd/system/mysql.service → /usr/lib/systemd/system/mariadb.service.
+Created symlink /etc/systemd/system/mysqld.service → /usr/lib/systemd/system/mariadb.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/mariadb.service → /usr/lib/systemd/system/mariadb.service.
+[root@AKL-1425 ~]# sudo systemctl status mariadb
+● mariadb.service - MariaDB 10.5 database server
+     Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled; preset: disabled)
+     Active: active (running) since Mon 2024-08-05 18:31:13 NZST; 6s ago
+       Docs: man:mariadbd(8)
+             https://mariadb.com/kb/en/library/systemd/
+   Main PID: 48349 (mariadbd)
+     Status: "Taking your SQL requests now..."
+      Tasks: 25 (limit: 99206)
+     Memory: 78.7M
+        CPU: 409ms
+     CGroup: /system.slice/mariadb.service
+             └─48349 /usr/libexec/mariadbd --basedir=/usr
+
+Aug 05 18:31:13 AKL-1425 mariadb-prepare-db-dir[48298]: The second is mysql@localhost, it has no password either, but
+Aug 05 18:31:13 AKL-1425 mariadb-prepare-db-dir[48298]: you need to be the system 'mysql' user to connect.
+Aug 05 18:31:13 AKL-1425 mariadb-prepare-db-dir[48298]: After connecting you can set the password, if you would need >
+Aug 05 18:31:13 AKL-1425 mariadb-prepare-db-dir[48298]: able to connect as any of these users with a password and wit>
+Aug 05 18:31:13 AKL-1425 mariadb-prepare-db-dir[48298]: See the MariaDB Knowledgebase at https://mariadb.com/kb
+Aug 05 18:31:13 AKL-1425 mariadb-prepare-db-dir[48298]: Please report any problems at https://mariadb.org/jira
+Aug 05 18:31:13 AKL-1425 mariadb-prepare-db-dir[48298]: The latest information about MariaDB is available at https://>
+Aug 05 18:31:13 AKL-1425 mariadb-prepare-db-dir[48298]: Consider joining MariaDB's strong and vibrant community:
+Aug 05 18:31:13 AKL-1425 mariadb-prepare-db-dir[48298]: https://mariadb.org/get-involved/
+Aug 05 18:31:13 AKL-1425 systemd[1]: Started MariaDB 10.5 database server.
+
+[root@AKL-1425 ~]# sudo dnf install nginx certbot python3-certbot-nginx
+Last metadata expiration check: 0:01:48 ago on Mon 05 Aug 2024 06:29:39 PM NZST.
+Dependencies resolved.
+======================================================================================================================
+ Package                              Architecture     Version                              Repository           Size
+======================================================================================================================
+Installing:
+ certbot                              noarch           2.11.0-1.el9                         epel                 49 k
+ nginx                                x86_64           1:1.20.1-14.el9_2.1.alma.1           appstream            36 k
+ python3-certbot-nginx                noarch           2.11.0-1.el9                         epel                157 k
+Installing dependencies:
+ almalinux-logos-httpd                noarch           90.5.1-1.1.el9                       appstream            18 k
+ fontawesome-fonts                    noarch           1:4.7.0-13.el9                       appstream           204 k
+ nginx-core                           x86_64           1:1.20.1-14.el9_2.1.alma.1           appstream           565 k
+ nginx-filesystem                     noarch           1:1.20.1-14.el9_2.1.alma.1           appstream           8.4 k
+ python3-acme                         noarch           2.11.0-1.el9                         epel                159 k
+ python3-certbot                      noarch           2.11.0-1.el9                         epel                685 k
+ python3-configargparse               noarch           1.7-1.el9                            epel                 45 k
+ python3-configobj                    noarch           5.0.6-25.el9                         appstream            62 k
+ python3-importlib-metadata           noarch           4.12.0-2.el9                         epel                 43 k
+ python3-josepy                       noarch           1.13.0-1.el9                         epel                 60 k
+ python3-parsedatetime                noarch           2.6-5.el9                            epel                 79 k
+ python3-pyOpenSSL                    noarch           21.0.0-1.el9                         epel                 90 k
+ python3-pyparsing                    noarch           2.4.7-9.el9                          baseos              149 k
+ python3-pyrfc3339                    noarch           1.1-11.el9                           epel                 18 k
+ python3-pytz                         noarch           2021.1-5.el9                         appstream            47 k
+ python3-zipp                         noarch           0.5.1-1.el9                          epel                 14 k
+Installing weak dependencies:
+ python-josepy-doc                    noarch           1.13.0-1.el9                         epel                 19 k
+
+Transaction Summary
+======================================================================================================================
+Install  20 Packages
+
+Total download size: 2.4 M
+Installed size: 9.2 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/20): almalinux-logos-httpd-90.5.1-1.1.el9.noarch.rpm                               146 kB/s |  18 kB     00:00    
+(2/20): nginx-1.20.1-14.el9_2.1.alma.1.x86_64.rpm                                     233 kB/s |  36 kB     00:00    
+(3/20): fontawesome-fonts-4.7.0-13.el9.noarch.rpm                                     1.1 MB/s | 204 kB     00:00    
+(4/20): nginx-filesystem-1.20.1-14.el9_2.1.alma.1.noarch.rpm                          182 kB/s | 8.4 kB     00:00    
+(5/20): nginx-core-1.20.1-14.el9_2.1.alma.1.x86_64.rpm                                3.9 MB/s | 565 kB     00:00    
+(6/20): python3-configobj-5.0.6-25.el9.noarch.rpm                                     719 kB/s |  62 kB     00:00    
+(7/20): python3-pytz-2021.1-5.el9.noarch.rpm                                          420 kB/s |  47 kB     00:00    
+(8/20): certbot-2.11.0-1.el9.noarch.rpm                                               632 kB/s |  49 kB     00:00    
+(9/20): python3-pyparsing-2.4.7-9.el9.noarch.rpm                                      1.5 MB/s | 149 kB     00:00    
+(10/20): python-josepy-doc-1.13.0-1.el9.noarch.rpm                                    282 kB/s |  19 kB     00:00    
+(11/20): python3-certbot-2.11.0-1.el9.noarch.rpm                                      9.6 MB/s | 685 kB     00:00    
+(12/20): python3-acme-2.11.0-1.el9.noarch.rpm                                         1.6 MB/s | 159 kB     00:00    
+(13/20): python3-configargparse-1.7-1.el9.noarch.rpm                                  600 kB/s |  45 kB     00:00    
+(14/20): python3-importlib-metadata-4.12.0-2.el9.noarch.rpm                           303 kB/s |  43 kB     00:00    
+(15/20): python3-certbot-nginx-2.11.0-1.el9.noarch.rpm                                752 kB/s | 157 kB     00:00    
+(16/20): python3-parsedatetime-2.6-5.el9.noarch.rpm                                   1.4 MB/s |  79 kB     00:00    
+(17/20): python3-pyOpenSSL-21.0.0-1.el9.noarch.rpm                                    946 kB/s |  90 kB     00:00    
+(18/20): python3-pyrfc3339-1.1-11.el9.noarch.rpm                                      329 kB/s |  18 kB     00:00    
+(19/20): python3-josepy-1.13.0-1.el9.noarch.rpm                                       288 kB/s |  60 kB     00:00    
+(20/20): python3-zipp-0.5.1-1.el9.noarch.rpm                                          259 kB/s |  14 kB     00:00    
+----------------------------------------------------------------------------------------------------------------------
+Total                                                                                 767 kB/s | 2.4 MB     00:03     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                              1/1 
+  Installing       : python3-pyOpenSSL-21.0.0-1.el9.noarch                                                       1/20 
+  Installing       : python3-pytz-2021.1-5.el9.noarch                                                            2/20 
+  Installing       : python3-pyrfc3339-1.1-11.el9.noarch                                                         3/20 
+  Running scriptlet: nginx-filesystem-1:1.20.1-14.el9_2.1.alma.1.noarch                                          4/20 
+  Installing       : nginx-filesystem-1:1.20.1-14.el9_2.1.alma.1.noarch                                          4/20 
+  Installing       : nginx-core-1:1.20.1-14.el9_2.1.alma.1.x86_64                                                5/20 
+  Installing       : python3-zipp-0.5.1-1.el9.noarch                                                             6/20 
+  Installing       : python3-importlib-metadata-4.12.0-2.el9.noarch                                              7/20 
+  Installing       : python3-parsedatetime-2.6-5.el9.noarch                                                      8/20 
+  Installing       : python3-configargparse-1.7-1.el9.noarch                                                     9/20 
+  Installing       : python-josepy-doc-1.13.0-1.el9.noarch                                                      10/20 
+  Installing       : python3-josepy-1.13.0-1.el9.noarch                                                         11/20 
+  Installing       : python3-acme-2.11.0-1.el9.noarch                                                           12/20 
+  Installing       : python3-pyparsing-2.4.7-9.el9.noarch                                                       13/20 
+  Installing       : python3-configobj-5.0.6-25.el9.noarch                                                      14/20 
+  Installing       : python3-certbot-2.11.0-1.el9.noarch                                                        15/20 
+  Installing       : fontawesome-fonts-1:4.7.0-13.el9.noarch                                                    16/20 
+  Installing       : certbot-2.11.0-1.el9.noarch                                                                17/20 
+  Running scriptlet: certbot-2.11.0-1.el9.noarch                                                                17/20 
+Created symlink /etc/systemd/system/timers.target.wants/certbot-renew.timer → /usr/lib/systemd/system/certbot-renew.timer.
+
+Certbot auto renewal timer is not started by default.
+Run 'systemctl start certbot-renew.timer' to enable automatic renewals.
