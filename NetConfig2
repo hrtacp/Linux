@@ -1,0 +1,485 @@
+[root@AKL-1425 ~]# nmcli connection show
+
+NAME             UUID                                  TYPE      DEVICE
+
+enp2s0f1         7bcfd8cf-2660-3c3f-93a6-e9bac6fb3ca3  ethernet  enp2s0f1
+
+br0              8159ebf7-8d96-4d47-b6aa-e71fac2eccdb  bridge    br0
+
+lo               2631caab-caf0-4041-967a-c99a8076e111  loopback  lo
+
+virbr0           fc72b009-5dd8-4ca1-818f-85115fcc3258  bridge    virbr0
+
+Bridge br0       d2d68553-f97e-7549-7a26-b34a26f29318  bridge    --
+
+enp2s0f0         54a0b31c-e26b-4683-a960-a2df2b1594b5  ethernet  --
+
+enp2s0f1         94806589-9dae-401a-a475-cbde2a674873  ethernet  --
+
+System enp2s0f1  0ff8880e-97c8-95d5-45d4-064bf1f84ea2  ethernet  --
+
+[root@AKL-1425 ~]# sudo nmcli connection delete 94806589-9dae-401a-a475-cbde2a674873
+
+sudo nmcli connection delete 0ff8880e-97c8-95d5-45d4-064bf1f84ea2
+
+sudo nmcli connection delete d2d68553-f97e-7549-7a26-b34a26f29318
+
+Connection 'enp2s0f1' (94806589-9dae-401a-a475-cbde2a674873) successfully deleted.
+
+Connection 'System enp2s0f1' (0ff8880e-97c8-95d5-45d4-064bf1f84ea2) successfully deleted.
+
+Connection 'Bridge br0' (d2d68553-f97e-7549-7a26-b34a26f29318) successfully deleted.
+
+[root@AKL-1425 ~]# nmcli connection show
+
+NAME      UUID                                  TYPE      DEVICE
+
+enp2s0f1  7bcfd8cf-2660-3c3f-93a6-e9bac6fb3ca3  ethernet  enp2s0f1
+
+br0       8159ebf7-8d96-4d47-b6aa-e71fac2eccdb  bridge    br0
+
+lo        2631caab-caf0-4041-967a-c99a8076e111  loopback  lo
+
+virbr0    fc72b009-5dd8-4ca1-818f-85115fcc3258  bridge    virbr0
+
+enp2s0f0  54a0b31c-e26b-4683-a960-a2df2b1594b5  ethernet  --
+
+[root@AKL-1425 ~]# sudo nmcli connection add type ethernet con-name enp2s0f1 ifname enp2s0f1 master br0
+
+Warning: There is another connection with the name 'enp2s0f1'. Reference the connection by its uuid 'a4280101-79ac-4ade-91a9-6d036c1cb485'
+
+Connection 'enp2s0f1' (a4280101-79ac-4ade-91a9-6d036c1cb485) successfully added.
+
+[root@AKL-1425 ~]# sudo nmcli connection modify enp2s0f1 connection.autoconnect no
+
+Warning: There is another connection with the name 'enp2s0f1'. Reference the connection by its uuid '7bcfd8cf-2660-3c3f-93a6-e9bac6fb3ca3'
+
+[root@AKL-1425 ~]# nmcli connection show
+
+NAME      UUID                                  TYPE      DEVICE
+
+enp2s0f1  7bcfd8cf-2660-3c3f-93a6-e9bac6fb3ca3  ethernet  enp2s0f1
+
+br0       8159ebf7-8d96-4d47-b6aa-e71fac2eccdb  bridge    br0
+
+lo        2631caab-caf0-4041-967a-c99a8076e111  loopback  lo
+
+virbr0    fc72b009-5dd8-4ca1-818f-85115fcc3258  bridge    virbr0
+
+enp2s0f0  54a0b31c-e26b-4683-a960-a2df2b1594b5  ethernet  --
+
+enp2s0f1  a4280101-79ac-4ade-91a9-6d036c1cb485  ethernet  --
+
+[root@AKL-1425 ~]# sudo nmcli connection delete a4280101-79ac-4ade-91a9-6d036c1cb485
+
+Connection 'enp2s0f1' (a4280101-79ac-4ade-91a9-6d036c1cb485) successfully deleted.
+
+[root@AKL-1425 ~]# nmcli connection show
+
+NAME      UUID                                  TYPE      DEVICE
+
+enp2s0f1  7bcfd8cf-2660-3c3f-93a6-e9bac6fb3ca3  ethernet  enp2s0f1
+
+br0       8159ebf7-8d96-4d47-b6aa-e71fac2eccdb  bridge    br0
+
+lo        2631caab-caf0-4041-967a-c99a8076e111  loopback  lo
+
+virbr0    fc72b009-5dd8-4ca1-818f-85115fcc3258  bridge    virbr0
+
+enp2s0f0  54a0b31c-e26b-4683-a960-a2df2b1594b5  ethernet  --
+
+[root@AKL-1425 ~]# sudo nmcli connection add type ethernet con-name enp2s0f1 ifname enp2s0f1 master br0
+
+Warning: There is another connection with the name 'enp2s0f1'. Reference the connection by its uuid '83e8b195-f61f-4c7a-a54f-321ef065864b'
+
+Connection 'enp2s0f1' (83e8b195-f61f-4c7a-a54f-321ef065864b) successfully added.
+
+[root@AKL-1425 ~]# sudo nmcli connection delete 83e8b195-f61f-4c7a-a54f-321ef065864b
+
+Connection 'enp2s0f1' (83e8b195-f61f-4c7a-a54f-321ef065864b) successfully deleted.
+
+[root@AKL-1425 ~]# sudo nmcli connection add type ethernet con-name enp2s0f1 ifname enp2s0f1 master br0
+
+Warning: There is another connection with the name 'enp2s0f1'. Reference the connection by its uuid '4dd7933f-bc40-4b79-a9e3-d060f97127e1'
+
+Connection 'enp2s0f1' (4dd7933f-bc40-4b79-a9e3-d060f97127e1) successfully added.
+
+[root@AKL-1425 ~]# sudo nmcli connection delete 4dd7933f-bc40-4b79-a9e3-d060f97127e1
+
+Connection 'enp2s0f1' (4dd7933f-bc40-4b79-a9e3-d060f97127e1) successfully deleted.
+
+[root@AKL-1425 ~]# nmcli connection show
+
+NAME      UUID                                  TYPE      DEVICE
+
+enp2s0f1  7bcfd8cf-2660-3c3f-93a6-e9bac6fb3ca3  ethernet  enp2s0f1
+
+br0       8159ebf7-8d96-4d47-b6aa-e71fac2eccdb  bridge    br0
+
+lo        2631caab-caf0-4041-967a-c99a8076e111  loopback  lo
+
+virbr0    fc72b009-5dd8-4ca1-818f-85115fcc3258  bridge    virbr0
+
+enp2s0f0  54a0b31c-e26b-4683-a960-a2df2b1594b5  ethernet  --
+
+[root@AKL-1425 ~]# nmcli connection show enp2s0f1
+
+connection.id:                          enp2s0f1
+
+connection.uuid:                        7bcfd8cf-2660-3c3f-93a6-e9bac6fb3ca3
+
+connection.stable-id:                   --
+
+connection.type:                        802-3-ethernet
+
+connection.interface-name:              enp2s0f1
+
+connection.autoconnect:                 no
+
+connection.autoconnect-priority:        -999
+
+connection.autoconnect-retries:         -1 (default)
+
+connection.multi-connect:               0 (default)
+
+connection.auth-retries:                -1
+
+connection.timestamp:                   1723188658
+
+connection.permissions:                 --
+
+connection.zone:                        --
+
+connection.controller:                  --
+
+connection.master:                      --
+
+connection.slave-type:                  --
+
+connection.port-type:                   --
+
+connection.autoconnect-slaves:          -1 (default)
+
+connection.autoconnect-ports:           -1 (default)
+
+connection.secondaries:                 --
+
+connection.gateway-ping-timeout:        0
+
+connection.metered:                     unknown
+
+connection.lldp:                        default
+
+connection.mdns:                        -1 (default)
+
+connection.llmnr:                       -1 (default)
+
+connection.dns-over-tls:                -1 (default)
+
+connection.mptcp-flags:                 0x0 (default)
+
+connection.wait-device-timeout:         -1
+
+connection.wait-activation-delay:       -1
+
+802-3-ethernet.port:                    --
+
+802-3-ethernet.speed:                   0
+
+802-3-ethernet.duplex:                  --
+
+802-3-ethernet.auto-negotiate:          no
+
+802-3-ethernet.mac-address:             --
+
+802-3-ethernet.cloned-mac-address:      --
+
+802-3-ethernet.generate-mac-address-mask:--
+
+802-3-ethernet.mac-address-blacklist:   --
+
+802-3-ethernet.mtu:                     auto
+
+802-3-ethernet.s390-subchannels:        --
+
+802-3-ethernet.s390-nettype:            --
+
+802-3-ethernet.s390-options:            --
+
+802-3-ethernet.wake-on-lan:             default
+
+802-3-ethernet.wake-on-lan-password:    --
+
+802-3-ethernet.accept-all-mac-addresses:-1 (default)
+
+ipv4.method:                            manual
+
+ipv4.dns:                               8.8.8.8,8.8.4.4
+
+ipv4.dns-search:                        --
+
+ipv4.dns-options:                       --
+
+ipv4.dns-priority:                      0
+
+ipv4.addresses:                         103.108.94.226/29
+
+ipv4.gateway:                           103.108.94.225
+
+ipv4.routes:                            --
+
+ipv4.route-metric:                      -1
+
+ipv4.route-table:                       0 (unspec)
+
+[root@AKL-1425 ~]# sudo nmcli connection add type ethernet con-name enp2s0f1 ifname enp2s0f1 master br0
+
+Warning: There is another connection with the name 'enp2s0f1'. Reference the connection by its uuid 'f732b898-4deb-4498-a2ef-341244f26ee0'
+
+Connection 'enp2s0f1' (f732b898-4deb-4498-a2ef-341244f26ee0) successfully added.
+
+[root@AKL-1425 ~]# nmcli connection show br0
+
+connection.id:                          br0
+
+connection.uuid:                        8159ebf7-8d96-4d47-b6aa-e71fac2eccdb
+
+connection.stable-id:                   --
+
+connection.type:                        bridge
+
+connection.interface-name:              br0
+
+connection.autoconnect:                 yes
+
+connection.autoconnect-priority:        0
+
+connection.autoconnect-retries:         -1 (default)
+
+connection.multi-connect:               0 (default)
+
+connection.auth-retries:                -1
+
+connection.timestamp:                   1723188654
+
+connection.permissions:                 --
+
+connection.zone:                        --
+
+connection.controller:                  --
+
+connection.master:                      --
+
+connection.slave-type:                  --
+
+connection.port-type:                   --
+
+connection.autoconnect-slaves:          -1 (default)
+
+connection.autoconnect-ports:           -1 (default)
+
+connection.secondaries:                 --
+
+connection.gateway-ping-timeout:        0
+
+connection.metered:                     unknown
+
+connection.lldp:                        default
+
+connection.mdns:                        -1 (default)
+
+connection.llmnr:                       -1 (default)
+
+connection.dns-over-tls:                -1 (default)
+
+connection.mptcp-flags:                 0x0 (default)
+
+connection.wait-device-timeout:         -1
+
+connection.wait-activation-delay:       -1
+
+802-3-ethernet.port:                    --
+
+802-3-ethernet.speed:                   0
+
+802-3-ethernet.duplex:                  --
+
+802-3-ethernet.auto-negotiate:          no
+
+802-3-ethernet.mac-address:             --
+
+802-3-ethernet.cloned-mac-address:      --
+
+802-3-ethernet.generate-mac-address-mask:--
+
+802-3-ethernet.mac-address-blacklist:   --
+
+802-3-ethernet.mtu:                     auto
+
+802-3-ethernet.s390-subchannels:        --
+
+802-3-ethernet.s390-nettype:            --
+
+802-3-ethernet.s390-options:            --
+
+802-3-ethernet.wake-on-lan:             default
+
+802-3-ethernet.wake-on-lan-password:    --
+
+802-3-ethernet.accept-all-mac-addresses:-1 (default)
+
+ipv4.method:                            manual
+
+ipv4.dns:                               8.8.8.8,8.8.4.4
+
+ipv4.dns-search:                        --
+
+ipv4.dns-options:                       --
+
+ipv4.dns-priority:                      0
+
+ipv4.addresses:                         103.108.94.226/29
+
+ipv4.gateway:                           103.108.94.225
+
+ipv4.routes:                            --
+
+ipv4.route-metric:                      -1
+
+ipv4.route-table:                       0 (unspec)
+
+[root@AKL-1425 ~]# sudo nmcli connection delete f732b898-4deb-4498-a2ef-341244f26ee0
+
+Connection 'enp2s0f1' (f732b898-4deb-4498-a2ef-341244f26ee0) successfully deleted.
+
+[root@AKL-1425 ~]# nmcli connection show enp2s0f1
+
+connection.id:                          enp2s0f1
+
+connection.uuid:                        7bcfd8cf-2660-3c3f-93a6-e9bac6fb3ca3
+
+connection.stable-id:                   --
+
+connection.type:                        802-3-ethernet
+
+connection.interface-name:              enp2s0f1
+
+connection.autoconnect:                 no
+
+connection.autoconnect-priority:        -999
+
+connection.autoconnect-retries:         -1 (default)
+
+connection.multi-connect:               0 (default)
+
+connection.auth-retries:                -1
+
+connection.timestamp:                   1723188658
+
+connection.permissions:                 --
+
+connection.zone:                        --
+
+connection.controller:                  --
+
+connection.master:                      --
+
+connection.slave-type:                  --
+
+connection.port-type:                   --
+
+connection.autoconnect-slaves:          -1 (default)
+
+connection.autoconnect-ports:           -1 (default)
+
+connection.secondaries:                 --
+
+connection.gateway-ping-timeout:        0
+
+connection.metered:                     unknown
+
+connection.lldp:                        default
+
+connection.mdns:                        -1 (default)
+
+connection.llmnr:                       -1 (default)
+
+connection.dns-over-tls:                -1 (default)
+
+connection.mptcp-flags:                 0x0 (default)
+
+connection.wait-device-timeout:         -1
+
+connection.wait-activation-delay:       -1
+
+802-3-ethernet.port:                    --
+
+802-3-ethernet.speed:                   0
+
+802-3-ethernet.duplex:                  --
+
+802-3-ethernet.auto-negotiate:          no
+
+802-3-ethernet.mac-address:             --
+
+802-3-ethernet.cloned-mac-address:      --
+
+802-3-ethernet.generate-mac-address-mask:--
+
+802-3-ethernet.mac-address-blacklist:   --
+
+802-3-ethernet.mtu:                     auto
+
+802-3-ethernet.s390-subchannels:        --
+
+802-3-ethernet.s390-nettype:            --
+
+802-3-ethernet.s390-options:            --
+
+802-3-ethernet.wake-on-lan:             default
+
+802-3-ethernet.wake-on-lan-password:    --
+
+802-3-ethernet.accept-all-mac-addresses:-1 (default)
+
+ipv4.method:                            manual
+
+ipv4.dns:                               8.8.8.8,8.8.4.4
+
+ipv4.dns-search:                        --
+
+ipv4.dns-options:                       --
+
+ipv4.dns-priority:                      0
+
+ipv4.addresses:                         103.108.94.226/29
+
+ipv4.gateway:                           103.108.94.225
+
+ipv4.routes:                            --
+
+ipv4.route-metric:                      -1
+
+ipv4.route-table:                       0 (unspec)
+
+ipv4.routing-rules:                     --
+
+[root@AKL-1425 ~]# sudo nmcli connection add type ethernet con-name enp2s0f1 ifname enp2s0f1 master br0
+
+Warning: There is another connection with the name 'enp2s0f1'. Reference the connection by its uuid '292975f9-74c2-4835-8293-6eafd1c3b8d8'
+
+Connection 'enp2s0f1' (292975f9-74c2-4835-8293-6eafd1c3b8d8) successfully added.
+
+[root@AKL-1425 ~]# reboot
+
+[root@AKL-1425 ~]# Connection to 103.108.94.226 closed by remote host.
+
+Connection to 103.108.94.226 closed.
+
+harshutammina@HarshavdhansAir ~ %
+
+harshutammina@HarshavdhansAir ~ % harshutammina@HarshavdhansAir ~ %
+
+zsh: command not found: harshutammina@HarshavdhansAir
+
+harshutammina@HarshavdhansAir ~ %
