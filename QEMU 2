@@ -1,0 +1,300 @@
+[root@AKL-1425 ~]# sudo dnf install qemu-kvm libvirt libvirt-client virt-top virt-install virt-manager virt-viewer libguestfs-tools
+Extra Packages for Enterprise Linux 9 openh264 (From Cisco) - x86_64                  1.0 kB/s | 2.5 kB     00:02    
+Dependencies resolved.
+======================================================================================================================
+ Package                                    Arch       Version                                    Repository     Size
+======================================================================================================================
+Installing:
+ libvirt                                    x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      25 k
+ libvirt-client                             x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     435 k
+ qemu-kvm                                   x86_64     17:8.2.0-11.el9_4.4                        appstream      68 k
+ virt-install                               noarch     4.1.0-5.el9                                appstream      41 k
+ virt-manager                               noarch     4.1.0-5.el9                                appstream     527 k
+ virt-top                                   x86_64     1.1.1-9.el9                                appstream     709 k
+ virt-viewer                                x86_64     11.0-1.el9                                 appstream     283 k
+ virt-win-reg                               noarch     1.51.6-2.el9                               appstream      30 k
+Installing dependencies:
+ augeas-libs                                x86_64     1.13.0-5.el9                               appstream     405 k
+ boost-iostreams                            x86_64     1.75.0-8.el9                               appstream      38 k
+ boost-system                               x86_64     1.75.0-8.el9                               appstream      13 k
+ boost-thread                               x86_64     1.75.0-8.el9                               appstream      55 k
+ capstone                                   x86_64     4.0.2-10.el9                               appstream     766 k
+ cyrus-sasl                                 x86_64     2.1.27-21.el9                              baseos         71 k
+ daxctl-libs                                x86_64     71.1-8.el9                                 baseos         41 k
+ dhcp-client                                x86_64     12:4.4.2-19.b1.el9                         baseos        788 k
+ dhcp-common                                noarch     12:4.4.2-19.b1.el9                         baseos        128 k
+ edk2-ovmf                                  noarch     20231122-6.el9_4.2                         appstream     6.2 M
+ gnutls-dane                                x86_64     3.8.3-4.el9_4                              appstream      21 k
+ gnutls-utils                               x86_64     3.8.3-4.el9_4                              appstream     287 k
+ gssproxy                                   x86_64     0.8.4-6.el9                                baseos        108 k
+ gtk-vnc2                                   x86_64     1.3.0-2.el9                                appstream      40 k
+ gvnc                                       x86_64     1.3.0-2.el9                                appstream      93 k
+ hexedit                                    x86_64     1.6-1.el9                                  appstream      42 k
+ hivex-libs                                 x86_64     1.3.21-3.el9                               appstream      44 k
+ ipcalc                                     x86_64     1.0.0-5.el9                                baseos         41 k
+ ipxe-roms-qemu                             noarch     20200823-9.git4bd064de.el9_0               appstream     671 k
+ keyutils                                   x86_64     1.6.3-1.el9                                baseos         71 k
+ libblkio                                   x86_64     1.3.0-1.el9                                appstream     556 k
+ libburn                                    x86_64     1.5.4-4.el9                                appstream     171 k
+ libev                                      x86_64     4.33-5.el9                                 baseos         52 k
+ libfdt                                     x86_64     1.6.0-7.el9                                appstream      33 k
+ libguestfs                                 x86_64     1:1.50.1-7.el9.alma.1                      appstream     1.1 M
+ libguestfs-appliance                       x86_64     1:1.50.1-7.el9.alma.1                      appstream     2.2 M
+ libisoburn                                 x86_64     1.5.4-4.el9                                appstream     414 k
+ libisofs                                   x86_64     1.5.4-4.el9                                appstream     221 k
+ libnbd                                     x86_64     1.18.1-3.el9                               appstream     164 k
+ libnfsidmap                                x86_64     1:2.5.4-25.el9                             baseos         60 k
+ libpmem                                    x86_64     1.12.1-1.el9                               appstream     111 k
+ librados2                                  x86_64     2:16.2.4-5.el9                             appstream     3.4 M
+ librbd1                                    x86_64     2:16.2.4-5.el9                             appstream     3.0 M
+ librdmacm                                  x86_64     48.0-1.el9                                 baseos         70 k
+ libtpms                                    x86_64     0.9.1-3.20211126git1ff6fe1f43.el9_2        appstream     183 k
+ libverto-libev                             x86_64     0.3.2-3.el9                                baseos         13 k
+ libvirt-client-qemu                        x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      46 k
+ libvirt-daemon                             x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     212 k
+ libvirt-daemon-common                      x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     133 k
+ libvirt-daemon-config-network              x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      28 k
+ libvirt-daemon-config-nwfilter             x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      33 k
+ libvirt-daemon-driver-interface            x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     218 k
+ libvirt-daemon-driver-network              x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     257 k
+ libvirt-daemon-driver-nodedev              x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     239 k
+ libvirt-daemon-driver-nwfilter             x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     254 k
+ libvirt-daemon-driver-qemu                 x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     970 k
+ libvirt-daemon-driver-secret               x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     215 k
+ libvirt-daemon-driver-storage              x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      25 k
+ libvirt-daemon-driver-storage-core         x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     273 k
+ libvirt-daemon-driver-storage-disk         x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      36 k
+ libvirt-daemon-driver-storage-iscsi        x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      33 k
+ libvirt-daemon-driver-storage-logical      x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      37 k
+ libvirt-daemon-driver-storage-mpath        x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      31 k
+ libvirt-daemon-driver-storage-rbd          x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      42 k
+ libvirt-daemon-driver-storage-scsi         x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      33 k
+ libvirt-daemon-lock                        x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      63 k
+ libvirt-daemon-log                         x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      67 k
+ libvirt-daemon-plugin-lockd                x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      37 k
+ libvirt-daemon-proxy                       x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     210 k
+ libvirt-glib                               x86_64     4.0.0-3.el9                                appstream      43 k
+ libvirt-libs                               x86_64     10.0.0-6.6.el9_4.alma.1                    appstream     4.9 M
+ lzop                                       x86_64     1.04-8.el9                                 baseos         55 k
+ mdevctl                                    x86_64     1.1.0-4.el9                                appstream     758 k
+ mtools                                     x86_64     4.0.26-4.el9_0                             baseos        209 k
+ nbdkit-basic-filters                       x86_64     1.36.2-1.el9                               appstream     308 k
+ nbdkit-basic-plugins                       x86_64     1.36.2-1.el9                               appstream     209 k
+ nbdkit-server                              x86_64     1.36.2-1.el9                               appstream     127 k
+ ndctl-libs                                 x86_64     71.1-8.el9                                 baseos         87 k
+ nfs-utils                                  x86_64     1:2.5.4-25.el9                             baseos        429 k
+ numad                                      x86_64     0.5-37.20150602git.el9                     baseos         36 k
+ passt-selinux                              noarch     0^20231204.gb86afe3-1.el9                  appstream      30 k
+ perl-Class-Inspector                       noarch     1.36-7.el9                                 appstream      30 k
+ perl-Exporter-Tiny                         noarch     1.002002-6.el9                             appstream      51 k
+ perl-List-MoreUtils-XS                     x86_64     0.430-5.el9                                appstream      62 k
+ perl-Sys-Guestfs                           x86_64     1:1.50.1-7.el9.alma.1                      appstream     324 k
+ perl-hivex                                 x86_64     1.3.21-3.el9                               appstream      51 k
+ perl-libintl-perl                          x86_64     1.32-4.el9                                 appstream     795 k
+ python3-argcomplete                        noarch     1.12.0-5.el9                               appstream      61 k
+ python3-cffi                               x86_64     1.14.5-5.el9                               baseos        241 k
+ python3-cryptography                       x86_64     36.0.1-4.el9                               baseos        1.1 M
+ python3-libvirt                            x86_64     10.0.0-1.el9                               appstream     331 k
+ python3-ply                                noarch     3.11-14.el9                                baseos        103 k
+ python3-pycparser                          noarch     2.20-6.el9                                 baseos        124 k
+ qemu-img                                   x86_64     17:8.2.0-11.el9_4.4                        appstream     2.5 M
+ qemu-kvm-audio-pa                          x86_64     17:8.2.0-11.el9_4.4                        appstream      77 k
+ qemu-kvm-block-blkio                       x86_64     17:8.2.0-11.el9_4.4                        appstream      80 k
+ qemu-kvm-block-rbd                         x86_64     17:8.2.0-11.el9_4.4                        appstream      82 k
+ qemu-kvm-common                            x86_64     17:8.2.0-11.el9_4.4                        appstream     666 k
+ qemu-kvm-core                              x86_64     17:8.2.0-11.el9_4.4                        appstream     4.3 M
+ qemu-kvm-device-display-virtio-gpu         x86_64     17:8.2.0-11.el9_4.4                        appstream      88 k
+ qemu-kvm-device-display-virtio-gpu-pci     x86_64     17:8.2.0-11.el9_4.4                        appstream      72 k
+ qemu-kvm-device-display-virtio-vga         x86_64     17:8.2.0-11.el9_4.4                        appstream      73 k
+ qemu-kvm-device-usb-host                   x86_64     17:8.2.0-11.el9_4.4                        appstream      86 k
+ qemu-kvm-device-usb-redirect               x86_64     17:8.2.0-11.el9_4.4                        appstream      91 k
+ qemu-kvm-docs                              x86_64     17:8.2.0-11.el9_4.4                        appstream     1.2 M
+ qemu-kvm-tools                             x86_64     17:8.2.0-11.el9_4.4                        appstream     577 k
+ qemu-kvm-ui-egl-headless                   x86_64     17:8.2.0-11.el9_4.4                        appstream      73 k
+ qemu-kvm-ui-opengl                         x86_64     17:8.2.0-11.el9_4.4                        appstream      80 k
+ qemu-pr-helper                             x86_64     17:8.2.0-11.el9_4.4                        appstream     494 k
+ rpcbind                                    x86_64     1.2.6-7.el9                                baseos         56 k
+ scrub                                      x86_64     2.6.1-4.el9                                appstream      44 k
+ seabios-bin                                noarch     1.16.3-2.el9                               appstream     101 k
+ seavgabios-bin                             noarch     1.16.3-2.el9                               appstream      35 k
+ sssd-nfs-idmap                             x86_64     2.9.4-6.el9_4.1.alma.1                     baseos         40 k
+ supermin                                   x86_64     5.3.3-1.el9                                appstream     757 k
+ swtpm                                      x86_64     0.8.0-2.el9_4                              appstream      42 k
+ swtpm-libs                                 x86_64     0.8.0-2.el9_4                              appstream      48 k
+ swtpm-tools                                x86_64     0.8.0-2.el9_4                              appstream     116 k
+ syslinux                                   x86_64     6.04-0.20.el9                              baseos        560 k
+ syslinux-extlinux                          x86_64     6.04-0.20.el9                              baseos        130 k
+ syslinux-extlinux-nonlinux                 noarch     6.04-0.20.el9                              baseos        384 k
+ syslinux-nonlinux                          noarch     6.04-0.20.el9                              baseos        559 k
+ systemd-container                          x86_64     252-32.el9_4.6                             baseos        578 k
+ unbound-libs                               x86_64     1.16.2-3.el9_3.5                           appstream     548 k
+ usbredir                                   x86_64     0.13.0-2.el9                               appstream      50 k
+ virt-manager-common                        noarch     4.1.0-5.el9                                appstream     1.0 M
+ virtiofsd                                  x86_64     1.10.1-1.el9                               appstream     850 k
+ xorriso                                    x86_64     1.5.4-4.el9                                appstream     315 k
+ zstd                                       x86_64     1.5.1-2.el9                                baseos        546 k
+Installing weak dependencies:
+ geolite2-city                              noarch     20191217-6.el9                             appstream      23 M
+ geolite2-country                           noarch     20191217-6.el9                             appstream     1.6 M
+ libvirt-daemon-kvm                         x86_64     10.0.0-6.6.el9_4.alma.1                    appstream      25 k
+ nbdkit                                     x86_64     1.36.2-1.el9                               appstream     9.9 k
+ nbdkit-curl-plugin                         x86_64     1.36.2-1.el9                               appstream      41 k
+ nbdkit-ssh-plugin                          x86_64     1.36.2-1.el9                               appstream      30 k
+ passt                                      x86_64     0^20231204.gb86afe3-1.el9                  appstream     183 k
+ perl-File-ShareDir                         noarch     1.118-4.el9                                appstream      30 k
+ perl-I18N-Langinfo                         x86_64     0.19-481.el9                               appstream      21 k
+ perl-List-MoreUtils                        noarch     0.430-4.el9                                appstream      63 k
+ perl-Params-Util                           x86_64     1.102-5.el9                                appstream      33 k
+
+Transaction Summary
+======================================================================================================================
+Install  138 Packages
+
+Total download size: 79 M
+Installed size: 287 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/138): boost-iostreams-1.75.0-8.el9.x86_64.rpm                                      327 kB/s |  38 kB     00:00    
+(2/138): boost-system-1.75.0-8.el9.x86_64.rpm                                         103 kB/s |  13 kB     00:00    
+(3/138): augeas-libs-1.13.0-5.el9.x86_64.rpm                                          2.0 MB/s | 405 kB     00:00    
+(4/138): boost-thread-1.75.0-8.el9.x86_64.rpm                                         477 kB/s |  55 kB     00:00    
+(5/138): capstone-4.0.2-10.el9.x86_64.rpm                                             2.6 MB/s | 766 kB     00:00    
+(6/138): edk2-ovmf-20231122-6.el9_4.2.noarch.rpm                                       15 MB/s | 6.2 MB     00:00    
+(7/138): gnutls-dane-3.8.3-4.el9_4.x86_64.rpm                                         406 kB/s |  21 kB     00:00    
+(8/138): gnutls-utils-3.8.3-4.el9_4.x86_64.rpm                                        3.3 MB/s | 287 kB     00:00    
+(9/138): gtk-vnc2-1.3.0-2.el9.x86_64.rpm                                              819 kB/s |  40 kB     00:00    
+(10/138): gvnc-1.3.0-2.el9.x86_64.rpm                                                 1.5 MB/s |  93 kB     00:00    
+(11/138): hexedit-1.6-1.el9.x86_64.rpm                                                631 kB/s |  42 kB     00:00    
+(12/138): hivex-libs-1.3.21-3.el9.x86_64.rpm                                          1.3 MB/s |  44 kB     00:00    
+(13/138): ipxe-roms-qemu-20200823-9.git4bd064de.el9_0.noarch.rpm                      6.1 MB/s | 671 kB     00:00    
+(14/138): libblkio-1.3.0-1.el9.x86_64.rpm                                             8.0 MB/s | 556 kB     00:00    
+(15/138): geolite2-city-20191217-6.el9.noarch.rpm                                      22 MB/s |  23 MB     00:01    
+(16/138): libburn-1.5.4-4.el9.x86_64.rpm                                              1.4 MB/s | 171 kB     00:00    
+(17/138): geolite2-country-20191217-6.el9.noarch.rpm                                  1.8 MB/s | 1.6 MB     00:00    
+(18/138): libfdt-1.6.0-7.el9.x86_64.rpm                                               604 kB/s |  33 kB     00:00    
+(19/138): libguestfs-1.50.1-7.el9.alma.1.x86_64.rpm                                   6.0 MB/s | 1.1 MB     00:00    
+(20/138): libguestfs-appliance-1.50.1-7.el9.alma.1.x86_64.rpm                         9.5 MB/s | 2.2 MB     00:00    
+(21/138): libisofs-1.5.4-4.el9.x86_64.rpm                                             2.6 MB/s | 221 kB     00:00    
+(22/138): libpmem-1.12.1-1.el9.x86_64.rpm                                             2.8 MB/s | 111 kB     00:00    
+(23/138): libisoburn-1.5.4-4.el9.x86_64.rpm                                           1.5 MB/s | 414 kB     00:00    
+(24/138): libnbd-1.18.1-3.el9.x86_64.rpm                                              1.4 MB/s | 164 kB     00:00    
+(25/138): librados2-16.2.4-5.el9.x86_64.rpm                                            13 MB/s | 3.4 MB     00:00    
+(26/138): libvirt-10.0.0-6.6.el9_4.alma.1.x86_64.rpm                                  442 kB/s |  25 kB     00:00    
+(27/138): libtpms-0.9.1-3.20211126git1ff6fe1f43.el9_2.x86_64.rpm                      584 kB/s | 183 kB     00:00    
+(28/138): libvirt-client-10.0.0-6.6.el9_4.alma.1.x86_64.rpm                           4.5 MB/s | 435 kB     00:00    
+(29/138): libvirt-daemon-10.0.0-6.6.el9_4.alma.1.x86_64.rpm                           3.5 MB/s | 212 kB     00:00    
+(30/138): librbd1-16.2.4-5.el9.x86_64.rpm                                             6.2 MB/s | 3.0 MB     00:00    
+(31/138): libvirt-client-qemu-10.0.0-6.6.el9_4.alma.1.x86_64.rpm                      374 kB/s |  46 kB     00:00    
+(32/138): libvirt-daemon-config-network-10.0.0-6.6.el9_4.alma.1.x86_64.rpm            1.2 MB/s |  28 kB     00:00    
+(33/138): libvirt-daemon-common-10.0.0-6.6.el9_4.alma.1.x86_64.rpm                    1.8 MB/s | 133 kB     00:00    
+(34/138): libvirt-daemon-config-nwfilter-10.0.0-6.6.el9_4.alma.1.x86_64.rpm           452 kB/s |  33 kB     00:00    
+(35/138): libvirt-daemon-driver-network-10.0.0-6.6.el9_4.alma.1.x86_64.rpm            4.1 MB/s | 257 kB     00:00    
+(36/138): libvirt-daemon-driver-interface-10.0.0-6.6.el9_4.alma.1.x86_64.rpm          2.0 MB/s | 218 kB     00:00    
+(37/138): libvirt-daemon-driver-nodedev-10.0.0-6.6.el9_4.alma.1.x86_64.rpm            3.1 MB/s | 239 kB     00:00    
+(38/138): libvirt-daemon-driver-nwfilter-10.0.0-6.6.el9_4.alma.1.x86_64.rpm           3.2 MB/s | 254 kB     00:00    
+(39/138): libvirt-daemon-driver-secret-10.0.0-6.6.el9_4.alma.1.x86_64.rpm             3.5 MB/s | 215 kB     00:00    
+(40/138): libvirt-daemon-driver-storage-10.0.0-6.6.el9_4.alma.1.x86_64.rpm            1.1 MB/s |  25 kB     00:00    
+(41/138): libvirt-daemon-driver-storage-core-10.0.0-6.6.el9_4.alma.1.x86_64.rpm        10 MB/s | 273 kB     00:00    
+(42/138): libvirt-daemon-driver-qemu-10.0.0-6.6.el9_4.alma.1.x86_64.rpm               8.1 MB/s | 970 kB     00:00    
+(43/138): libvirt-daemon-driver-storage-iscsi-10.0.0-6.6.el9_4.alma.1.x86_64.rpm      1.5 MB/s |  33 kB     00:00    
+(44/138): libvirt-daemon-driver-storage-disk-10.0.0-6.6.el9_4.alma.1.x86_64.rpm       525 kB/s |  36 kB     00:00    
+(45/138): libvirt-daemon-driver-storage-logical-10.0.0-6.6.el9_4.alma.1.x86_64.rpm    910 kB/s |  37 kB     00:00    
+(46/138): libvirt-daemon-driver-storage-mpath-10.0.0-6.6.el9_4.alma.1.x86_64.rpm      820 kB/s |  31 kB     00:00    
+(47/138): libvirt-daemon-driver-storage-rbd-10.0.0-6.6.el9_4.alma.1.x86_64.rpm        2.0 MB/s |  42 kB     00:00    
+(48/138): libvirt-daemon-driver-storage-scsi-10.0.0-6.6.el9_4.alma.1.x86_64.rpm       1.5 MB/s |  33 kB     00:00    
+(49/138): libvirt-daemon-kvm-10.0.0-6.6.el9_4.alma.1.x86_64.rpm                       704 kB/s |  25 kB     00:00    
+(50/138): libvirt-daemon-lock-10.0.0-6.6.el9_4.alma.1.x86_64.rpm                      1.4 MB/s |  63 kB     00:00    
+(51/138): libvirt-daemon-plugin-lockd-10.0.0-6.6.el9_4.alma.1.x86_64.rpm              1.4 MB/s |  37 kB     00:00    
+(52/138): libvirt-daemon-log-10.0.0-6.6.el9_4.alma.1.x86_64.rpm                       1.2 MB/s |  67 kB     00:00    
+(53/138): libvirt-glib-4.0.0-3.el9.x86_64.rpm                                         1.7 MB/s |  43 kB     00:00    
+(54/138): libvirt-daemon-proxy-10.0.0-6.6.el9_4.alma.1.x86_64.rpm                     5.0 MB/s | 210 kB     00:00    
+(55/138): nbdkit-1.36.2-1.el9.x86_64.rpm                                              241 kB/s | 9.9 kB     00:00    
+(56/138): nbdkit-basic-filters-1.36.2-1.el9.x86_64.rpm                                3.7 MB/s | 308 kB     00:00    
+(57/138): nbdkit-basic-plugins-1.36.2-1.el9.x86_64.rpm                                4.6 MB/s | 209 kB     00:00    
+(58/138): libvirt-libs-10.0.0-6.6.el9_4.alma.1.x86_64.rpm                              19 MB/s | 4.9 MB     00:00    
+(59/138): nbdkit-curl-plugin-1.36.2-1.el9.x86_64.rpm                                  550 kB/s |  41 kB     00:00    
+(60/138): nbdkit-ssh-plugin-1.36.2-1.el9.x86_64.rpm                                   1.1 MB/s |  30 kB     00:00    
+(61/138): mdevctl-1.1.0-4.el9.x86_64.rpm                                              2.3 MB/s | 758 kB     00:00    
+(62/138): nbdkit-server-1.36.2-1.el9.x86_64.rpm                                       1.7 MB/s | 127 kB     00:00    
+(63/138): passt-0^20231204.gb86afe3-1.el9.x86_64.rpm                                  3.3 MB/s | 183 kB     00:00    
+(64/138): passt-selinux-0^20231204.gb86afe3-1.el9.noarch.rpm                          710 kB/s |  30 kB     00:00    
+(65/138): perl-Exporter-Tiny-1.002002-6.el9.noarch.rpm                                1.1 MB/s |  51 kB     00:00    
+(66/138): perl-Class-Inspector-1.36-7.el9.noarch.rpm                                  482 kB/s |  30 kB     00:00    
+(67/138): perl-File-ShareDir-1.118-4.el9.noarch.rpm                                   474 kB/s |  30 kB     00:00    
+(68/138): perl-I18N-Langinfo-0.19-481.el9.x86_64.rpm                                  285 kB/s |  21 kB     00:00    
+(69/138): perl-List-MoreUtils-0.430-4.el9.noarch.rpm                                  763 kB/s |  63 kB     00:00    
+(70/138): perl-List-MoreUtils-XS-0.430-5.el9.x86_64.rpm                               990 kB/s |  62 kB     00:00    
+(71/138): perl-Params-Util-1.102-5.el9.x86_64.rpm                                     809 kB/s |  33 kB     00:00    
+(72/138): perl-Sys-Guestfs-1.50.1-7.el9.alma.1.x86_64.rpm                             3.0 MB/s | 324 kB     00:00    
+(73/138): perl-hivex-1.3.21-3.el9.x86_64.rpm                                          472 kB/s |  51 kB     00:00    
+(74/138): perl-libintl-perl-1.32-4.el9.x86_64.rpm                                     6.7 MB/s | 795 kB     00:00    
+(75/138): python3-argcomplete-1.12.0-5.el9.noarch.rpm                                 861 kB/s |  61 kB     00:00    
+(76/138): python3-libvirt-10.0.0-1.el9.x86_64.rpm                                     1.3 MB/s | 331 kB     00:00    
+(77/138): qemu-kvm-8.2.0-11.el9_4.4.x86_64.rpm                                        318 kB/s |  68 kB     00:00    
+(78/138): qemu-img-8.2.0-11.el9_4.4.x86_64.rpm                                        7.7 MB/s | 2.5 MB     00:00    
+(79/138): qemu-kvm-audio-pa-8.2.0-11.el9_4.4.x86_64.rpm                               753 kB/s |  77 kB     00:00    
+(80/138): qemu-kvm-block-blkio-8.2.0-11.el9_4.4.x86_64.rpm                            943 kB/s |  80 kB     00:00    
+(81/138): qemu-kvm-block-rbd-8.2.0-11.el9_4.4.x86_64.rpm                              3.5 MB/s |  82 kB     00:00    
+(82/138): qemu-kvm-device-display-virtio-gpu-8.2.0-11.el9_4.4.x86_64.rpm              3.9 MB/s |  88 kB     00:00    
+(83/138): qemu-kvm-device-display-virtio-gpu-pci-8.2.0-11.el9_4.4.x86_64.rpm          3.1 MB/s |  72 kB     00:00    
+(84/138): qemu-kvm-common-8.2.0-11.el9_4.4.x86_64.rpm                                 6.8 MB/s | 666 kB     00:00    
+(85/138): qemu-kvm-device-display-virtio-vga-8.2.0-11.el9_4.4.x86_64.rpm              1.3 MB/s |  73 kB     00:00    
+(86/138): qemu-kvm-device-usb-redirect-8.2.0-11.el9_4.4.x86_64.rpm                    1.8 MB/s |  91 kB     00:00    
+(87/138): qemu-kvm-core-8.2.0-11.el9_4.4.x86_64.rpm                                    10 MB/s | 4.3 MB     00:00    
+(88/138): qemu-kvm-device-usb-host-8.2.0-11.el9_4.4.x86_64.rpm                        267 kB/s |  86 kB     00:00    
+(89/138): qemu-kvm-docs-8.2.0-11.el9_4.4.x86_64.rpm                                   4.5 MB/s | 1.2 MB     00:00    
+(90/138): qemu-kvm-ui-opengl-8.2.0-11.el9_4.4.x86_64.rpm                              1.2 MB/s |  80 kB     00:00    
+(91/138): qemu-kvm-ui-egl-headless-8.2.0-11.el9_4.4.x86_64.rpm                        513 kB/s |  73 kB     00:00    
+(92/138): qemu-kvm-tools-8.2.0-11.el9_4.4.x86_64.rpm                                  3.5 MB/s | 577 kB     00:00    
+(93/138): scrub-2.6.1-4.el9.x86_64.rpm                                                343 kB/s |  44 kB     00:00    
+(94/138): seabios-bin-1.16.3-2.el9.noarch.rpm                                         660 kB/s | 101 kB     00:00    
+(95/138): qemu-pr-helper-8.2.0-11.el9_4.4.x86_64.rpm                                  2.0 MB/s | 494 kB     00:00    
+(96/138): swtpm-0.8.0-2.el9_4.x86_64.rpm                                              526 kB/s |  42 kB     00:00    
+(97/138): seavgabios-bin-1.16.3-2.el9.noarch.rpm                                      222 kB/s |  35 kB     00:00    
+(98/138): swtpm-libs-0.8.0-2.el9_4.x86_64.rpm                                         670 kB/s |  48 kB     00:00    
+(99/138): supermin-5.3.3-1.el9.x86_64.rpm                                             3.6 MB/s | 757 kB     00:00    
+(100/138): swtpm-tools-0.8.0-2.el9_4.x86_64.rpm                                       818 kB/s | 116 kB     00:00    
+(101/138): usbredir-0.13.0-2.el9.x86_64.rpm                                           579 kB/s |  50 kB     00:00    
+(102/138): virt-install-4.1.0-5.el9.noarch.rpm                                        769 kB/s |  41 kB     00:00    
+(103/138): unbound-libs-1.16.2-3.el9_3.5.x86_64.rpm                                   3.1 MB/s | 548 kB     00:00    
+(104/138): virt-manager-4.1.0-5.el9.noarch.rpm                                        6.3 MB/s | 527 kB     00:00    
+(105/138): virt-manager-common-4.1.0-5.el9.noarch.rpm                                 4.6 MB/s | 1.0 MB     00:00    
+(106/138): virt-top-1.1.1-9.el9.x86_64.rpm                                            3.0 MB/s | 709 kB     00:00    
+(107/138): virt-viewer-11.0-1.el9.x86_64.rpm                                          1.1 MB/s | 283 kB     00:00    
+(108/138): virt-win-reg-1.51.6-2.el9.noarch.rpm                                       260 kB/s |  30 kB     00:00    
+(109/138): virtiofsd-1.10.1-1.el9.x86_64.rpm                                          5.3 MB/s | 850 kB     00:00    
+(110/138): xorriso-1.5.4-4.el9.x86_64.rpm                                             2.5 MB/s | 315 kB     00:00    
+(111/138): daxctl-libs-71.1-8.el9.x86_64.rpm                                          372 kB/s |  41 kB     00:00    
+(112/138): cyrus-sasl-2.1.27-21.el9.x86_64.rpm                                        303 kB/s |  71 kB     00:00    
+(113/138): dhcp-common-4.4.2-19.b1.el9.noarch.rpm                                     1.9 MB/s | 128 kB     00:00    
+(114/138): ipcalc-1.0.0-5.el9.x86_64.rpm                                              567 kB/s |  41 kB     00:00    
+(115/138): dhcp-client-4.4.2-19.b1.el9.x86_64.rpm                                     2.8 MB/s | 788 kB     00:00    
+(116/138): keyutils-1.6.3-1.el9.x86_64.rpm                                            1.3 MB/s |  71 kB     00:00    
+(117/138): gssproxy-0.8.4-6.el9.x86_64.rpm                                            667 kB/s | 108 kB     00:00    
+(118/138): libnfsidmap-2.5.4-25.el9.x86_64.rpm                                        1.3 MB/s |  60 kB     00:00    
+(119/138): libev-4.33-5.el9.x86_64.rpm                                                599 kB/s |  52 kB     00:00    
+(120/138): libverto-libev-0.3.2-3.el9.x86_64.rpm                                      363 kB/s |  13 kB     00:00    
+(121/138): librdmacm-48.0-1.el9.x86_64.rpm                                            998 kB/s |  70 kB     00:00    
+(122/138): lzop-1.04-8.el9.x86_64.rpm                                                 930 kB/s |  55 kB     00:00    
+(123/138): ndctl-libs-71.1-8.el9.x86_64.rpm                                           1.4 MB/s |  87 kB     00:00    
+(124/138): mtools-4.0.26-4.el9_0.x86_64.rpm                                           2.5 MB/s | 209 kB     00:00    
+(125/138): numad-0.5-37.20150602git.el9.x86_64.rpm                                    726 kB/s |  36 kB     00:00    
+(126/138): nfs-utils-2.5.4-25.el9.x86_64.rpm                                          4.1 MB/s | 429 kB     00:00    
+(127/138): python3-cffi-1.14.5-5.el9.x86_64.rpm                                       1.4 MB/s | 241 kB     00:00    
+(128/138): python3-cryptography-36.0.1-4.el9.x86_64.rpm                               7.9 MB/s | 1.1 MB     00:00    
+(129/138): python3-ply-3.11-14.el9.noarch.rpm                                         883 kB/s | 103 kB     00:00    
+(130/138): python3-pycparser-2.20-6.el9.noarch.rpm                                    2.4 MB/s | 124 kB     00:00    
+(131/138): rpcbind-1.2.6-7.el9.x86_64.rpm                                             1.2 MB/s |  56 kB     00:00    
+(132/138): sssd-nfs-idmap-2.9.4-6.el9_4.1.alma.1.x86_64.rpm                           804 kB/s |  40 kB     00:00    
+(133/138): syslinux-extlinux-6.04-0.20.el9.x86_64.rpm                                 2.5 MB/s | 130 kB     00:00    
+(134/138): syslinux-6.04-0.20.el9.x86_64.rpm                                          5.7 MB/s | 560 kB     00:00    
+(135/138): syslinux-extlinux-nonlinux-6.04-0.20.el9.noarch.rpm                        3.3 MB/s | 384 kB     00:00    
+(136/138): syslinux-nonlinux-6.04-0.20.el9.noarch.rpm                                 5.5 MB/s | 559 kB     00:00    
+(137/138): systemd-container-252-32.el9_4.6.x86_64.rpm                                4.1 MB/s | 578 kB     00:00    
+(138/138): zstd-1.5.1-2.el9.x86_64.rpm                                                4.3 MB/s | 546 kB     00:00    
+----------------------------------------------------------------------------------------------------------------------
+Total                                                                                  11 MB/s |  79 MB     00:07     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
