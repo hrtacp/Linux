@@ -1,0 +1,229 @@
+[root@AKL-1425 ~]# cd /root/owncast
+./owncast
+INFO[2024-08-07T20:41:04+10:00] Owncast v0.1.3-linux-64bit (6ae3167b61d8485d3f269bd422f0c1a1f072ea5c)
+INFO[2024-08-07T20:41:04+10:00] Web server is listening on port 8080.
+
+INFO[2024-08-07T20:41:04+10:00] Configure this server by visiting /admin.
+
+FATA[2024-08-07T20:41:04+10:00] failed to start/run the router listen tcp 0.0.0.0:8080: bind: address already in use
+[root@AKL-1425 owncast]# sudo lsof -i :8080
+COMMAND  PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java    1150 tomcat   46u  IPv6  23095      0t0  TCP *:webcache (LISTEN)
+[root@AKL-1425 owncast]# sudo kill 1150
+[root@AKL-1425 owncast]# sudo lsof -i :8080
+[root@AKL-1425 owncast]# ./owncast
+INFO[2024-08-07T20:42:06+10:00] Owncast v0.1.3-linux-64bit (6ae3167b61d8485d3f269bd422f0c1a1f072ea5c)
+INFO[2024-08-07T20:42:06+10:00] Web server is listening on port 8080.
+
+INFO[2024-08-07T20:42:06+10:00] Configure this server by visiting /admin.
+
+^C
+[root@AKL-1425 owncast]# sudo systemctl start owncast
+[root@AKL-1425 owncast]# sudo systemctl status owncast
+● owncast.service - Owncast Service
+Loaded: loaded (/etc/systemd/system/owncast.service; enabled; preset: disabled)
+Active: active (running) since Wed 2024-08-07 20:42:11 AEST; 6s ago
+Main PID: 18442 (owncast)
+Tasks: 12 (limit: 99220)
+Memory: 117.7M
+CPU: 2.548s
+CGroup: /system.slice/owncast.service
+└─18442 /root/owncast/owncast
+
+Aug 07 20:42:11 AKL-1425 systemd[1]: Started Owncast Service.
+Aug 07 20:42:12 AKL-1425 owncast[18442]: time="2024-08-07T20:42:12+10:00" level=info msg="Owncast v0.1.3-linux-64bit (6ae3167b61d8485d3f269bd422f0c1a1f072ea>
+Aug 07 20:42:12 AKL-1425 owncast[18442]: time="2024-08-07T20:42:12+10:00" level=info msg="Web server is listening on port 8080."
+Aug 07 20:42:12 AKL-1425 owncast[18442]: time="2024-08-07T20:42:12+10:00" level=info msg="Configure this server by visiting /admin."
+
+[root@AKL-1425 owncast]# nano  /var/log/auth.log
+[root@AKL-1425 owncast]# Y
+bash: Y: command not found...
+[root@AKL-1425 owncast]# history
++
+1  passwd
+2  vi /etc/ssh/sshd_config
+3  service sshd restart
+4  service ssh restart
+5  systemctl sshdrestart
+6  systemctl sshd restart
+7  systemctl restart ssh
+8  systemctl restart sshd
+9  exit
+10  sudo dnf groupinstall "Server with GUI" -y
+11  sudo dnf install epel-release -y
+12  sudo dnf install xrdp -y
+13  sudo systemctl enable xrdp --now
+14  sudo systemctl status xrdp
+15  sudo systemctl restart xrdp
+16  sudo firewall-cmd --new-zone=xrdp --permanent
+17  sudo firewall-cmd --zone=xrdp --add-port=3389/tcp --permanent
+18  ip a
+19  sudo firewall-cmd --zone=xrdp --add-source=103.108.94.226/29 --permanent
+20  sudo firewall-cmd --add-port=3389/tcp --permanent
+21  sudo firewall-cmd --reload
+22  ip a
+23  history
+24  sudo systemctl status xrdp
+25  systemctl restart xrdp
+26  sudo systemctl status xrdp
+27  vi /etc/xrdp/cert.pem
+28  vi /etc/xrdp/key.pem
+29  cat openssl.con
+30  vi /etc/xrdp/openssl.conf
+31  ip a
+32  hostnamectl
+33  cat /etc/X11/Xwrapper.config
+34  cat /etc/X11/Xwrapper.config
+35  sudo tail -f /var/log/xrdp.logs
+36  cat /var/log/xrdp.log
+37  iptables
+38  sudo ufw status
+39  history
+40  systemctl firewalld status
+41  systemctl firewall status
+42  sudo firewall-cmd --add-port=3389/tcp --permanent
+43  sudo firewall-cmd --reload
+44  sudo firewall-cmd --zone=xrdp --remove-source=103.108.94.226/29 --permanent
+45  sudo firewall-cmd --reload
+46  iptables -t nat -L
+47  iptables -S
+48  iptables -L -v -n | more
+49  iptables -t nat -L --line-numbers -n
+50  systemctl firewall status
+51  reboot
+52  history
+53  systemctl restart xrdp
+54  ip a
+55  cat /etc/xrdp/km-19360409.ini
+56  cat /etc/xrdp/sesman.ini
+57  cat /etc/xrdp/xrdp.ini
+58  history
+59  cat /var/log/xrdp.log
+60  cat /etc/xrdp/openssl.conf
+61  reboot
+62  vim /etc/xrdp/sesman.ini
+63  cat /etc/xrdp/sesman.ini
+64  vim /etc/xrdp/sesman.ini
+65  exit
+66  sudo nano /etc/tomcat/server.xml
+67  sudo systemctl restart tomcat
+68  sudo nano /etc/nginx/conf.d/guacamole.conf
+69  sudo nginx -t
+70  sudo nginx -t
+71  sudo nano /etc/nginx/conf.d/guacamole.conf
+72  sudo nginx -t
+73  sudo systemctl restart nginx
+74  sudo certbot --nginx --agree-tos --no-eff-email  --redirect --hsts --staple-ocsp --email alice@howtoforge.local -d [guacamole.technoharshu.com](http://guacamole.technoharshu.com/)
+75  sudo systemctl restart nginx
+76  sudo systemctl restart tomcat
+77  sudo systemctl status guacd
+78  egrep -c '(vmx|svm)' /proc/cpuinfo
+79  sudo dnf update
+80  sudo dnf install qemu-kvm libvirt libvirt-client virt-top virt-install virt-manager virt-viewer libguestfs-tools
+81  sudo systemctl start libvirtd
+82  sudo systemctl enable libvirtd
+83  sudo systemctl status libvirtd
+84  sudo dnf install wget nano epel-release dnf-utils
+85  sudo dnf config-manager --set-enabled crb
+86  sudo dnf install --nogpgcheck [https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm-E%rhel).noarch.rpm](https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm-E%25rhel).noarch.rpm)
+87  [https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm-E%rhel).noarch.rpm](https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm-E%25rhel).noarch.rpm)
+88  sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
+89  sudo dnf install cairo-devel libjpeg-turbo-devel libjpeg-devel libpng-devel libtool libuuid-devel uuid-devel make cmake ffmpeg-devel freerdp-devel pango-devel libssh2-devel libtelnet-devel libvncserver-devel libwebsockets-devel pulseaudio-libs-devel openssl-devel compat-openssl11 libvorbis-devel libwebp-devel libgcrypt-devel
+90  sudo dnf install java-11-openjdk-devel tomcat
+91  java --version
+92  sudo systemctl start tomcat
+93  sudo systemctl enable tomcat
+94  sudo systemctl status tomcat
+95  sudo dnf install mariadb-server
+96  sudo systemctl start mariadb
+97  sudo systemctl enable mariadb
+98  sudo systemctl status mariadb
+99  sudo dnf install nginx certbot python3-certbot-nginx
+100  sudo systemctl start nginx
+101  sudo systemctl enable nginx
+102  sudo systemctl status nginx
+103  sudo firewall-cmd --add-service={http,https} --permanent
+104  sudo firewall-cmd --reload
+105  sudo firewall-cmd --list-all
+106  sudo mariadb-secure-installation
+107  sudo mariadb -u root -p
+108  cd /usr/src
+109  wget https://dlcdn.apache.org/guacamole/1.5.2/source/guacamole-server-1.5.2.tar.gz
+110  wget https://apache.org/dyn/closer.lua/guacamole/1.5.5/source/guacamole-server-1.5.5.tar.gz?action=download
+111  tar -xf guacamole-server-1.5.5.tar.gz
+112  wget https://apache.org/dyn/closer.lua/guacamole/1.5.5/source/guacamole-server-1.5.5.tar.gz
+113  tar -xf guacamole-server-1.5.5.tar.gz
+114  wget https://apache.org/dyn/closer.lua/guacamole/1.5.5/source/guacamole-server-1.5.5.tar.gz
+115  tar -xf guacamole-server-1.5.5.tar.gz.1
+116  cd guacamole-server-*/
+117  ./configure --with-systemd-dir=/etc/systemd/system/
+118  sudo make && sudo make install
+119  sudo ldconfig
+120  sudo mkdir -p /etc/guacamole/
+121  sudo nano /etc/guacamole/guacd.conf
+122  sudo systemctl daemon-reload
+123  sudo systemctl start guacd
+124  sudo systemctl enable guacd
+125  sudo systemctl status guacd
+126  ss -tulpn | grep 4822
+127  cd /usr/src
+128  sudo cp guacamole-1.5.5.war /var/lib/tomcat/webapps/guacamole.war
+129  sudo cp guacamole-1.5.5.tar.gz /var/lib/tomcat/webapps/guacamole.tar.gz
+130  sudo cp guacamole-1.5.5.war /var/lib/tomcat/webapps/guacamole.war
+131  sudo systemctl restart tomcat
+132  sudo mkdir -p /etc/guacamole/{extensions,lib}
+133  echo "GUACAMOLE_HOME=/etc/guacamole" | sudo tee -a /etc/sysconfig/tomcat
+134  cd /usr/src
+135  tar -xf guacamole-auth-jdbc-1.5.5.tar.gz
+136  sudo mv guacamole-auth-jdbc-1.5.5/mysql/guacamole-auth-jdbc-mysql-1.5.5.jar /etc/guacamole/extensions/
+137  cd guacamole-auth-jdbc-1.5.5/mysql/schema
+138  cat *.sql | mariadb -u root -p guacamoledb
+139  cd /usr/src
+140  wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j-8.0.33.tar.gz
+141  tar -xf mysql-connector-j-8.0.33.tar.gz
+142  sudo mv mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar /etc/guacamole/lib/
+143  sudo nano /etc/guacamole/guacamole.properties
+144  sudo systemctl restart tomcat
+145  sudo nano /etc/tomcat/server.xml
+146  nano /etc/guacamole/guacd.conf
+147  sudo systemctl restart guacd
+148  sudo systemctl status guacd
+149  nano /etc/guacamole/guacd.conf
+150  sudo systemctl daemon-reload
+151  sudo systemctl start guacd
+152  sudo systemctl enable guacd
+153  sudo systemctl status guacd
+154  cd
+155  curl -s https://owncast.online/install.sh | bash
+156  sudo nano /etc/systemd/system/owncast.service
+157  sudo systemctl daemon-reload
+158  sudo systemctl start owncast
+159  sudo systemctl enable owncast
+160  sudo systemctl status owncast
+161  sudo chmod +x /root/owncast/owncast
+162  sudo systemctl start owncast
+163  sudo systemctl status owncast
+164  sudo nano /path/to/owncast.log
+165  sudo nano /root/owncast/owncast.log
+166  cd /root/owncast/owncast
+167  ls
+168  cd owncast
+169  ls
+170  ./owncast
+171  sudo systemctl stop guacd
+172  ./owncast
+173  sudo netstat -lntp | grep :8080
+174  sudo kill 68935
+175  ./owncast
+176  sudo systemctl start owncast
+177  sudo systemctl status owncast
+178  ./owncast
+179  sudo ufw status
+180  sudo dnf install ufw
+181  sudo ufw status
+182  sudo systemctl start ufw
+183  sudo ufw status
+184  sudo systemctl enable ufw
+185  sudo ufw status
+186  sudo ufw allow 8080/tcp
+187  ./owncast*
