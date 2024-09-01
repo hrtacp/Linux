@@ -1,0 +1,348 @@
+[root@AKL-1425 ~]# sudo dnf config-manager --set-enabled crb
+[root@AKL-1425 ~]# sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm-E%rhel).noarch.rpm
+bash: rpm-E%rhel: command not found...
+AlmaLinux 9 - CRB                                                                     3.2 MB/s | 3.3 MB     00:01    
+Last metadata expiration check: 0:00:01 ago on Mon 05 Aug 2024 06:28:35 PM NZST.
+^CSWIG director method error. Error detected when calling 'PackageTargetCB.progress'] ---  B/s |   0  B     --:-- ETA
+[root@AKL-1425 ~]# sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm-E%rhel).noarch.rpm
+https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm-E%rhel).noarch.rpm
+bash: rpm-E%rhel: command not found...
+Last metadata expiration check: 0:00:11 ago on Mon 05 Aug 2024 06:28:35 PM NZST.
+[MIRROR] rpmfusion-free-release-.noarch.rpm: Status code: 404 for https://rpmfusion.org/free/el/rpmfusion-free-release-.noarch.rpm (IP: 212.129.31.198)
+[MIRROR] rpmfusion-free-release-.noarch.rpm: Status code: 404 for https://rpmfusion.org/free/el/rpmfusion-free-release-.noarch.rpm (IP: 212.129.31.198)
+[MIRROR] rpmfusion-free-release-.noarch.rpm: Status code: 404 for https://rpmfusion.org/free/el/rpmfusion-free-release-.noarch.rpm (IP: 212.129.31.198)
+[MIRROR] rpmfusion-free-release-.noarch.rpm: Status code: 404 for https://rpmfusion.org/free/el/rpmfusion-free-release-.noarch.rpm (IP: 212.129.31.198)
+[FAILED] rpmfusion-free-release-.noarch.rpm: Status code: 404 for https://rpmfusion.org/free/el/rpmfusion-free-release-.noarch.rpm (IP: 212.129.31.198)
+Status code: 404 for https://rpmfusion.org/free/el/rpmfusion-free-release-.noarch.rpm (IP: 212.129.31.198)
+bash: rpm-E%rhel: command not found...
+-bash: https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-.noarch.rpm: No such file or directory
+[root@AKL-1425 ~]# sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm \
+https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
+Last metadata expiration check: 0:00:48 ago on Mon 05 Aug 2024 06:28:35 PM NZST.
+rpmfusion-free-release-9.noarch.rpm                                                   3.4 kB/s |  10 kB     00:03    
+rpmfusion-nonfree-release-9.noarch.rpm                                                9.0 kB/s |  10 kB     00:01    
+Dependencies resolved.
+======================================================================================================================
+ Package                                  Architecture          Version             Repository                   Size
+======================================================================================================================
+Installing:
+ rpmfusion-free-release                   noarch                9-1                 @commandline                 10 k
+ rpmfusion-nonfree-release                noarch                9-1                 @commandline                 10 k
+
+Transaction Summary
+======================================================================================================================
+Install  2 Packages
+
+Total size: 21 k
+Installed size: 7.7 k
+Is this ok [y/N]: y
+Downloading Packages:
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                              1/1 
+  Installing       : rpmfusion-free-release-9-1.noarch                                                            1/2 
+  Installing       : rpmfusion-nonfree-release-9-1.noarch                                                         2/2 
+  Verifying        : rpmfusion-free-release-9-1.noarch                                                            1/2 
+  Verifying        : rpmfusion-nonfree-release-9-1.noarch                                                         2/2 
+
+Installed:
+  rpmfusion-free-release-9-1.noarch                        rpmfusion-nonfree-release-9-1.noarch                       
+
+Complete!
+[root@AKL-1425 ~]# sudo dnf install cairo-devel libjpeg-turbo-devel libjpeg-devel libpng-devel libtool libuuid-devel uuid-devel make cmake ffmpeg-devel freerdp-devel pango-devel libssh2-devel libtelnet-devel libvncserver-devel libwebsockets-devel pulseaudio-libs-devel openssl-devel compat-openssl11 libvorbis-devel libwebp-devel libgcrypt-devel
+RPM Fusion for EL 9 - Free - Updates                                                  244 kB/s | 221 kB     00:00    
+RPM Fusion for EL 9 - Nonfree - Updates                                                61 kB/s |  89 kB     00:01    
+Dependencies resolved.
+======================================================================================================================
+ Package                     Architecture Version                                  Repository                    Size
+======================================================================================================================
+Installing:
+ cairo-devel                 x86_64       1.17.4-7.el9                             appstream                    190 k
+ cmake                       x86_64       3.26.5-2.el9                             appstream                    8.7 M
+ compat-openssl11            x86_64       1:1.1.1k-4.el9_0                         appstream                    1.5 M
+ ffmpeg-devel                x86_64       5.1.5-1.el9                              rpmfusion-free-updates       801 k
+ freerdp-devel               x86_64       2:2.11.2-1.el9                           crb                          138 k
+ libgcrypt-devel             x86_64       1.10.0-10.el9_2                          appstream                    143 k
+ libjpeg-turbo-devel         x86_64       2.0.90-7.el9                             appstream                     98 k
+ libpng-devel                x86_64       2:1.6.37-12.el9                          appstream                    290 k
+ libssh2-devel               x86_64       1.11.0-1.el9                             epel                          55 k
+ libtelnet-devel             x86_64       0.23-3.el9                               epel                          28 k
+ libtool                     x86_64       2.4.6-45.el9                             appstream                    578 k
+ libuuid-devel               x86_64       2.37.4-18.el9                            appstream                     24 k
+ libvncserver-devel          x86_64       0.9.13-11.el9                            epel                          57 k
+ libvorbis-devel             x86_64       1:1.3.7-5.el9                            crb                           18 k
+ libwebp-devel               x86_64       1.2.0-8.el9_3                            appstream                     32 k
+ libwebsockets-devel         x86_64       4.3.2-1.el9                              epel                         323 k
+ make                        x86_64       1:4.3-8.el9                              baseos                       530 k
+ openssl-devel               x86_64       1:3.0.7-27.el9                           appstream                    3.0 M
+ pango-devel                 x86_64       1.48.7-3.el9                             appstream                    140 k
+ pulseaudio-libs-devel       x86_64       15.0-2.el9                               appstream                    390 k
+ uuid-devel                  x86_64       1.6.2-55.el9                             crb                           23 k
+Installing dependencies:
+ SDL2                        x86_64       2.26.0-1.el9                             appstream                    677 k
+ autoconf                    noarch       2.69-38.el9                              appstream                    666 k
+ automake                    noarch       1.16.2-8.el9                             appstream                    662 k
+ brotli                      x86_64       1.0.9-6.el9                              appstream                    313 k
+ brotli-devel                x86_64       1.0.9-6.el9                              appstream                     31 k
+ bzip2-devel                 x86_64       1.0.8-8.el9                              appstream                    213 k
+ cmake-data                  noarch       3.26.5-2.el9                             appstream                    1.7 M
+ cmake-filesystem            x86_64       3.26.5-2.el9                             appstream                     11 k
+ cmake-rpm-macros            noarch       3.26.5-2.el9                             appstream                     10 k
+ ffmpeg-libs                 x86_64       5.1.5-1.el9                              rpmfusion-free-updates       7.8 M
+ fftw-libs-double            x86_64       3.3.8-12.el9                             appstream                    907 k
+ fontconfig-devel            x86_64       2.14.0-2.el9_1                           appstream                    127 k
+ freerdp-libs                x86_64       2:2.11.2-1.el9                           appstream                    893 k
+ freetype-devel              x86_64       2.10.4-9.el9                             appstream                    1.1 M
+ fribidi-devel               x86_64       1.0.10-6.el9.2                           appstream                     25 k
+ gcc                         x86_64       11.4.1-3.el9.alma.1                      appstream                     32 M
+ glib2-devel                 x86_64       2.68.4-14.el9                            appstream                    470 k
+ glibc-devel                 x86_64       2.34-100.el9_4.2                         appstream                     36 k
+ glibc-headers               x86_64       2.34-100.el9_4.2                         appstream                    440 k
+ graphite2-devel             x86_64       1.3.14-9.el9                             appstream                     21 k
+ harfbuzz-devel              x86_64       2.7.4-10.el9                             appstream                    304 k
+ highway                     x86_64       1.2.0-2.el9                              epel                          35 k
+ intel-mediasdk              x86_64       21.3.5-1.el9                             epel                         2.6 M
+ kernel-headers              x86_64       5.14.0-427.28.1.el9_4                    appstream                    6.5 M
+ ladspa                      x86_64       1.13-28.el9                              crb                           47 k
+ libX11-devel                x86_64       1.7.0-9.el9                              appstream                    939 k
+ libXau-devel                x86_64       1.0.9-8.el9                              appstream                     13 k
+ libXext-devel               x86_64       1.3.4-8.el9                              appstream                     72 k
+ libXft-devel                x86_64       2.3.3-8.el9                              appstream                     18 k
+ libXrender-devel            x86_64       0.9.10-16.el9                            appstream                     16 k
+ libaom                      x86_64       3.9.0-1.el9                              epel                         1.8 M
+ libass                      x86_64       0.17.1-1.el9                             epel                         116 k
+ libavdevice                 x86_64       5.1.5-1.el9                              rpmfusion-free-updates        71 k
+ libblkid-devel              x86_64       2.37.4-18.el9                            appstream                     17 k
+ libbluray                   x86_64       1.3.4-1.el9                              epel                         171 k
+ libdatrie-devel             x86_64       0.2.13-4.el9                             appstream                    132 k
+ libdav1d                    x86_64       1.2.1-1.el9                              epel                         596 k
+ libdecor                    x86_64       0.1.1-1.el9                              appstream                     41 k
+ libev-devel                 x86_64       4.33-5.el9                               epel                         100 k
+ libffi-devel                x86_64       3.4.2-8.el9                              appstream                     28 k
+ libgpg-error-devel          x86_64       1.42-5.el9                               appstream                     65 k
+ libicu-devel                x86_64       67.1-9.el9                               appstream                    830 k
+ libjxl                      x86_64       0.7.0-1.el9                              epel                         957 k
+ libmodplug                  x86_64       1:0.8.9.0-13.el9                         epel                         171 k
+ libmount-devel              x86_64       2.37.4-18.el9                            appstream                     18 k
+ libmysofa                   x86_64       1.2.1-1.el9                              epel                          42 k
+ libogg-devel                x86_64       2:1.3.4-6.el9                            crb                           13 k
+ libopenmpt                  x86_64       0.7.8-1.el9                              epel                         680 k
+ libselinux-devel            x86_64       3.6-1.el9                                appstream                    113 k
+ libsepol-devel              x86_64       3.6-1.el9                                appstream                     39 k
+ libshaderc                  x86_64       2023.7-1.el9                             appstream                    999 k
+ libssh2                     x86_64       1.11.0-1.el9                             epel                         132 k
+ libtelnet                   x86_64       0.23-3.el9                               epel                          23 k
+ libthai-devel               x86_64       0.1.28-8.el9                             appstream                    117 k
+ libudfread                  x86_64       1.1.2-2.el9                              epel                          33 k
+ libuv-devel                 x86_64       1:1.42.0-2.el9_4                         crb                           26 k
+ libva                       x86_64       2.20.0-1.el9                             appstream                    104 k
+ libvdpau                    x86_64       1.5-1.el9                                appstream                     16 k
+ libvmaf                     x86_64       2.3.0-2.el9                              epel                         177 k
+ libvncserver                x86_64       0.9.13-11.el9                            epel                         296 k
+ libwebsockets               x86_64       4.3.2-1.el9                              epel                         297 k
+ libwinpr                    x86_64       2:2.11.2-1.el9                           appstream                    355 k
+ libwinpr-devel              x86_64       2:2.11.2-1.el9                           crb                          164 k
+ libxcb-devel                x86_64       1.13.1-9.el9                             appstream                    1.0 M
+ libxcrypt-devel             x86_64       4.4.18-3.el9                             appstream                     28 k
+ libxkbcommon-devel          x86_64       1.0.3-4.el9                              appstream                     61 k
+ libxml2-devel               x86_64       2.9.13-6.el9_4                           appstream                    827 k
+ lilv-libs                   x86_64       0.24.14-3.el9                            epel                          58 k
+ lv2                         x86_64       1.18.8-4.el9                             epel                          90 k
+ m4                          x86_64       1.4.19-1.el9                             appstream                    294 k
+ ocl-icd                     x86_64       2.2.13-4.el9                             appstream                     51 k
+ openal-soft                 x86_64       1.19.1-16.el9                            appstream                    533 k
+ opencore-amr                x86_64       0.1.6-3.el9                              epel                         172 k
+ pcre-cpp                    x86_64       8.44-3.el9.3                             appstream                     26 k
+ pcre-devel                  x86_64       8.44-3.el9.3                             appstream                    470 k
+ pcre-utf16                  x86_64       8.44-3.el9.3                             appstream                    184 k
+ pcre-utf32                  x86_64       8.44-3.el9.3                             appstream                    174 k
+ pcre2-devel                 x86_64       10.40-5.el9                              appstream                    471 k
+ pcre2-utf16                 x86_64       10.40-5.el9                              appstream                    213 k
+ perl-File-Compare           noarch       1.100.600-481.el9                        appstream                     12 k
+ perl-File-Copy              noarch       2.34-481.el9                             appstream                     19 k
+ perl-Thread-Queue           noarch       3.14-460.el9                             appstream                     21 k
+ perl-threads                x86_64       1:2.25-460.el9                           appstream                     57 k
+ perl-threads-shared         x86_64       1.61-460.el9                             appstream                     44 k
+ pixman-devel                x86_64       0.40.0-6.el9_3                           appstream                     16 k
+ rubberband                  x86_64       3.1.3-2.el9                              epel                         365 k
+ serd                        x86_64       0.30.12-2.el9                            epel                          61 k
+ sord                        x86_64       0.16.10-2.el9                            epel                          46 k
+ soxr                        x86_64       0.1.3-11.el9                             epel                          82 k
+ spirv-tools-libs            x86_64       2023.3-1.el9                             appstream                    1.4 M
+ sratom                      x86_64       0.6.10-2.el9                             epel                          26 k
+ srt-libs                    x86_64       1.4.4-1.el9                              epel                         291 k
+ svt-av1-libs                x86_64       0.9.0-1.el9                              epel                         1.7 M
+ sysprof-capture-devel       x86_64       3.40.1-3.el9                             appstream                     59 k
+ uuid                        x86_64       1.6.2-55.el9                             appstream                     56 k
+ vamp-plugin-sdk             x86_64       2.9.0-4.el9                              epel                         171 k
+ vapoursynth-libs            x86_64       57-1.el9                                 epel                         503 k
+ vid.stab                    x86_64       1.1.0-14.20201110gitf9166e9.el9          epel                          49 k
+ vo-amrwbenc                 x86_64       0.1.3-18.el9                             epel                          75 k
+ wayland-devel               x86_64       1.21.0-1.el9                             appstream                    136 k
+ x264-libs                   x86_64       0.163-6.20210613git5db6aa6.el9           rpmfusion-free-updates       682 k
+ x265-libs                   x86_64       3.5-5.el9                                rpmfusion-free-updates       1.3 M
+ xorg-x11-proto-devel        noarch       2022.2-1.el9                             appstream                    263 k
+ xvidcore                    x86_64       1.3.7-9.el9                              epel                         252 k
+ xz-devel                    x86_64       5.2.5-8.el9_0                            appstream                     52 k
+ zimg                        x86_64       3.0.5-1.el9                              epel                         275 k
+ zlib-devel                  x86_64       1.2.11-40.el9                            appstream                     44 k
+ zvbi                        x86_64       0.2.35-15.el9                            epel                         413 k
+Installing weak dependencies:
+ jxl-pixbuf-loader           x86_64       0.7.0-1.el9                              epel                          53 k
+ vmaf-models                 noarch       2.3.0-2.el9                              epel                         227 k
+
+Transaction Summary
+======================================================================================================================
+Install  131 Packages
+
+Total download size: 97 M
+Installed size: 329 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/131): autoconf-2.69-38.el9.noarch.rpm                                              3.1 MB/s | 666 kB     00:00    
+(2/131): SDL2-2.26.0-1.el9.x86_64.rpm                                                 3.0 MB/s | 677 kB     00:00    
+(3/131): automake-1.16.2-8.el9.noarch.rpm                                             2.5 MB/s | 662 kB     00:00    
+(4/131): brotli-1.0.9-6.el9.x86_64.rpm                                                4.6 MB/s | 313 kB     00:00    
+(5/131): brotli-devel-1.0.9-6.el9.x86_64.rpm                                          397 kB/s |  31 kB     00:00    
+(6/131): bzip2-devel-1.0.8-8.el9.x86_64.rpm                                           2.9 MB/s | 213 kB     00:00    
+(7/131): cairo-devel-1.17.4-7.el9.x86_64.rpm                                          2.6 MB/s | 190 kB     00:00    
+(8/131): cmake-3.26.5-2.el9.x86_64.rpm                                                 21 MB/s | 8.7 MB     00:00    
+(9/131): cmake-data-3.26.5-2.el9.noarch.rpm                                           4.1 MB/s | 1.7 MB     00:00    
+(10/131): cmake-filesystem-3.26.5-2.el9.x86_64.rpm                                     24 kB/s |  11 kB     00:00    
+(11/131): compat-openssl11-1.1.1k-4.el9_0.x86_64.rpm                                  5.2 MB/s | 1.5 MB     00:00    
+(12/131): cmake-rpm-macros-3.26.5-2.el9.noarch.rpm                                     32 kB/s |  10 kB     00:00    
+(13/131): fftw-libs-double-3.3.8-12.el9.x86_64.rpm                                    2.9 MB/s | 907 kB     00:00    
+(14/131): fontconfig-devel-2.14.0-2.el9_1.x86_64.rpm                                  1.1 MB/s | 127 kB     00:00    
+(15/131): freerdp-libs-2.11.2-1.el9.x86_64.rpm                                        5.8 MB/s | 893 kB     00:00    
+(16/131): freetype-devel-2.10.4-9.el9.x86_64.rpm                                      8.8 MB/s | 1.1 MB     00:00    
+(17/131): fribidi-devel-1.0.10-6.el9.2.x86_64.rpm                                     228 kB/s |  25 kB     00:00    
+(18/131): glib2-devel-2.68.4-14.el9.x86_64.rpm                                        841 kB/s | 470 kB     00:00    
+(19/131): glibc-devel-2.34-100.el9_4.2.x86_64.rpm                                      53 kB/s |  36 kB     00:00    
+(20/131): glibc-headers-2.34-100.el9_4.2.x86_64.rpm                                   934 kB/s | 440 kB     00:00    
+(21/131): graphite2-devel-1.3.14-9.el9.x86_64.rpm                                      49 kB/s |  21 kB     00:00    
+(22/131): harfbuzz-devel-2.7.4-10.el9.x86_64.rpm                                      1.5 MB/s | 304 kB     00:00    
+(23/131): kernel-headers-5.14.0-427.28.1.el9_4.x86_64.rpm                             7.9 MB/s | 6.5 MB     00:00    
+(24/131): libX11-devel-1.7.0-9.el9.x86_64.rpm                                         1.1 MB/s | 939 kB     00:00    
+(25/131): libXau-devel-1.0.9-8.el9.x86_64.rpm                                          64 kB/s |  13 kB     00:00    
+(26/131): libXext-devel-1.3.4-8.el9.x86_64.rpm                                        454 kB/s |  72 kB     00:00    
+(27/131): gcc-11.4.1-3.el9.alma.1.x86_64.rpm                                           13 MB/s |  32 MB     00:02    
+(28/131): libXrender-devel-0.9.10-16.el9.x86_64.rpm                                    75 kB/s |  16 kB     00:00    
+(29/131): libXft-devel-2.3.3-8.el9.x86_64.rpm                                          72 kB/s |  18 kB     00:00    
+(30/131): libblkid-devel-2.37.4-18.el9.x86_64.rpm                                     385 kB/s |  17 kB     00:00    
+(31/131): libdatrie-devel-0.2.13-4.el9.x86_64.rpm                                     2.2 MB/s | 132 kB     00:00    
+(32/131): libdecor-0.1.1-1.el9.x86_64.rpm                                             487 kB/s |  41 kB     00:00    
+(33/131): libffi-devel-3.4.2-8.el9.x86_64.rpm                                         308 kB/s |  28 kB     00:00    
+(34/131): libgcrypt-devel-1.10.0-10.el9_2.x86_64.rpm                                  1.3 MB/s | 143 kB     00:00    
+(35/131): libgpg-error-devel-1.42-5.el9.x86_64.rpm                                    655 kB/s |  65 kB     00:00    
+(36/131): libicu-devel-67.1-9.el9.x86_64.rpm                                          4.2 MB/s | 830 kB     00:00    
+(37/131): libjpeg-turbo-devel-2.0.90-7.el9.x86_64.rpm                                 560 kB/s |  98 kB     00:00    
+(38/131): libmount-devel-2.37.4-18.el9.x86_64.rpm                                      95 kB/s |  18 kB     00:00    
+(39/131): libpng-devel-1.6.37-12.el9.x86_64.rpm                                       2.1 MB/s | 290 kB     00:00    
+(40/131): libselinux-devel-3.6-1.el9.x86_64.rpm                                       672 kB/s | 113 kB     00:00    
+(41/131): libsepol-devel-3.6-1.el9.x86_64.rpm                                         288 kB/s |  39 kB     00:00    
+(42/131): libshaderc-2023.7-1.el9.x86_64.rpm                                          9.5 MB/s | 999 kB     00:00    
+(43/131): libthai-devel-0.1.28-8.el9.x86_64.rpm                                       1.5 MB/s | 117 kB     00:00    
+(44/131): libuuid-devel-2.37.4-18.el9.x86_64.rpm                                      267 kB/s |  24 kB     00:00    
+(45/131): libva-2.20.0-1.el9.x86_64.rpm                                               1.3 MB/s | 104 kB     00:00    
+(46/131): libtool-2.4.6-45.el9.x86_64.rpm                                             3.6 MB/s | 578 kB     00:00    
+(47/131): libvdpau-1.5-1.el9.x86_64.rpm                                               299 kB/s |  16 kB     00:00    
+(48/131): libwebp-devel-1.2.0-8.el9_3.x86_64.rpm                                      422 kB/s |  32 kB     00:00    
+(49/131): libwinpr-2.11.2-1.el9.x86_64.rpm                                            3.1 MB/s | 355 kB     00:00    
+(50/131): libxcb-devel-1.13.1-9.el9.x86_64.rpm                                        8.3 MB/s | 1.0 MB     00:00    
+(51/131): libxcrypt-devel-4.4.18-3.el9.x86_64.rpm                                     258 kB/s |  28 kB     00:00    
+(52/131): libxkbcommon-devel-1.0.3-4.el9.x86_64.rpm                                   883 kB/s |  61 kB     00:00    
+(53/131): libxml2-devel-2.9.13-6.el9_4.x86_64.rpm                                     6.8 MB/s | 827 kB     00:00    
+(54/131): m4-1.4.19-1.el9.x86_64.rpm                                                  2.4 MB/s | 294 kB     00:00    
+(55/131): ocl-icd-2.2.13-4.el9.x86_64.rpm                                             287 kB/s |  51 kB     00:00    
+(56/131): openal-soft-1.19.1-16.el9.x86_64.rpm                                        2.8 MB/s | 533 kB     00:00    
+(57/131): openssl-devel-3.0.7-27.el9.x86_64.rpm                                       7.2 MB/s | 3.0 MB     00:00    
+(58/131): pcre-cpp-8.44-3.el9.3.x86_64.rpm                                            109 kB/s |  26 kB     00:00    
+(59/131): pango-devel-1.48.7-3.el9.x86_64.rpm                                         395 kB/s | 140 kB     00:00    
+(60/131): pcre-devel-8.44-3.el9.3.x86_64.rpm                                          4.9 MB/s | 470 kB     00:00    
+(61/131): pcre-utf16-8.44-3.el9.3.x86_64.rpm                                          1.8 MB/s | 184 kB     00:00    
+(62/131): pcre-utf32-8.44-3.el9.3.x86_64.rpm                                          1.7 MB/s | 174 kB     00:00    
+(63/131): pcre2-devel-10.40-5.el9.x86_64.rpm                                          8.4 MB/s | 471 kB     00:00    
+(64/131): pcre2-utf16-10.40-5.el9.x86_64.rpm                                          2.2 MB/s | 213 kB     00:00    
+(65/131): perl-File-Compare-1.100.600-481.el9.noarch.rpm                              110 kB/s |  12 kB     00:00    
+(66/131): perl-File-Copy-2.34-481.el9.noarch.rpm                                      236 kB/s |  19 kB     00:00    
+(67/131): perl-Thread-Queue-3.14-460.el9.noarch.rpm                                   316 kB/s |  21 kB     00:00    
+(68/131): perl-threads-2.25-460.el9.x86_64.rpm                                        795 kB/s |  57 kB     00:00    
+(69/131): perl-threads-shared-1.61-460.el9.x86_64.rpm                                 673 kB/s |  44 kB     00:00    
+(70/131): pixman-devel-0.40.0-6.el9_3.x86_64.rpm                                      224 kB/s |  16 kB     00:00    
+(71/131): pulseaudio-libs-devel-15.0-2.el9.x86_64.rpm                                 1.8 MB/s | 390 kB     00:00    
+(72/131): spirv-tools-libs-2023.3-1.el9.x86_64.rpm                                    4.6 MB/s | 1.4 MB     00:00    
+(73/131): sysprof-capture-devel-3.40.1-3.el9.x86_64.rpm                               223 kB/s |  59 kB     00:00    
+(74/131): uuid-1.6.2-55.el9.x86_64.rpm                                                277 kB/s |  56 kB     00:00    
+(75/131): wayland-devel-1.21.0-1.el9.x86_64.rpm                                       932 kB/s | 136 kB     00:00    
+(76/131): xorg-x11-proto-devel-2022.2-1.el9.noarch.rpm                                1.5 MB/s | 263 kB     00:00    
+(77/131): xz-devel-5.2.5-8.el9_0.x86_64.rpm                                           476 kB/s |  52 kB     00:00    
+(78/131): zlib-devel-1.2.11-40.el9.x86_64.rpm                                         447 kB/s |  44 kB     00:00    
+(79/131): make-4.3-8.el9.x86_64.rpm                                                   1.9 MB/s | 530 kB     00:00    
+(80/131): freerdp-devel-2.11.2-1.el9.x86_64.rpm                                       489 kB/s | 138 kB     00:00    
+(81/131): ladspa-1.13-28.el9.x86_64.rpm                                               172 kB/s |  47 kB     00:00    
+(82/131): libogg-devel-1.3.4-6.el9.x86_64.rpm                                         135 kB/s |  13 kB     00:00    
+(83/131): libuv-devel-1.42.0-2.el9_4.x86_64.rpm                                       369 kB/s |  26 kB     00:00    
+(84/131): libvorbis-devel-1.3.7-5.el9.x86_64.rpm                                      195 kB/s |  18 kB     00:00    
+(85/131): libwinpr-devel-2.11.2-1.el9.x86_64.rpm                                      1.0 MB/s | 164 kB     00:00    
+(86/131): uuid-devel-1.6.2-55.el9.x86_64.rpm                                          134 kB/s |  23 kB     00:00    
+(87/131): highway-1.2.0-2.el9.x86_64.rpm                                              209 kB/s |  35 kB     00:00    
+(88/131): jxl-pixbuf-loader-0.7.0-1.el9.x86_64.rpm                                    244 kB/s |  53 kB     00:00    
+(89/131): libaom-3.9.0-1.el9.x86_64.rpm                                               4.4 MB/s | 1.8 MB     00:00    
+(90/131): intel-mediasdk-21.3.5-1.el9.x86_64.rpm                                      5.3 MB/s | 2.6 MB     00:00    
+(91/131): libass-0.17.1-1.el9.x86_64.rpm                                              453 kB/s | 116 kB     00:00    
+(92/131): libbluray-1.3.4-1.el9.x86_64.rpm                                            2.2 MB/s | 171 kB     00:00    
+(93/131): libdav1d-1.2.1-1.el9.x86_64.rpm                                             3.7 MB/s | 596 kB     00:00    
+(94/131): libev-devel-4.33-5.el9.x86_64.rpm                                           532 kB/s | 100 kB     00:00    
+(95/131): libjxl-0.7.0-1.el9.x86_64.rpm                                               3.1 MB/s | 957 kB     00:00    
+(96/131): libmodplug-0.8.9.0-13.el9.x86_64.rpm                                        749 kB/s | 171 kB     00:00    
+(97/131): libmysofa-1.2.1-1.el9.x86_64.rpm                                            201 kB/s |  42 kB     00:00    
+(98/131): libopenmpt-0.7.8-1.el9.x86_64.rpm                                           5.0 MB/s | 680 kB     00:00    
+(99/131): libssh2-devel-1.11.0-1.el9.x86_64.rpm                                       619 kB/s |  55 kB     00:00    
+(100/131): libssh2-1.11.0-1.el9.x86_64.rpm                                            1.1 MB/s | 132 kB     00:00    
+(101/131): libtelnet-0.23-3.el9.x86_64.rpm                                            542 kB/s |  23 kB     00:00    
+(102/131): libtelnet-devel-0.23-3.el9.x86_64.rpm                                      495 kB/s |  28 kB     00:00    
+(103/131): libudfread-1.1.2-2.el9.x86_64.rpm                                          389 kB/s |  33 kB     00:00    
+(104/131): libvmaf-2.3.0-2.el9.x86_64.rpm                                             1.9 MB/s | 177 kB     00:00    
+(105/131): libvncserver-devel-0.9.13-11.el9.x86_64.rpm                                274 kB/s |  57 kB     00:00    
+(106/131): libvncserver-0.9.13-11.el9.x86_64.rpm                                      1.2 MB/s | 296 kB     00:00    
+(107/131): libwebsockets-4.3.2-1.el9.x86_64.rpm                                       1.3 MB/s | 297 kB     00:00    
+(108/131): libwebsockets-devel-4.3.2-1.el9.x86_64.rpm                                 2.1 MB/s | 323 kB     00:00    
+(109/131): lilv-libs-0.24.14-3.el9.x86_64.rpm                                         329 kB/s |  58 kB     00:00    
+(110/131): lv2-1.18.8-4.el9.x86_64.rpm                                                532 kB/s |  90 kB     00:00    
+(111/131): opencore-amr-0.1.6-3.el9.x86_64.rpm                                        1.4 MB/s | 172 kB     00:00    
+(112/131): rubberband-3.1.3-2.el9.x86_64.rpm                                          1.2 MB/s | 365 kB     00:00    
+(113/131): serd-0.30.12-2.el9.x86_64.rpm                                              209 kB/s |  61 kB     00:00    
+(114/131): sord-0.16.10-2.el9.x86_64.rpm                                              168 kB/s |  46 kB     00:00    
+(115/131): soxr-0.1.3-11.el9.x86_64.rpm                                               684 kB/s |  82 kB     00:00    
+(116/131): sratom-0.6.10-2.el9.x86_64.rpm                                             218 kB/s |  26 kB     00:00    
+(117/131): srt-libs-1.4.4-1.el9.x86_64.rpm                                            2.1 MB/s | 291 kB     00:00    
+(118/131): svt-av1-libs-0.9.0-1.el9.x86_64.rpm                                        6.6 MB/s | 1.7 MB     00:00    
+(119/131): vamp-plugin-sdk-2.9.0-4.el9.x86_64.rpm                                     573 kB/s | 171 kB     00:00    
+(120/131): vapoursynth-libs-57-1.el9.x86_64.rpm                                       1.6 MB/s | 503 kB     00:00    
+(121/131): vid.stab-1.1.0-14.20201110gitf9166e9.el9.x86_64.rpm                        340 kB/s |  49 kB     00:00    
+(122/131): vmaf-models-2.3.0-2.el9.noarch.rpm                                         1.8 MB/s | 227 kB     00:00    
+(123/131): vo-amrwbenc-0.1.3-18.el9.x86_64.rpm                                        719 kB/s |  75 kB     00:00    
+(124/131): xvidcore-1.3.7-9.el9.x86_64.rpm                                            1.8 MB/s | 252 kB     00:00    
+(125/131): zimg-3.0.5-1.el9.x86_64.rpm                                                2.0 MB/s | 275 kB     00:00    
+(126/131): zvbi-0.2.35-15.el9.x86_64.rpm                                              3.0 MB/s | 413 kB     00:00    
+(127/131): libavdevice-5.1.5-1.el9.x86_64.rpm                                         364 kB/s |  71 kB     00:00    
+(128/131): ffmpeg-devel-5.1.5-1.el9.x86_64.rpm                                        1.4 MB/s | 801 kB     00:00    
+(129/131): x264-libs-0.163-6.20210613git5db6aa6.el9.x86_64.rpm                        2.3 MB/s | 682 kB     00:00    
+(130/131): x265-libs-3.5-5.el9.x86_64.rpm                                             3.4 MB/s | 1.3 MB     00:00    
+(131/131): ffmpeg-libs-5.1.5-1.el9.x86_64.rpm                                         5.2 MB/s | 7.8 MB     00:01    
+----------------------------------------------------------------------------------------------------------------------
+Total                                                                                 7.1 MB/s |  97 MB     00:13     
+RPM Fusion for EL 9 - Free - Updates                                                  1.6 MB/s | 1.7 kB     00:00    
+Importing GPG key 0x296458F3:
+ Userid     : "RPM Fusion free repository for EL (9) <rpmfusion-gpg-key-el9-free@rpmfusion.org>"
+ Fingerprint: EDC0 0FE7 418C 9DF7 EF49 91A4 7403 EA33 2964 58F3
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-el-9
+Is this ok [y/N]: y
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
