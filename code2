@@ -1,0 +1,70 @@
+Activate the web console with: systemctl enable --now cockpit.socket
+
+# Last failed login: Wed Aug 7 19:28:09 AEST 2024 from 180.101.88.228 on ssh:notty
+There were 554 failed login attempts since the last successful login.
+Last login: Wed Aug 7 17:09:20 2024 from 202.7.251.31
+[root@AKL-1425 ~]# sudo snap install p7zip-desktop
+2024-08-07T19:29:13+10:00 INFO Waiting for automatic snapd restart...
+p7zip-desktop 16.02.2 from Ernesto Castellotti (ernytech) installed
+[root@AKL-1425 ~]# sudo snap install snap-store
+snap-store 41.3-77-g7dc86c8 from Canonical✓ installed
+[root@AKL-1425 ~]# sudo snap install snap-store
+snap "snap-store" is already installed, see 'snap help refresh'
+[root@AKL-1425 ~]# yum install filezilla
+Last metadata expiration check: 0:58:51 ago on Wed 07 Aug 2024 07:28:03 PM AEST.
+Dependencies resolved.
+
+# Package Architecture Version Repository Size
+
+Installing:
+filezilla                               x86_64                            3.60.1-1.el9                                epel                            4.4 M
+Installing dependencies:
+libfilezilla                            x86_64                            0.37.2-1.el9                                epel                            305 k
+pugixml                                 x86_64                            1.13-1.el9                                  epel                             99 k
+wxBase3                                 x86_64                            3.0.5.1-6.el9                               epel                            991 k
+wxGTK3                                  x86_64                            3.0.5.1-6.el9                               epel                            4.4 M
+wxGTK3-i18n                             noarch                            3.0.5.1-6.el9                               epel                            492 k
+
+# Transaction Summary
+
+Install  6 Packages
+
+## Total download size: 11 M
+Installed size: 38 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/6): libfilezilla-0.37.2-1.el9.x86_64.rpm 868 kB/s | 305 kB 00:00
+(2/6): pugixml-1.13-1.el9.x86_64.rpm 279 kB/s | 99 kB 00:00
+(3/6): filezilla-3.60.1-1.el9.x86_64.rpm 8.3 MB/s | 4.4 MB 00:00
+(4/6): wxBase3-3.0.5.1-6.el9.x86_64.rpm 5.2 MB/s | 991 kB 00:00
+(5/6): wxGTK3-3.0.5.1-6.el9.x86_64.rpm 13 MB/s | 4.4 MB 00:00
+(6/6): wxGTK3-i18n-3.0.5.1-6.el9.noarch.rpm 1.4 MB/s | 492 kB 00:00
+
+Total                                                                                                                        7.3 MB/s |  11 MB     00:01
+
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+Preparing        :                                                                                                                                     1/1
+Installing       : wxBase3-3.0.5.1-6.el9.x86_64                                                                                                        1/6
+Installing       : wxGTK3-i18n-3.0.5.1-6.el9.noarch                                                                                                    2/6
+Installing       : wxGTK3-3.0.5.1-6.el9.x86_64                                                                                                         3/6
+Installing       : pugixml-1.13-1.el9.x86_64                                                                                                           4/6
+Installing       : libfilezilla-0.37.2-1.el9.x86_64                                                                                                    5/6
+Installing       : filezilla-3.60.1-1.el9.x86_64                                                                                                       6/6
+Running scriptlet: filezilla-3.60.1-1.el9.x86_64                                                                                                       6/6
+Verifying        : filezilla-3.60.1-1.el9.x86_64                                                                                                       1/6
+Verifying        : libfilezilla-0.37.2-1.el9.x86_64                                                                                                    2/6
+Verifying        : pugixml-1.13-1.el9.x86_64                                                                                                           3/6
+Verifying        : wxBase3-3.0.5.1-6.el9.x86_64                                                                                                        4/6
+Verifying        : wxGTK3-3.0.5.1-6.el9.x86_64                                                                                                         5/6
+Verifying        : wxGTK3-i18n-3.0.5.1-6.el9.noarch                                                                                                    6/6
+
+Installed:
+filezilla-3.60.1-1.el9.x86_64     libfilezilla-0.37.2-1.el9.x86_64  pugixml-1.13-1.el9.x86_64  wxBase3-3.0.5.1-6.el9.x86_64  wxGTK3-3.0.5.1-6.el9.x86_64
+wxGTK3-i18n-3.0.5.1-6.el9.noarch
+
+Complete!
+[root@AKL-1425 ~]# sudo systemctl status owncast
