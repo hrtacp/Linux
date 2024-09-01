@@ -1,0 +1,208 @@
+[root@AKL-1425 ~]# nano /etc/guacamole/guacd.conf
+[root@AKL-1425 ~]# sudo systemctl restart guacd
+[root@AKL-1425 ~]# wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j-8.0.33.tar.gz^C
+[root@AKL-1425 ~]# sudo systemctl status guacd
+● guacd.service - Guacamole Server
+     Loaded: loaded (/etc/systemd/system/guacd.service; enabled; preset: disabled)
+● guacd.service - Guacamole Server
+     Loaded: loaded (/etc/systemd/system/guacd.service; enabled; preset: disabled)
+     Active: active (running) since Mon 2024-08-05 21:32:22 NZST; 2min 1s ago
+       Docs: man:guacd(8)
+   Main PID: 69855 (guacd)
+      Tasks: 1 (limit: 99206)
+     Memory: 10.3M
+        CPU: 22ms
+     CGroup: /system.slice/guacd.service
+             └─69855 /usr/local/sbin/guacd -f
+
+Aug 05 21:33:40 AKL-1425 guacd[69855]: Guacamole protocol violation. Perhaps the version of guacamole-client is incompatible with this version of guacd?
+Aug 05 21:33:40 AKL-1425 guacd[69855]: guacd[69855]: ERROR:        Guacamole protocol violation. Perhaps the version of guacamole-client is incompatible wit>
+Aug 05 21:33:40 AKL-1425 guacd[69855]: Guacamole protocol violation. Perhaps the version of guacamole-client is incompatible with this version of guacd?
+Aug 05 21:33:40 AKL-1425 guacd[69855]: guacd[69855]: ERROR:        Guacamole protocol violation. Perhaps the version of guacamole-client is incompatible wit>
+Aug 05 21:33:40 AKL-1425 guacd[69855]: Guacamole protocol violation. Perhaps the version of guacamole-client is incompatible with this version of guacd?
+Aug 05 21:33:40 AKL-1425 guacd[69855]: guacd[69855]: ERROR:        Guacamole protocol violation. Perhaps the version of guacamole-client is incompatible wit>
+Aug 05 21:33:40 AKL-1425 guacd[69855]: Guacamole protocol violation. Perhaps the version of guacamole-client is incompatible with this version of guacd?
+Aug 05 21:33:40 AKL-1425 guacd[69855]: guacd[69855]: ERROR:        Guacamole protocol violation. Perhaps the version of guacamole-client is incompatible wit>
+Aug 05 21:33:40 AKL-1425 guacd[69855]: Guacamole protocol violation. Perhaps the version of guacamole-client is incompatible with this version of guacd?
+Aug 05 21:33:40 AKL-1425 guacd[69855]: guacd[69855]: ERROR:        Guacamole protocol violation. Perhaps the version of guacamole-client is incompatible wit>
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+[root@AKL-1425 ~]# curl -s https://owncast.online/install.sh | bash^C
+[root@AKL-1425 ~]# cd
+[root@AKL-1425 ~]# curl -s https://owncast.online/install.sh | bash
+Owncast Installer v0.1.3 
+
+Created directory  [✓]
+Downloaded Owncast v0.1.3 for linux  [✓]  
+Downloaded ffmpeg because it was not found on your system [✓]
+
+Success! Run owncast by changing to the owncast directory and run ./owncast.
+The default port is 8080 and the default streaming key and admin password is abc123.
+Visit https://owncast.online/docs/configuration/ to learn how to configure your new Owncast server.
+
+[root@AKL-1425 ~]# curl -s https://owncast.online/install.sh | bash
+Owncast Installer v0.1.3 
+
+Existing install found in /root/owncast. Will update it to v0.1.3. If this is incorrect remove the directory and rerun the installer.
+Backing up your files to /root/owncast-install-backups before upgrading to v0.1.3cp: cannot stat 'data/': No such file or directory
+
+
+ERROR: Your Owncast installation did not complete successfully.
+Please report your issue at https://github.com/owncast/owncast/issues
+
+[root@AKL-1425 ~]# sudo nano /etc/systemd/system/owncast.service
+[root@AKL-1425 ~]# sudo systemctl daemon-reload
+[root@AKL-1425 ~]# sudo systemctl start owncast
+[root@AKL-1425 ~]# sudo systemctl enable owncast
+Created symlink /etc/systemd/system/multi-user.target.wants/owncast.service → /etc/systemd/system/owncast.service.
+[root@AKL-1425 ~]# sudo systemctl status owncast
+× owncast.service - Owncast Service
+     Loaded: loaded (/etc/systemd/system/owncast.service; enabled; preset: disabled)
+     Active: failed (Result: exit-code) since Mon 2024-08-05 21:38:19 NZST; 14s ago
+   Duration: 1ms
+   Main PID: 70456 (code=exited, status=203/EXEC)
+        CPU: 989us
+
+Aug 05 21:38:19 AKL-1425 systemd[1]: owncast.service: Scheduled restart job, restart counter is at 5.
+Aug 05 21:38:19 AKL-1425 systemd[1]: Stopped Owncast Service.
+Aug 05 21:38:19 AKL-1425 systemd[1]: owncast.service: Start request repeated too quickly.
+Aug 05 21:38:19 AKL-1425 systemd[1]: owncast.service: Failed with result 'exit-code'.
+Aug 05 21:38:19 AKL-1425 systemd[1]: Failed to start Owncast Service.
+[root@AKL-1425 ~]# sudo chmod +x /root/owncast/owncast
+[root@AKL-1425 ~]# sudo systemctl start owncast
+[root@AKL-1425 ~]# sudo systemctl status owncast
+× owncast.service - Owncast Service
+     Loaded: loaded (/etc/systemd/system/owncast.service; enabled; preset: disabled)
+     Active: failed (Result: exit-code) since Mon 2024-08-05 21:39:03 NZST; 832ms ago
+   Duration: 1ms
+    Process: 70548 ExecStart=/root/owncast/owncast (code=exited, status=203/EXEC)
+   Main PID: 70548 (code=exited, status=203/EXEC)
+        CPU: 1ms
+
+Aug 05 21:39:03 AKL-1425 systemd[1]: owncast.service: Scheduled restart job, restart counter is at 5.
+Aug 05 21:39:03 AKL-1425 systemd[1]: Stopped Owncast Service.
+Aug 05 21:39:03 AKL-1425 systemd[1]: owncast.service: Start request repeated too quickly.
+Aug 05 21:39:03 AKL-1425 systemd[1]: owncast.service: Failed with result 'exit-code'.
+Aug 05 21:39:03 AKL-1425 systemd[1]: Failed to start Owncast Service.
+[root@AKL-1425 ~]# sudo nano /path/to/owncast.log
+[root@AKL-1425 ~]# sudo nano /root/owncast/owncast.log
+[root@AKL-1425 ~]# cd /root/owncast/owncast
+-bash: cd: /root/owncast/owncast: Not a directory
+[root@AKL-1425 ~]# ls
+anaconda-ks.cfg  Desktop  Documents  Downloads  Music  owncast  owncast-install-backups  Pictures  Public  Templates  thinclient_drives  Videos
+[root@AKL-1425 ~]# cd owncast
+[root@AKL-1425 owncast]# ls
+ffmpeg  owncast
+[root@AKL-1425 owncast]# ./owncast
+INFO[2024-08-05T21:40:04+12:00] Owncast v0.1.3-linux-64bit (6ae3167b61d8485d3f269bd422f0c1a1f072ea5c) 
+INFO[2024-08-05T21:40:04+12:00] Web server is listening on port 8080.        
+INFO[2024-08-05T21:40:04+12:00] Configure this server by visiting /admin.    
+FATA[2024-08-05T21:40:04+12:00] failed to start/run the router listen tcp 0.0.0.0:8080: bind: address already in use 
+[root@AKL-1425 owncast]# sudo systemctl stop guacd
+[root@AKL-1425 owncast]# ./owncast
+INFO[2024-08-05T21:40:18+12:00] Owncast v0.1.3-linux-64bit (6ae3167b61d8485d3f269bd422f0c1a1f072ea5c) 
+INFO[2024-08-05T21:40:18+12:00] Web server is listening on port 8080.        
+INFO[2024-08-05T21:40:18+12:00] Configure this server by visiting /admin.    
+FATA[2024-08-05T21:40:18+12:00] failed to start/run the router listen tcp 0.0.0.0:8080: bind: address already in use 
+[root@AKL-1425 owncast]# sudo netstat -lntp | grep :8080
+tcp6       0      0 :::8080                 :::*                    LISTEN      68935/java          
+[root@AKL-1425 owncast]# sudo kill 68935
+[root@AKL-1425 owncast]# ./owncast
+INFO[2024-08-05T21:42:02+12:00] Owncast v0.1.3-linux-64bit (6ae3167b61d8485d3f269bd422f0c1a1f072ea5c) 
+INFO[2024-08-05T21:42:02+12:00] Web server is listening on port 8080.        
+INFO[2024-08-05T21:42:02+12:00] Configure this server by visiting /admin.    
+^C
+[root@AKL-1425 owncast]# sudo systemctl start owncast
+[root@AKL-1425 owncast]# sudo systemctl status owncast
+× owncast.service - Owncast Service
+     Loaded: loaded (/etc/systemd/system/owncast.service; enabled; preset: disabled)
+     Active: failed (Result: exit-code) since Mon 2024-08-05 21:42:13 NZST; 1min 24s ago
+   Duration: 999us
+    Process: 70861 ExecStart=/root/owncast/owncast (code=exited, status=203/EXEC)
+   Main PID: 70861 (code=exited, status=203/EXEC)
+        CPU: 869us
+
+Aug 05 21:42:13 AKL-1425 systemd[1]: owncast.service: Scheduled restart job, restart counter is at 5.
+Aug 05 21:42:13 AKL-1425 systemd[1]: Stopped Owncast Service.
+Aug 05 21:42:13 AKL-1425 systemd[1]: owncast.service: Start request repeated too quickly.
+Aug 05 21:42:13 AKL-1425 systemd[1]: owncast.service: Failed with result 'exit-code'.
+Aug 05 21:42:13 AKL-1425 systemd[1]: Failed to start Owncast Service.
+[root@AKL-1425 owncast]# ./owncast
+INFO[2024-08-05T21:43:44+12:00] Owncast v0.1.3-linux-64bit (6ae3167b61d8485d3f269bd422f0c1a1f072ea5c) 
+INFO[2024-08-05T21:43:44+12:00] Web server is listening on port 8080.        
+INFO[2024-08-05T21:43:44+12:00] Configure this server by visiting /admin.    
+sudo ufw status
+
+^C
+[root@AKL-1425 owncast]# sudo ufw status
+sudo: ufw: command not found
+[root@AKL-1425 owncast]# sudo dnf install ufw
+Last metadata expiration check: 0:23:20 ago on Mon 05 Aug 2024 09:22:24 PM NZST.
+Dependencies resolved.
+=============================================================================================================================================================
+ Package                           Architecture                         Version                                     Repository                          Size
+=============================================================================================================================================================
+Installing:
+ ufw                               noarch                               0.35-24.el9                                 epel                               217 k
+
+Transaction Summary
+=============================================================================================================================================================
+Install  1 Package
+
+Total download size: 217 k
+Installed size: 873 k
+Is this ok [y/N]: y
+Downloading Packages:
+ufw-0.35-24.el9.noarch.rpm                                                                                                   664 kB/s | 217 kB     00:00    
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                        280 kB/s | 217 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                     1/1 
+  Installing       : ufw-0.35-24.el9.noarch                                                                                                              1/1 
+  Running scriptlet: ufw-0.35-24.el9.noarch                                                                                                              1/1 
+  Verifying        : ufw-0.35-24.el9.noarch                                                                                                              1/1 
+
+Installed:
+  ufw-0.35-24.el9.noarch                                                                                                                                     
+
+Complete!
+[root@AKL-1425 owncast]# sudo dnf install ufw
+Last metadata expiration check: 0:23:25 ago on Mon 05 Aug 2024 09:22:24 PM NZST.
+Package ufw-0.35-24.el9.noarch is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@AKL-1425 owncast]# sudo ufw status
+Status: inactive
+[root@AKL-1425 owncast]# sudo systemctl start ufw
+[root@AKL-1425 owncast]# sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+SSH                        ALLOW       Anywhere                  
+224.0.0.251 mDNS           ALLOW       Anywhere                  
+SSH (v6)                   ALLOW       Anywhere (v6)             
+ff02::fb mDNS              ALLOW       Anywhere (v6)             
