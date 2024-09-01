@@ -1,0 +1,173 @@
+Installed:
+
+bridge-utils-1.7.1-3.el9.x86_64
+
+Complete!
+
+[root@AKL-1425 ~]# sudo brctl addbr br0
+
+sudo brctl addif br0 eth0
+
+interface eth0 does not exist!
+
+[root@AKL-1425 ~]# sudo brctl addbr br0
+
+device br0 already exists; can't create bridge with the same name
+
+[root@AKL-1425 ~]# sudo brctl addif br0 eth0
+
+interface eth0 does not exist!
+
+[root@AKL-1425 ~]# ip link show
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+
+link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+
+2: enp2s0f0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN mode DEFAULT group default qlen 1000
+
+link/ether 0c:c4:7a:81:79:c4 brd ff:ff:ff:ff:ff:ff
+
+3: enp2s0f1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+
+link/ether 0c:c4:7a:81:79:c5 brd ff:ff:ff:ff:ff:ff
+
+4: virbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+
+link/ether 52:54:00:2f:74:a8 brd ff:ff:ff:ff:ff:ff
+
+6: vnet1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master virbr0 state UNKNOWN mode DEFAULT group default qlen 1000
+
+link/ether fe:54:00:46:4a:a1 brd ff:ff:ff:ff:ff:ff
+
+7: br0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+
+link/ether be:d2:c6:8f:78:2b brd ff:ff:ff:ff:ff:ff
+
+[root@AKL-1425 ~]# sudo brctl addif br0 enp2s0f1
+
+[root@AKL-1425 ~]# client_loop: send disconnect: Broken pipe
+
+harshutammina@HarshavdhansAir ~ % sudo nano /etc/network/interfaces
+
+Password:
+
+Sorry, try again.
+
+Password:
+
+Sorry, try again.
+
+Password:
+
+sudo: 2 incorrect password attempts
+
+harshutammina@HarshavdhansAir ~ % ssh root@103.108.94.226
+
+ssh: connect to host 103.108.94.226 port 22: Operation timed out
+
+harshutammina@HarshavdhansAir ~ % ssh root@103.108.94.226
+
+^C
+
+harshutammina@HarshavdhansAir ~ % ssh root@103.108.94.226
+
+^C
+
+harshutammina@HarshavdhansAir ~ % ssh root@103.108.94.226
+
+^C
+
+harshutammina@HarshavdhansAir ~ % ssh root@103.108.94.226
+
+root@103.108.94.226's password:
+
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Fri Aug  9 17:20:21 2024
+
+[root@AKL-1425 ~]# ls
+
+anaconda-ks.cfg  **data**  **Desktop**  **Documents**  **Downloads**  **Music**  **owncast**  **owncast-install-backups**  **Pictures**  **Public**  **snap**  **Templates**  **thinclient_drives**  **Videos**
+
+[root@AKL-1425 ~]# sudo nano /etc/sysconfig/network-scripts/ifcfg-br0
+
+[root@AKL-1425 ~]# sudo nano /etc/sysconfig/network-scripts/ifcfg-enp2s0f1
+
+[root@AKL-1425 ~]# sudo systemctl restart network
+
+**Failed to restart network.service: Unit network.service not found.**
+
+[root@AKL-1425 ~]# sudo systemctl restart NetworkManager
+
+[root@AKL-1425 ~]# sudo systemctl status NetworkManager
+
+**●** NetworkManager.service - Network Manager
+
+Loaded: loaded (/usr/lib/systemd/system/NetworkManager.service; **enabled**; preset: **enabled**)
+
+Active: **active (running)** since Fri 2024-08-09 17:30:25 AEST; 6s ago
+
+Docs: man:NetworkManager(8)
+
+Main PID: 3294 (NetworkManager)
+
+Tasks: 4 (limit: 99220)
+
+Memory: 7.7M
+
+CPU: 98ms
+
+CGroup: /system.slice/NetworkManager.service
+
+└─3294 /usr/sbin/NetworkManager --no-daemon
+
+Aug 09 17:30:25 AKL-1425 NetworkManager[3294]: <info>  [1723188625.9028] device (enp2s0f1): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'assume')
+
+Aug 09 17:30:25 AKL-1425 NetworkManager[3294]: <info>  [1723188625.9030] device (br0): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+
+Aug 09 17:30:25 AKL-1425 NetworkManager[3294]: <info>  [1723188625.9032] device (enp2s0f1): state change: secondaries -> activated (reason 'none', sys-iface-state: 'assume')
+
+Aug 09 17:30:25 AKL-1425 NetworkManager[3294]: <info>  [1723188625.9036] device (enp2s0f1): Activation: successful, device activated.
+
+Aug 09 17:30:25 AKL-1425 NetworkManager[3294]: <info>  [1723188625.9041] manager: NetworkManager state is now CONNECTED_GLOBAL
+
+Aug 09 17:30:27 AKL-1425 NetworkManager[3294]: <info>  [1723188627.9188] device (br0): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+
+Aug 09 17:30:27 AKL-1425 NetworkManager[3294]: <info>  [1723188627.9244] device (br0): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+
+Aug 09 17:30:27 AKL-1425 NetworkManager[3294]: <info>  [1723188627.9251] device (br0): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+
+Aug 09 17:30:27 AKL-1425 NetworkManager[3294]: <info>  [1723188627.9272] device (br0): Activation: successful, device activated.
+
+Aug 09 17:30:31 AKL-1425 NetworkManager[3294]: <info>  [1723188631.8603] manager: startup complete
+
+[root@AKL-1425 ~]# sudo nmcli connection add type bridge con-name br0 ifname br0
+
+sudo nmcli connection modify br0 ipv4.addresses 103.108.94.226/29
+
+sudo nmcli connection modify br0 ipv4.gateway 103.108.94.225
+
+sudo nmcli connection modify br0 ipv4.dns "8.8.8.8,8.8.4.4"
+
+sudo nmcli connection modify br0 ipv4.method manual
+
+sudo nmcli connection up br0
+
+Connection 'br0' (8159ebf7-8d96-4d47-b6aa-e71fac2eccdb) successfully added.
+
+Connection successfully activated (master waiting for slaves) (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/5)
+
+[root@AKL-1425 ~]# sudo nmcli connection add type ethernet con-name enp2s0f1 ifname enp2s0f1 master br0
+
+sudo nmcli connection modify enp2s0f1 connection.autoconnect no
+
+sudo nmcli connection up enp2s0f1
+
+Warning: There is another connection with the name 'enp2s0f1'. Reference the connection by its uuid '94806589-9dae-401a-a475-cbde2a674873'
+
+Connection 'enp2s0f1' (94806589-9dae-401a-a475-cbde2a674873) successfully added.
+
+Warning: There is another connection with the name 'enp2s0f1'. Reference the connection by its uuid '7bcfd8cf-2660-3c3f-93a6-e9bac6fb3ca3'
+
+Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/6)
