@@ -1,0 +1,316 @@
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Mon Aug  5 18:22:25 NZST 2024 from 202.7.251.31 on ssh:notty
+There were 393 failed login attempts since the last successful login.
+Last login: Mon Aug  5 15:07:52 2024 from 136.233.220.146
+[root@AKL-1425 ~]# egrep -c '(vmx|svm)' /proc/cpuinfo
+16
+[root@AKL-1425 ~]# sudo dnf update
+Last metadata expiration check: 1:03:23 ago on Mon 05 Aug 2024 05:19:21 PM NZST.
+Dependencies resolved.
+======================================================================================================================
+ Package                               Architecture      Version                           Repository            Size
+======================================================================================================================
+Installing:
+ kernel                                x86_64            5.14.0-427.28.1.el9_4             baseos               5.1 M
+Upgrading:
+ c-ares                                x86_64            1.19.1-2.el9_4                    baseos               109 k
+ epel-release                          noarch            9-7.el9                           epel                  19 k
+ flatpak                               x86_64            1.12.9-1.el9_4                    appstream            1.7 M
+ flatpak-libs                          x86_64            1.12.9-1.el9_4                    appstream            494 k
+ flatpak-selinux                       noarch            1.12.9-1.el9_4                    appstream             21 k
+ flatpak-session-helper                x86_64            1.12.9-1.el9_4                    appstream             72 k
+ gdk-pixbuf2                           x86_64            2.42.6-4.el9_4                    appstream            466 k
+ gdk-pixbuf2-modules                   x86_64            2.42.6-4.el9_4                    appstream             85 k
+ ghostscript                           x86_64            9.54.0-16.el9_4                   appstream             36 k
+ ghostscript-tools-fonts               x86_64            9.54.0-16.el9_4                   appstream             11 k
+ ghostscript-tools-printing            x86_64            9.54.0-16.el9_4                   appstream             11 k
+ grub2-common                          noarch            1:2.06-80.el9_4.alma.1            baseos               902 k
+ grub2-pc                              x86_64            1:2.06-80.el9_4.alma.1            baseos                13 k
+ grub2-pc-modules                      noarch            1:2.06-80.el9_4.alma.1            baseos               910 k
+ grub2-tools                           x86_64            1:2.06-80.el9_4.alma.1            baseos               1.8 M
+ grub2-tools-minimal                   x86_64            1:2.06-80.el9_4.alma.1            baseos               603 k
+ libappstream-glib                     x86_64            0.7.18-5.el9_4                    appstream            386 k
+ libgs                                 x86_64            9.54.0-16.el9_4                   appstream            3.1 M
+ libndp                                x86_64            1.8-6.el9_4.alma.1                baseos                36 k
+ libnghttp2                            x86_64            1.43.0-5.el9_4.3                  baseos                72 k
+ libuv                                 x86_64            1:1.42.0-2.el9_4                  appstream            146 k
+ linux-firmware-whence                 noarch            20240603-143.1.el9_4              baseos                93 k
+ mesa-libEGL                           x86_64            23.3.3-1.el9.alma.1               appstream            126 k
+ mesa-libGL                            x86_64            23.3.3-1.el9.alma.1               appstream            167 k
+ mesa-libgbm                           x86_64            23.3.3-1.el9.alma.1               appstream             37 k
+ mesa-libglapi                         x86_64            23.3.3-1.el9.alma.1               appstream             43 k
+ mesa-libxatracker                     x86_64            23.3.3-1.el9.alma.1               appstream            2.0 M
+ mesa-vulkan-drivers                   x86_64            23.3.3-1.el9.alma.1               appstream            9.7 M
+ ostree                                x86_64            2024.6-1.el9_4                    appstream            292 k
+ ostree-libs                           x86_64            2024.6-1.el9_4                    appstream            465 k
+ python-unversioned-command            noarch            3.9.18-3.el9_4.3                  appstream            8.4 k
+ python3                               x86_64            3.9.18-3.el9_4.3                  baseos                25 k
+ python3-idna                          noarch            2.10-7.el9_4.1                    baseos                96 k
+ python3-libs                          x86_64            3.9.18-3.el9_4.3                  baseos               7.3 M
+ python3-perf                          x86_64            5.14.0-427.28.1.el9_4             baseos               5.2 M
+Installing dependencies:
+ composefs                             x86_64            1.0.3-2.el9                       appstream             64 k
+ composefs-libs                        x86_64            1.0.3-2.el9                       appstream             59 k
+ grub2-tools-efi                       x86_64            1:2.06-80.el9_4.alma.1            baseos               540 k
+ grub2-tools-extra                     x86_64            1:2.06-80.el9_4.alma.1            baseos               841 k
+ kernel-core                           x86_64            5.14.0-427.28.1.el9_4             baseos                20 M
+ kernel-modules                        x86_64            5.14.0-427.28.1.el9_4             baseos                38 M
+ kernel-modules-core                   x86_64            5.14.0-427.28.1.el9_4             baseos                33 M
+
+Transaction Summary
+======================================================================================================================
+Install   8 Packages
+Upgrade  35 Packages
+
+Total download size: 134 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/43): composefs-1.0.3-2.el9.x86_64.rpm                                              507 kB/s |  64 kB     00:00    
+(2/43): composefs-libs-1.0.3-2.el9.x86_64.rpm                                         442 kB/s |  59 kB     00:00    
+(3/43): grub2-tools-efi-2.06-80.el9_4.alma.1.x86_64.rpm                               922 kB/s | 540 kB     00:00    
+(4/43): grub2-tools-extra-2.06-80.el9_4.alma.1.x86_64.rpm                             1.3 MB/s | 841 kB     00:00    
+(5/43): kernel-5.14.0-427.28.1.el9_4.x86_64.rpm                                       7.6 MB/s | 5.1 MB     00:00    
+(6/43): kernel-core-5.14.0-427.28.1.el9_4.x86_64.rpm                                  7.9 MB/s |  20 MB     00:02    
+(7/43): kernel-modules-core-5.14.0-427.28.1.el9_4.x86_64.rpm                           13 MB/s |  33 MB     00:02    
+(8/43): flatpak-1.12.9-1.el9_4.x86_64.rpm                                             9.3 MB/s | 1.7 MB     00:00    
+(9/43): flatpak-libs-1.12.9-1.el9_4.x86_64.rpm                                        4.1 MB/s | 494 kB     00:00    
+(10/43): flatpak-selinux-1.12.9-1.el9_4.noarch.rpm                                    159 kB/s |  21 kB     00:00    
+(11/43): flatpak-session-helper-1.12.9-1.el9_4.x86_64.rpm                             1.1 MB/s |  72 kB     00:00    
+(12/43): gdk-pixbuf2-2.42.6-4.el9_4.x86_64.rpm                                        2.7 MB/s | 466 kB     00:00    
+(13/43): gdk-pixbuf2-modules-2.42.6-4.el9_4.x86_64.rpm                                554 kB/s |  85 kB     00:00    
+(14/43): kernel-modules-5.14.0-427.28.1.el9_4.x86_64.rpm                               13 MB/s |  38 MB     00:03    
+(15/43): ghostscript-tools-fonts-9.54.0-16.el9_4.x86_64.rpm                            53 kB/s |  11 kB     00:00    
+(16/43): ghostscript-9.54.0-16.el9_4.x86_64.rpm                                       154 kB/s |  36 kB     00:00    
+(17/43): ghostscript-tools-printing-9.54.0-16.el9_4.x86_64.rpm                        266 kB/s |  11 kB     00:00    
+(18/43): libappstream-glib-0.7.18-5.el9_4.x86_64.rpm                                  4.3 MB/s | 386 kB     00:00    
+(19/43): libgs-9.54.0-16.el9_4.x86_64.rpm                                              14 MB/s | 3.1 MB     00:00    
+(20/43): libuv-1.42.0-2.el9_4.x86_64.rpm                                              755 kB/s | 146 kB     00:00    
+(21/43): mesa-libEGL-23.3.3-1.el9.alma.1.x86_64.rpm                                   725 kB/s | 126 kB     00:00    
+(22/43): mesa-libGL-23.3.3-1.el9.alma.1.x86_64.rpm                                    1.7 MB/s | 167 kB     00:00    
+(23/43): mesa-libgbm-23.3.3-1.el9.alma.1.x86_64.rpm                                   384 kB/s |  37 kB     00:00    
+(24/43): mesa-libglapi-23.3.3-1.el9.alma.1.x86_64.rpm                                 484 kB/s |  43 kB     00:00    
+(25/43): mesa-libxatracker-23.3.3-1.el9.alma.1.x86_64.rpm                             7.8 MB/s | 2.0 MB     00:00    
+(26/43): mesa-vulkan-drivers-23.3.3-1.el9.alma.1.x86_64.rpm                            12 MB/s | 9.7 MB     00:00    
+(27/43): ostree-2024.6-1.el9_4.x86_64.rpm                                             366 kB/s | 292 kB     00:00    
+(28/43): ostree-libs-2024.6-1.el9_4.x86_64.rpm                                        765 kB/s | 465 kB     00:00    
+(29/43): python-unversioned-command-3.9.18-3.el9_4.3.noarch.rpm                       133 kB/s | 8.4 kB     00:00    
+(30/43): c-ares-1.19.1-2.el9_4.x86_64.rpm                                             1.1 MB/s | 109 kB     00:00    
+(31/43): grub2-common-2.06-80.el9_4.alma.1.noarch.rpm                                 6.5 MB/s | 902 kB     00:00    
+(32/43): grub2-pc-2.06-80.el9_4.alma.1.x86_64.rpm                                     102 kB/s |  13 kB     00:00    
+(33/43): grub2-pc-modules-2.06-80.el9_4.alma.1.noarch.rpm                             4.5 MB/s | 910 kB     00:00    
+(34/43): grub2-tools-2.06-80.el9_4.alma.1.x86_64.rpm                                  5.8 MB/s | 1.8 MB     00:00    
+(35/43): grub2-tools-minimal-2.06-80.el9_4.alma.1.x86_64.rpm                          1.6 MB/s | 603 kB     00:00    
+(36/43): libndp-1.8-6.el9_4.alma.1.x86_64.rpm                                         130 kB/s |  36 kB     00:00    
+(37/43): libnghttp2-1.43.0-5.el9_4.3.x86_64.rpm                                       652 kB/s |  72 kB     00:00    
+(38/43): python3-3.9.18-3.el9_4.3.x86_64.rpm                                          559 kB/s |  25 kB     00:00    
+(39/43): linux-firmware-whence-20240603-143.1.el9_4.noarch.rpm                        1.1 MB/s |  93 kB     00:00    
+(40/43): python3-idna-2.10-7.el9_4.1.noarch.rpm                                       2.2 MB/s |  96 kB     00:00    
+(41/43): epel-release-9-7.el9.noarch.rpm                                               61 kB/s |  19 kB     00:00    
+(42/43): python3-perf-5.14.0-427.28.1.el9_4.x86_64.rpm                                 14 MB/s | 5.2 MB     00:00    
+(43/43): python3-libs-3.9.18-3.el9_4.3.x86_64.rpm                                      17 MB/s | 7.3 MB     00:00    
+----------------------------------------------------------------------------------------------------------------------
+Total                                                                                  15 MB/s | 134 MB     00:08     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                              1/1 
+  Upgrading        : grub2-common-1:2.06-80.el9_4.alma.1.noarch                                                  1/78 
+  Installing       : kernel-modules-core-5.14.0-427.28.1.el9_4.x86_64                                            2/78 
+  Installing       : kernel-core-5.14.0-427.28.1.el9_4.x86_64                                                    3/78 
+  Running scriptlet: kernel-core-5.14.0-427.28.1.el9_4.x86_64                                                    3/78 
+  Upgrading        : gdk-pixbuf2-2.42.6-4.el9_4.x86_64                                                           4/78 
+  Installing       : composefs-libs-1.0.3-2.el9.x86_64                                                           5/78 
+  Upgrading        : ostree-libs-2024.6-1.el9_4.x86_64                                                           6/78 
+  Upgrading        : grub2-tools-minimal-1:2.06-80.el9_4.alma.1.x86_64                                           7/78 
+  Upgrading        : mesa-libglapi-23.3.3-1.el9.alma.1.x86_64                                                    8/78 
+  Installing       : composefs-1.0.3-2.el9.x86_64                                                                9/78 
+  Upgrading        : ostree-2024.6-1.el9_4.x86_64                                                               10/78 
+  Running scriptlet: ostree-2024.6-1.el9_4.x86_64                                                               10/78 
+  Upgrading        : libappstream-glib-0.7.18-5.el9_4.x86_64                                                    11/78 
+  Installing       : kernel-modules-5.14.0-427.28.1.el9_4.x86_64                                                12/78 
+  Running scriptlet: kernel-modules-5.14.0-427.28.1.el9_4.x86_64                                                12/78 
+  Upgrading        : grub2-pc-modules-1:2.06-80.el9_4.alma.1.noarch                                             13/78 
+  Running scriptlet: grub2-tools-1:2.06-80.el9_4.alma.1.x86_64                                                  14/78 
+  Upgrading        : grub2-tools-1:2.06-80.el9_4.alma.1.x86_64                                                  14/78 
+  Upgrading        : python3-libs-3.9.18-3.el9_4.3.x86_64                                                       15/78 
+  Upgrading        : python3-3.9.18-3.el9_4.3.x86_64                                                            16/78 
+  Upgrading        : python-unversioned-command-3.9.18-3.el9_4.3.noarch                                         17/78 
+  Upgrading        : mesa-libgbm-23.3.3-1.el9.alma.1.x86_64                                                     18/78 
+  Upgrading        : libgs-9.54.0-16.el9_4.x86_64                                                               19/78 
+  Upgrading        : ghostscript-tools-fonts-9.54.0-16.el9_4.x86_64                                             20/78 
+  Upgrading        : ghostscript-tools-printing-9.54.0-16.el9_4.x86_64                                          21/78 
+  Upgrading        : ghostscript-9.54.0-16.el9_4.x86_64                                                         22/78 
+  Upgrading        : flatpak-session-helper-1.12.9-1.el9_4.x86_64                                               23/78 
+  Upgrading        : flatpak-selinux-1.12.9-1.el9_4.noarch                                                      24/78 
+  Running scriptlet: flatpak-selinux-1.12.9-1.el9_4.noarch                                                      24/78 
+  Running scriptlet: flatpak-1.12.9-1.el9_4.x86_64                                                              25/78 
+  Upgrading        : flatpak-1.12.9-1.el9_4.x86_64                                                              25/78 
+  Upgrading        : mesa-libEGL-23.3.3-1.el9.alma.1.x86_64                                                     26/78 
+  Upgrading        : python3-idna-2.10-7.el9_4.1.noarch                                                         27/78 
+  Upgrading        : python3-perf-5.14.0-427.28.1.el9_4.x86_64                                                  28/78 
+  Upgrading        : grub2-pc-1:2.06-80.el9_4.alma.1.x86_64                                                     29/78 
+  Installing       : kernel-5.14.0-427.28.1.el9_4.x86_64                                                        30/78 
+  Upgrading        : flatpak-libs-1.12.9-1.el9_4.x86_64                                                         31/78 
+  Upgrading        : mesa-libGL-23.3.3-1.el9.alma.1.x86_64                                                      32/78 
+  Installing       : grub2-tools-extra-1:2.06-80.el9_4.alma.1.x86_64                                            33/78 
+  Upgrading        : gdk-pixbuf2-modules-2.42.6-4.el9_4.x86_64                                                  34/78 
+  Installing       : grub2-tools-efi-1:2.06-80.el9_4.alma.1.x86_64                                              35/78 
+  Upgrading        : epel-release-9-7.el9.noarch                                                                36/78 
+  Running scriptlet: epel-release-9-7.el9.noarch                                                                36/78 
+  Upgrading        : linux-firmware-whence-20240603-143.1.el9_4.noarch                                          37/78 
+  Upgrading        : libnghttp2-1.43.0-5.el9_4.3.x86_64                                                         38/78 
+  Upgrading        : libndp-1.8-6.el9_4.alma.1.x86_64                                                           39/78 
+  Upgrading        : c-ares-1.19.1-2.el9_4.x86_64                                                               40/78 
+  Upgrading        : mesa-vulkan-drivers-23.3.3-1.el9.alma.1.x86_64                                             41/78 
+  Upgrading        : mesa-libxatracker-23.3.3-1.el9.alma.1.x86_64                                               42/78 
+  Upgrading        : libuv-1:1.42.0-2.el9_4.x86_64                                                              43/78 
+  Cleanup          : flatpak-1.12.8-1.el9.x86_64                                                                44/78 
+  Cleanup          : flatpak-libs-1.12.8-1.el9.x86_64                                                           45/78 
+  Cleanup          : grub2-pc-1:2.06-77.el9.alma.1.x86_64                                                       46/78 
+  Running scriptlet: ostree-2024.4-3.el9_4.x86_64                                                               47/78 
+  Cleanup          : ostree-2024.4-3.el9_4.x86_64                                                               47/78 
+  Cleanup          : ghostscript-9.54.0-14.el9_3.x86_64                                                         48/78 
+  Cleanup          : libappstream-glib-0.7.18-4.el9.x86_64                                                      49/78 
+  Cleanup          : mesa-libGL-23.3.3-1.el9.x86_64                                                             50/78 
+  Cleanup          : mesa-libEGL-23.3.3-1.el9.x86_64                                                            51/78 
+  Cleanup          : gdk-pixbuf2-modules-2.42.6-3.el9.x86_64                                                    52/78 
+  Cleanup          : grub2-pc-modules-1:2.06-77.el9.alma.1.noarch                                               53/78 
+  Cleanup          : python3-idna-2.10-7.el9.noarch                                                             54/78 
+  Cleanup          : python-unversioned-command-3.9.18-3.el9.noarch                                             55/78 
+  Cleanup          : ghostscript-tools-fonts-9.54.0-14.el9_3.x86_64                                             56/78 
+  Cleanup          : ghostscript-tools-printing-9.54.0-14.el9_3.x86_64                                          57/78 
+  Cleanup          : flatpak-selinux-1.12.8-1.el9.noarch                                                        58/78 
+  Running scriptlet: flatpak-selinux-1.12.8-1.el9.noarch                                                        58/78 
+  Cleanup          : epel-release-9-5.el9.noarch                                                                59/78 
+  Cleanup          : linux-firmware-whence-20240219-143.el9.noarch                                              60/78 
+  Cleanup          : grub2-tools-1:2.06-77.el9.alma.1.x86_64                                                    61/78 
+  Cleanup          : grub2-tools-minimal-1:2.06-77.el9.alma.1.x86_64                                            62/78 
+  Cleanup          : python3-perf-5.14.0-427.13.1.el9_4.x86_64                                                  63/78 
+  Cleanup          : grub2-common-1:2.06-77.el9.alma.1.noarch                                                   64/78 
+  Cleanup          : python3-3.9.18-3.el9.x86_64                                                                65/78 
+  Cleanup          : python3-libs-3.9.18-3.el9.x86_64                                                           66/78 
+  Cleanup          : gdk-pixbuf2-2.42.6-3.el9.x86_64                                                            67/78 
+  Cleanup          : mesa-libgbm-23.3.3-1.el9.x86_64                                                            68/78 
+  Cleanup          : mesa-libglapi-23.3.3-1.el9.x86_64                                                          69/78 
+  Cleanup          : libgs-9.54.0-14.el9_3.x86_64                                                               70/78 
+  Cleanup          : ostree-libs-2024.4-3.el9_4.x86_64                                                          71/78 
+  Cleanup          : flatpak-session-helper-1.12.8-1.el9.x86_64                                                 72/78 
+  Cleanup          : libnghttp2-1.43.0-5.el9_3.1.x86_64                                                         73/78 
+  Cleanup          : libndp-1.8-4.el9.x86_64                                                                    74/78 
+  Cleanup          : c-ares-1.19.1-1.el9.x86_64                                                                 75/78 
+  Cleanup          : mesa-vulkan-drivers-23.3.3-1.el9.x86_64                                                    76/78 
+  Cleanup          : mesa-libxatracker-23.3.3-1.el9.x86_64                                                      77/78 
+  Cleanup          : libuv-1:1.42.0-1.el9.x86_64                                                                78/78 
+  Running scriptlet: grub2-common-1:2.06-80.el9_4.alma.1.noarch                                                 78/78 
+  Running scriptlet: kernel-modules-core-5.14.0-427.28.1.el9_4.x86_64                                           78/78 
+  Running scriptlet: kernel-core-5.14.0-427.28.1.el9_4.x86_64                                                   78/78 
+  Running scriptlet: kernel-modules-5.14.0-427.28.1.el9_4.x86_64                                                78/78 
+  Running scriptlet: libuv-1:1.42.0-1.el9.x86_64                                                                78/78 
+  Verifying        : composefs-1.0.3-2.el9.x86_64                                                                1/78 
+  Verifying        : composefs-libs-1.0.3-2.el9.x86_64                                                           2/78 
+  Verifying        : grub2-tools-efi-1:2.06-80.el9_4.alma.1.x86_64                                               3/78 
+  Verifying        : grub2-tools-extra-1:2.06-80.el9_4.alma.1.x86_64                                             4/78 
+  Verifying        : kernel-5.14.0-427.28.1.el9_4.x86_64                                                         5/78 
+  Verifying        : kernel-core-5.14.0-427.28.1.el9_4.x86_64                                                    6/78 
+  Verifying        : kernel-modules-5.14.0-427.28.1.el9_4.x86_64                                                 7/78 
+  Verifying        : kernel-modules-core-5.14.0-427.28.1.el9_4.x86_64                                            8/78 
+  Verifying        : flatpak-1.12.9-1.el9_4.x86_64                                                               9/78 
+  Verifying        : flatpak-1.12.8-1.el9.x86_64                                                                10/78 
+  Verifying        : flatpak-libs-1.12.9-1.el9_4.x86_64                                                         11/78 
+  Verifying        : flatpak-libs-1.12.8-1.el9.x86_64                                                           12/78 
+  Verifying        : flatpak-selinux-1.12.9-1.el9_4.noarch                                                      13/78 
+  Verifying        : flatpak-selinux-1.12.8-1.el9.noarch                                                        14/78 
+  Verifying        : flatpak-session-helper-1.12.9-1.el9_4.x86_64                                               15/78 
+  Verifying        : flatpak-session-helper-1.12.8-1.el9.x86_64                                                 16/78 
+  Verifying        : gdk-pixbuf2-2.42.6-4.el9_4.x86_64                                                          17/78 
+  Verifying        : gdk-pixbuf2-2.42.6-3.el9.x86_64                                                            18/78 
+  Verifying        : gdk-pixbuf2-modules-2.42.6-4.el9_4.x86_64                                                  19/78 
+  Verifying        : gdk-pixbuf2-modules-2.42.6-3.el9.x86_64                                                    20/78 
+  Verifying        : ghostscript-9.54.0-16.el9_4.x86_64                                                         21/78 
+  Verifying        : ghostscript-9.54.0-14.el9_3.x86_64                                                         22/78 
+  Verifying        : ghostscript-tools-fonts-9.54.0-16.el9_4.x86_64                                             23/78 
+  Verifying        : ghostscript-tools-fonts-9.54.0-14.el9_3.x86_64                                             24/78 
+  Verifying        : ghostscript-tools-printing-9.54.0-16.el9_4.x86_64                                          25/78 
+  Verifying        : ghostscript-tools-printing-9.54.0-14.el9_3.x86_64                                          26/78 
+  Verifying        : libappstream-glib-0.7.18-5.el9_4.x86_64                                                    27/78 
+  Verifying        : libappstream-glib-0.7.18-4.el9.x86_64                                                      28/78 
+  Verifying        : libgs-9.54.0-16.el9_4.x86_64                                                               29/78 
+  Verifying        : libgs-9.54.0-14.el9_3.x86_64                                                               30/78 
+  Verifying        : libuv-1:1.42.0-2.el9_4.x86_64                                                              31/78 
+  Verifying        : libuv-1:1.42.0-1.el9.x86_64                                                                32/78 
+  Verifying        : mesa-libEGL-23.3.3-1.el9.alma.1.x86_64                                                     33/78 
+  Verifying        : mesa-libEGL-23.3.3-1.el9.x86_64                                                            34/78 
+  Verifying        : mesa-libGL-23.3.3-1.el9.alma.1.x86_64                                                      35/78 
+  Verifying        : mesa-libGL-23.3.3-1.el9.x86_64                                                             36/78 
+  Verifying        : mesa-libgbm-23.3.3-1.el9.alma.1.x86_64                                                     37/78 
+  Verifying        : mesa-libgbm-23.3.3-1.el9.x86_64                                                            38/78 
+  Verifying        : mesa-libglapi-23.3.3-1.el9.alma.1.x86_64                                                   39/78 
+  Verifying        : mesa-libglapi-23.3.3-1.el9.x86_64                                                          40/78 
+  Verifying        : mesa-libxatracker-23.3.3-1.el9.alma.1.x86_64                                               41/78 
+  Verifying        : mesa-libxatracker-23.3.3-1.el9.x86_64                                                      42/78 
+  Verifying        : mesa-vulkan-drivers-23.3.3-1.el9.alma.1.x86_64                                             43/78 
+  Verifying        : mesa-vulkan-drivers-23.3.3-1.el9.x86_64                                                    44/78 
+  Verifying        : ostree-2024.6-1.el9_4.x86_64                                                               45/78 
+  Verifying        : ostree-2024.4-3.el9_4.x86_64                                                               46/78 
+  Verifying        : ostree-libs-2024.6-1.el9_4.x86_64                                                          47/78 
+  Verifying        : ostree-libs-2024.4-3.el9_4.x86_64                                                          48/78 
+  Verifying        : python-unversioned-command-3.9.18-3.el9_4.3.noarch                                         49/78 
+  Verifying        : python-unversioned-command-3.9.18-3.el9.noarch                                             50/78 
+  Verifying        : c-ares-1.19.1-2.el9_4.x86_64                                                               51/78 
+  Verifying        : c-ares-1.19.1-1.el9.x86_64                                                                 52/78 
+  Verifying        : grub2-common-1:2.06-80.el9_4.alma.1.noarch                                                 53/78 
+  Verifying        : grub2-common-1:2.06-77.el9.alma.1.noarch                                                   54/78 
+  Verifying        : grub2-pc-1:2.06-80.el9_4.alma.1.x86_64                                                     55/78 
+  Verifying        : grub2-pc-1:2.06-77.el9.alma.1.x86_64                                                       56/78 
+  Verifying        : grub2-pc-modules-1:2.06-80.el9_4.alma.1.noarch                                             57/78 
+  Verifying        : grub2-pc-modules-1:2.06-77.el9.alma.1.noarch                                               58/78 
+  Verifying        : grub2-tools-1:2.06-80.el9_4.alma.1.x86_64                                                  59/78 
+  Verifying        : grub2-tools-1:2.06-77.el9.alma.1.x86_64                                                    60/78 
+  Verifying        : grub2-tools-minimal-1:2.06-80.el9_4.alma.1.x86_64                                          61/78 
+  Verifying        : grub2-tools-minimal-1:2.06-77.el9.alma.1.x86_64                                            62/78 
+  Verifying        : libndp-1.8-6.el9_4.alma.1.x86_64                                                           63/78 
+  Verifying        : libndp-1.8-4.el9.x86_64                                                                    64/78 
+  Verifying        : libnghttp2-1.43.0-5.el9_4.3.x86_64                                                         65/78 
+  Verifying        : libnghttp2-1.43.0-5.el9_3.1.x86_64                                                         66/78 
+  Verifying        : linux-firmware-whence-20240603-143.1.el9_4.noarch                                          67/78 
+  Verifying        : linux-firmware-whence-20240219-143.el9.noarch                                              68/78 
+  Verifying        : python3-3.9.18-3.el9_4.3.x86_64                                                            69/78 
+  Verifying        : python3-3.9.18-3.el9.x86_64                                                                70/78 
+  Verifying        : python3-idna-2.10-7.el9_4.1.noarch                                                         71/78 
+  Verifying        : python3-idna-2.10-7.el9.noarch                                                             72/78 
+  Verifying        : python3-libs-3.9.18-3.el9_4.3.x86_64                                                       73/78 
+  Verifying        : python3-libs-3.9.18-3.el9.x86_64                                                           74/78 
+  Verifying        : python3-perf-5.14.0-427.28.1.el9_4.x86_64                                                  75/78 
+  Verifying        : python3-perf-5.14.0-427.13.1.el9_4.x86_64                                                  76/78 
+  Verifying        : epel-release-9-7.el9.noarch                                                                77/78 
+  Verifying        : epel-release-9-5.el9.noarch                                                                78/78 
+
+Upgraded:
+  c-ares-1.19.1-2.el9_4.x86_64                               epel-release-9-7.el9.noarch                              
+  flatpak-1.12.9-1.el9_4.x86_64                              flatpak-libs-1.12.9-1.el9_4.x86_64                       
+  flatpak-selinux-1.12.9-1.el9_4.noarch                      flatpak-session-helper-1.12.9-1.el9_4.x86_64             
+  gdk-pixbuf2-2.42.6-4.el9_4.x86_64                          gdk-pixbuf2-modules-2.42.6-4.el9_4.x86_64                
+  ghostscript-9.54.0-16.el9_4.x86_64                         ghostscript-tools-fonts-9.54.0-16.el9_4.x86_64           
+  ghostscript-tools-printing-9.54.0-16.el9_4.x86_64          grub2-common-1:2.06-80.el9_4.alma.1.noarch               
+  grub2-pc-1:2.06-80.el9_4.alma.1.x86_64                     grub2-pc-modules-1:2.06-80.el9_4.alma.1.noarch           
+  grub2-tools-1:2.06-80.el9_4.alma.1.x86_64                  grub2-tools-minimal-1:2.06-80.el9_4.alma.1.x86_64        
+  libappstream-glib-0.7.18-5.el9_4.x86_64                    libgs-9.54.0-16.el9_4.x86_64                             
+  libndp-1.8-6.el9_4.alma.1.x86_64                           libnghttp2-1.43.0-5.el9_4.3.x86_64                       
+  libuv-1:1.42.0-2.el9_4.x86_64                              linux-firmware-whence-20240603-143.1.el9_4.noarch        
+  mesa-libEGL-23.3.3-1.el9.alma.1.x86_64                     mesa-libGL-23.3.3-1.el9.alma.1.x86_64                    
+  mesa-libgbm-23.3.3-1.el9.alma.1.x86_64                     mesa-libglapi-23.3.3-1.el9.alma.1.x86_64                 
+  mesa-libxatracker-23.3.3-1.el9.alma.1.x86_64               mesa-vulkan-drivers-23.3.3-1.el9.alma.1.x86_64           
+  ostree-2024.6-1.el9_4.x86_64                               ostree-libs-2024.6-1.el9_4.x86_64                        
+  python-unversioned-command-3.9.18-3.el9_4.3.noarch         python3-3.9.18-3.el9_4.3.x86_64                          
+  python3-idna-2.10-7.el9_4.1.noarch                         python3-libs-3.9.18-3.el9_4.3.x86_64                     
+  python3-perf-5.14.0-427.28.1.el9_4.x86_64                 
+Installed:
+  composefs-1.0.3-2.el9.x86_64                             composefs-libs-1.0.3-2.el9.x86_64                          
+  grub2-tools-efi-1:2.06-80.el9_4.alma.1.x86_64            grub2-tools-extra-1:2.06-80.el9_4.alma.1.x86_64            
+  kernel-5.14.0-427.28.1.el9_4.x86_64                      kernel-core-5.14.0-427.28.1.el9_4.x86_64                   
+  kernel-modules-5.14.0-427.28.1.el9_4.x86_64              kernel-modules-core-5.14.0-427.28.1.el9_4.x86_64           
+
+Complete!
