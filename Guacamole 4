@@ -1,0 +1,206 @@
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes'
+Making install in tests
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes/tests'
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes/tests'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes/tests'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/kubernetes'
+Making install in src/protocols/rdp
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+make  install-recursive
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+Making install in .
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+make[4]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+ /usr/bin/mkdir -p '/usr/local/lib'
+ /bin/sh ../../../libtool   --mode=install /usr/bin/install -c   libguac-client-rdp.la '/usr/local/lib'
+libtool: warning: relinking 'libguac-client-rdp.la'
+libtool: install: (cd /usr/src/guacamole-server-1.5.5/src/protocols/rdp; /bin/sh "/usr/src/guacamole-server-1.5.5/libtool"  --silent --tag CC --mode=relink gcc -Werror -Wall -Iinclude -I../../../src/common -I../../../src/common-ssh -I../../../src/libguac -I/usr/include/freerdp2/ -I/usr/include/winpr2 -g -O2 -version-info 0:0:0 -lcairo -lpthread -lfreerdp2 -lfreerdp-client2 -lwinpr2 -o libguac-client-rdp.la -rpath /usr/local/lib libguac_client_rdp_la-argv.lo libguac_client_rdp_la-beep.lo libguac_client_rdp_la-bitmap.lo channels/audio-input/libguac_client_rdp_la-audio-buffer.lo channels/audio-input/libguac_client_rdp_la-audio-input.lo channels/libguac_client_rdp_la-cliprdr.lo channels/libguac_client_rdp_la-common-svc.lo channels/libguac_client_rdp_la-disp.lo channels/libguac_client_rdp_la-pipe-svc.lo channels/libguac_client_rdp_la-rail.lo channels/rdpdr/libguac_client_rdp_la-rdpdr-fs-messages-dir-info.lo channels/rdpdr/libguac_client_rdp_la-rdpdr-fs-messages-file-info.lo channels/rdpdr/libguac_client_rdp_la-rdpdr-fs-messages-vol-info.lo channels/rdpdr/libguac_client_rdp_la-rdpdr-fs-messages.lo channels/rdpdr/libguac_client_rdp_la-rdpdr-fs.lo channels/rdpdr/libguac_client_rdp_la-rdpdr-messages.lo channels/rdpdr/libguac_client_rdp_la-rdpdr-printer.lo channels/rdpdr/libguac_client_rdp_la-rdpdr.lo channels/libguac_client_rdp_la-rdpei.lo channels/rdpsnd/libguac_client_rdp_la-rdpsnd-messages.lo channels/rdpsnd/libguac_client_rdp_la-rdpsnd.lo libguac_client_rdp_la-client.lo libguac_client_rdp_la-color.lo libguac_client_rdp_la-decompose.lo libguac_client_rdp_la-download.lo libguac_client_rdp_la-error.lo libguac_client_rdp_la-fs.lo libguac_client_rdp_la-gdi.lo libguac_client_rdp_la-glyph.lo libguac_client_rdp_la-input.lo libguac_client_rdp_la-keyboard.lo libguac_client_rdp_la-keymap.lo libguac_client_rdp_la-log.lo libguac_client_rdp_la-ls.lo plugins/libguac_client_rdp_la-channels.lo plugins/libguac_client_rdp_la-ptr-string.lo libguac_client_rdp_la-pointer.lo libguac_client_rdp_la-print-job.lo libguac_client_rdp_la-rdp.lo libguac_client_rdp_la-resolution.lo libguac_client_rdp_la-settings.lo libguac_client_rdp_la-unicode.lo libguac_client_rdp_la-upload.lo libguac_client_rdp_la-user.lo libguac_client_rdp_la-sftp.lo libguac_client_rdp_la-_generated_channel_entry_wrappers.lo libguac_client_rdp_la-_generated_keymaps.lo ../../../src/common/libguac_common.la ../../../src/libguac/libguac.la ../../../src/common-ssh/libguac_common_ssh.la )
+libtool: install: /usr/bin/install -c .libs/libguac-client-rdp.so.0.0.0T /usr/local/lib/libguac-client-rdp.so.0.0.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-client-rdp.so.0.0.0 libguac-client-rdp.so.0 || { rm -f libguac-client-rdp.so.0 && ln -s libguac-client-rdp.so.0.0.0 libguac-client-rdp.so.0; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-client-rdp.so.0.0.0 libguac-client-rdp.so || { rm -f libguac-client-rdp.so && ln -s libguac-client-rdp.so.0.0.0 libguac-client-rdp.so; }; })
+libtool: install: /usr/bin/install -c .libs/libguac-client-rdp.lai /usr/local/lib/libguac-client-rdp.la
+libtool: install: /usr/bin/install -c .libs/libguac-client-rdp.a /usr/local/lib/libguac-client-rdp.a
+libtool: install: chmod 644 /usr/local/lib/libguac-client-rdp.a
+libtool: install: ranlib /usr/local/lib/libguac-client-rdp.a
+libtool: finish: PATH="/sbin:/bin:/usr/sbin:/usr/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/usr/lib64/freerdp2'
+ /bin/sh ../../../libtool   --mode=install /usr/bin/install -c   libguac-common-svc-client.la libguacai-client.la '/usr/lib64/freerdp2'
+libtool: warning: relinking 'libguac-common-svc-client.la'
+libtool: install: (cd /usr/src/guacamole-server-1.5.5/src/protocols/rdp; /bin/sh "/usr/src/guacamole-server-1.5.5/libtool"  --silent --tag CC --mode=relink gcc -Werror -Wall -Iinclude -I../../../src/libguac -I/usr/include/freerdp2/ -I/usr/include/winpr2 -g -O2 -module -avoid-version -shared -lfreerdp2 -lfreerdp-client2 -lwinpr2 -o libguac-common-svc-client.la -rpath /usr/lib64/freerdp2 plugins/guac-common-svc/libguac_common_svc_client_la-guac-common-svc.lo ../../../src/libguac/libguac.la )
+libtool: install: /usr/bin/install -c .libs/libguac-common-svc-client.soT /usr/lib64/freerdp2/libguac-common-svc-client.so
+libtool: install: /usr/bin/install -c .libs/libguac-common-svc-client.lai /usr/lib64/freerdp2/libguac-common-svc-client.la
+libtool: warning: relinking 'libguacai-client.la'
+libtool: install: (cd /usr/src/guacamole-server-1.5.5/src/protocols/rdp; /bin/sh "/usr/src/guacamole-server-1.5.5/libtool"  --silent --tag CC --mode=relink gcc -Werror -Wall -Iinclude -I../../../src/common -I../../../src/common-ssh -I../../../src/libguac -I/usr/include/freerdp2/ -I/usr/include/winpr2 -g -O2 -module -avoid-version -shared -lpthread -lfreerdp2 -lfreerdp-client2 -lwinpr2 -o libguacai-client.la -rpath /usr/lib64/freerdp2 channels/audio-input/libguacai_client_la-audio-buffer.lo plugins/guacai/libguacai_client_la-guacai-messages.lo plugins/guacai/libguacai_client_la-guacai.lo plugins/libguacai_client_la-ptr-string.lo ../../../src/common/libguac_common.la ../../../src/libguac/libguac.la )
+libtool: install: /usr/bin/install -c .libs/libguacai-client.soT /usr/lib64/freerdp2/libguacai-client.so
+libtool: install: /usr/bin/install -c .libs/libguacai-client.lai /usr/lib64/freerdp2/libguacai-client.la
+libtool: finish: PATH="/sbin:/bin:/usr/sbin:/usr/bin:/sbin" ldconfig -n /usr/lib64/freerdp2
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib64/freerdp2
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[4]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+Making install in tests
+make[3]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp/tests'
+make[4]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp/tests'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp/tests'
+make[3]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp/tests'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/rdp'
+Making install in src/protocols/ssh
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/ssh'
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/ssh'
+ /usr/bin/mkdir -p '/usr/local/lib'
+ /bin/sh ../../../libtool   --mode=install /usr/bin/install -c   libguac-client-ssh.la '/usr/local/lib'
+libtool: warning: relinking 'libguac-client-ssh.la'
+libtool: install: (cd /usr/src/guacamole-server-1.5.5/src/protocols/ssh; /bin/sh "/usr/src/guacamole-server-1.5.5/libtool"  --silent --tag CC --mode=relink gcc -Werror -Wall -Iinclude -I../../../src/common-ssh -I../../../src/libguac -I../../../src/terminal -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/libxml2 -I/usr/include/cairo -I/usr/include/pixman-1 -pthread -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/libxml2 -I/usr/include/cairo -I/usr/include/pixman-1 -pthread -I../../../src/common -g -O2 -version-info 0:0:0 -lpthread -lssh2 -lssl -lcrypto -o libguac-client-ssh.la -rpath /usr/local/lib libguac_client_ssh_la-argv.lo libguac_client_ssh_la-client.lo libguac_client_ssh_la-clipboard.lo libguac_client_ssh_la-input.lo libguac_client_ssh_la-pipe.lo libguac_client_ssh_la-settings.lo libguac_client_ssh_la-sftp.lo libguac_client_ssh_la-ssh.lo libguac_client_ssh_la-ttymode.lo libguac_client_ssh_la-user.lo ../../../src/common/libguac_common.la ../../../src/common-ssh/libguac_common_ssh.la ../../../src/libguac/libguac.la ../../../src/terminal/libguac-terminal.la )
+libtool: install: /usr/bin/install -c .libs/libguac-client-ssh.so.0.0.0T /usr/local/lib/libguac-client-ssh.so.0.0.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-client-ssh.so.0.0.0 libguac-client-ssh.so.0 || { rm -f libguac-client-ssh.so.0 && ln -s libguac-client-ssh.so.0.0.0 libguac-client-ssh.so.0; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-client-ssh.so.0.0.0 libguac-client-ssh.so || { rm -f libguac-client-ssh.so && ln -s libguac-client-ssh.so.0.0.0 libguac-client-ssh.so; }; })
+libtool: install: /usr/bin/install -c .libs/libguac-client-ssh.lai /usr/local/lib/libguac-client-ssh.la
+libtool: install: /usr/bin/install -c .libs/libguac-client-ssh.a /usr/local/lib/libguac-client-ssh.a
+libtool: install: chmod 644 /usr/local/lib/libguac-client-ssh.a
+libtool: install: ranlib /usr/local/lib/libguac-client-ssh.a
+libtool: finish: PATH="/sbin:/bin:/usr/sbin:/usr/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/ssh'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/ssh'
+Making install in src/protocols/telnet
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/telnet'
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/telnet'
+ /usr/bin/mkdir -p '/usr/local/lib'
+ /bin/sh ../../../libtool   --mode=install /usr/bin/install -c   libguac-client-telnet.la '/usr/local/lib'
+libtool: warning: relinking 'libguac-client-telnet.la'
+libtool: install: (cd /usr/src/guacamole-server-1.5.5/src/protocols/telnet; /bin/sh "/usr/src/guacamole-server-1.5.5/libtool"  --silent --tag CC --mode=relink gcc -Werror -Wall -Iinclude -I../../../src/libguac -I../../../src/terminal -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/libxml2 -I/usr/include/cairo -I/usr/include/pixman-1 -pthread -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/libxml2 -I/usr/include/cairo -I/usr/include/pixman-1 -pthread -I../../../src/common -g -O2 -version-info 0:0:0 -lpthread -ltelnet -o libguac-client-telnet.la -rpath /usr/local/lib libguac_client_telnet_la-argv.lo libguac_client_telnet_la-client.lo libguac_client_telnet_la-clipboard.lo libguac_client_telnet_la-input.lo libguac_client_telnet_la-pipe.lo libguac_client_telnet_la-settings.lo libguac_client_telnet_la-telnet.lo libguac_client_telnet_la-user.lo ../../../src/common/libguac_common.la ../../../src/libguac/libguac.la ../../../src/terminal/libguac-terminal.la )
+libtool: install: /usr/bin/install -c .libs/libguac-client-telnet.so.0.0.0T /usr/local/lib/libguac-client-telnet.so.0.0.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-client-telnet.so.0.0.0 libguac-client-telnet.so.0 || { rm -f libguac-client-telnet.so.0 && ln -s libguac-client-telnet.so.0.0.0 libguac-client-telnet.so.0; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-client-telnet.so.0.0.0 libguac-client-telnet.so || { rm -f libguac-client-telnet.so && ln -s libguac-client-telnet.so.0.0.0 libguac-client-telnet.so; }; })
+libtool: install: /usr/bin/install -c .libs/libguac-client-telnet.lai /usr/local/lib/libguac-client-telnet.la
+libtool: install: /usr/bin/install -c .libs/libguac-client-telnet.a /usr/local/lib/libguac-client-telnet.a
+libtool: install: chmod 644 /usr/local/lib/libguac-client-telnet.a
+libtool: install: ranlib /usr/local/lib/libguac-client-telnet.a
+libtool: finish: PATH="/sbin:/bin:/usr/sbin:/usr/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/telnet'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/telnet'
+Making install in src/protocols/vnc
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/vnc'
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/protocols/vnc'
+ /usr/bin/mkdir -p '/usr/local/lib'
+ /bin/sh ../../../libtool   --mode=install /usr/bin/install -c   libguac-client-vnc.la '/usr/local/lib'
+libtool: warning: relinking 'libguac-client-vnc.la'
+libtool: install: (cd /usr/src/guacamole-server-1.5.5/src/protocols/vnc; /bin/sh "/usr/src/guacamole-server-1.5.5/libtool"  --silent --tag CC --mode=relink gcc -Werror -Wall -pedantic -Iinclude -I../../../src/common -I../../../src/common-ssh -I../../../src/libguac -I../../../src/pulse -g -O2 -version-info 0:0:0 -lcairo -lvncclient -o libguac-client-vnc.la -rpath /usr/local/lib libguac_client_vnc_la-argv.lo libguac_client_vnc_la-auth.lo libguac_client_vnc_la-client.lo libguac_client_vnc_la-clipboard.lo libguac_client_vnc_la-cursor.lo libguac_client_vnc_la-display.lo libguac_client_vnc_la-input.lo libguac_client_vnc_la-log.lo libguac_client_vnc_la-settings.lo libguac_client_vnc_la-user.lo libguac_client_vnc_la-vnc.lo libguac_client_vnc_la-sftp.lo ../../../src/common/libguac_common.la ../../../src/libguac/libguac.la ../../../src/common-ssh/libguac_common_ssh.la ../../../src/pulse/libguac_pulse.la )
+libtool: install: /usr/bin/install -c .libs/libguac-client-vnc.so.0.0.0T /usr/local/lib/libguac-client-vnc.so.0.0.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-client-vnc.so.0.0.0 libguac-client-vnc.so.0 || { rm -f libguac-client-vnc.so.0 && ln -s libguac-client-vnc.so.0.0.0 libguac-client-vnc.so.0; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libguac-client-vnc.so.0.0.0 libguac-client-vnc.so || { rm -f libguac-client-vnc.so && ln -s libguac-client-vnc.so.0.0.0 libguac-client-vnc.so; }; })
+libtool: install: /usr/bin/install -c .libs/libguac-client-vnc.lai /usr/local/lib/libguac-client-vnc.la
+libtool: install: /usr/bin/install -c .libs/libguac-client-vnc.a /usr/local/lib/libguac-client-vnc.a
+libtool: install: chmod 644 /usr/local/lib/libguac-client-vnc.a
+libtool: install: ranlib /usr/local/lib/libguac-client-vnc.a
+libtool: finish: PATH="/sbin:/bin:/usr/sbin:/usr/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
