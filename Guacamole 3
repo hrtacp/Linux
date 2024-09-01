@@ -1,0 +1,208 @@
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/vnc'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/protocols/vnc'
+Making install in src/guacd
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/guacd'
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/guacd'
+ /usr/bin/mkdir -p '/usr/local/sbin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c guacd '/usr/local/sbin'
+libtool: install: /usr/bin/install -c .libs/guacd /usr/local/sbin/guacd
+ /usr/bin/mkdir -p '/usr/local/share/man/man5'
+ /usr/bin/install -c -m 644 man/guacd.conf.5 '/usr/local/share/man/man5'
+ /usr/bin/mkdir -p '/usr/local/share/man/man8'
+ /usr/bin/install -c -m 644 man/guacd.8 '/usr/local/share/man/man8'
+ /usr/bin/mkdir -p '/etc/systemd/system/'
+ /usr/bin/install -c -m 644 systemd/guacd.service '/etc/systemd/system/'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/guacd'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/guacd'
+Making install in src/guacenc
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/guacenc'
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/guacenc'
+ /usr/bin/mkdir -p '/usr/local/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c guacenc '/usr/local/bin'
+libtool: install: /usr/bin/install -c .libs/guacenc /usr/local/bin/guacenc
+ /usr/bin/mkdir -p '/usr/local/share/man/man1'
+ /usr/bin/install -c -m 644 man/guacenc.1 '/usr/local/share/man/man1'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/guacenc'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/guacenc'
+Making install in src/guaclog
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5/src/guaclog'
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5/src/guaclog'
+ /usr/bin/mkdir -p '/usr/local/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c guaclog '/usr/local/bin'
+libtool: install: /usr/bin/install -c .libs/guaclog /usr/local/bin/guaclog
+ /usr/bin/mkdir -p '/usr/local/share/man/man1'
+ /usr/bin/install -c -m 644 man/guaclog.1 '/usr/local/share/man/man1'
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/guaclog'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5/src/guaclog'
+make[1]: Entering directory '/usr/src/guacamole-server-1.5.5'
+make[2]: Entering directory '/usr/src/guacamole-server-1.5.5'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/usr/src/guacamole-server-1.5.5'
+make[1]: Leaving directory '/usr/src/guacamole-server-1.5.5'
+[root@AKL-1425 guacamole-server-1.5.5]# sudo ldconfig
+[root@AKL-1425 guacamole-server-1.5.5]# 
+sudo mkdir -p /etc/guacamole/
+[root@AKL-1425 guacamole-server-1.5.5]# sudo nano /etc/guacamole/guacd.conf
+[root@AKL-1425 guacamole-server-1.5.5]# sudo systemctl daemon-reload
+[root@AKL-1425 guacamole-server-1.5.5]# sudo systemctl start guacd
+[root@AKL-1425 guacamole-server-1.5.5]# sudo systemctl enable guacd
+Created symlink /etc/systemd/system/multi-user.target.wants/guacd.service → /etc/systemd/system/guacd.service.
+[root@AKL-1425 guacamole-server-1.5.5]# sudo systemctl status guacd
+● guacd.service - Guacamole Server
+     Loaded: loaded (/etc/systemd/system/guacd.service; enabled; preset: disabled)
+     Active: active (running) since Mon 2024-08-05 18:40:29 NZST; 7s ago
+       Docs: man:guacd(8)
+   Main PID: 66714 (guacd)
+      Tasks: 1 (limit: 99206)
+     Memory: 10.2M
+        CPU: 14ms
+     CGroup: /system.slice/guacd.service
+             └─66714 /usr/local/sbin/guacd -f
+
+Aug 05 18:40:29 AKL-1425 systemd[1]: Started Guacamole Server.
+Aug 05 18:40:29 AKL-1425 guacd[66714]: Guacamole proxy daemon (guacd) version 1.5.5 started
+Aug 05 18:40:29 AKL-1425 guacd[66714]: guacd[66714]: INFO:        Guacamole proxy daemon (guacd) version 1.5.5 started
+Aug 05 18:40:29 AKL-1425 guacd[66714]: guacd[66714]: INFO:        Listening on host 127.0.0.1, port 4822
+Aug 05 18:40:29 AKL-1425 guacd[66714]: Listening on host 127.0.0.1, port 4822
+[root@AKL-1425 guacamole-server-1.5.5]# ^C
+[root@AKL-1425 guacamole-server-1.5.5]# ss -tulpn | grep 4822
+tcp   LISTEN 0      5               127.0.0.1:4822       0.0.0.0:*    users:(("guacd",pid=66714,fd=4))                                                                                                                                                                                                        
+[root@AKL-1425 guacamole-server-1.5.5]# cd /usr/src
+[root@AKL-1425 src]# sudo cp guacamole-1.5.5.war /var/lib/tomcat/webapps/guacamole.war
+cp: cannot stat 'guacamole-1.5.5.war': No such file or directory
+[root@AKL-1425 src]# sudo cp guacamole-1.5.5.tar.gz /var/lib/tomcat/webapps/guacamole.tar.gz
+cp: cannot stat 'guacamole-1.5.5.tar.gz': No such file or directory
+[root@AKL-1425 src]# sudo cp guacamole-1.5.5.war /var/lib/tomcat/webapps/guacamole.war
+[root@AKL-1425 src]# sudo systemctl restart tomcat
+[root@AKL-1425 src]# sudo mkdir -p /etc/guacamole/{extensions,lib}
+[root@AKL-1425 src]# echo "GUACAMOLE_HOME=/etc/guacamole" | sudo tee -a /etc/sysconfig/tomcat
+GUACAMOLE_HOME=/etc/guacamole
+[root@AKL-1425 src]# cd /usr/src
+[root@AKL-1425 src]# cd /usr/src
+[root@AKL-1425 src]# tar -xf guacamole-auth-jdbc-1.5.5.tar.gz
+[root@AKL-1425 src]# sudo mv guacamole-auth-jdbc-1.5.5/mysql/guacamole-auth-jdbc-mysql-1.5.5.jar /etc/guacamole/extensions/
+[root@AKL-1425 src]# cd guacamole-auth-jdbc-1.5.5/mysql/schema
+[root@AKL-1425 schema]# cat *.sql | mariadb -u root -p guacamoledb
+Enter password: 
+[root@AKL-1425 schema]# cd /usr/src
+[root@AKL-1425 src]# wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j-8.0.33.tar.gz
+--2024-08-05 19:09:24--  https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j-8.0.33.tar.gz
+Resolving dev.mysql.com (dev.mysql.com)... 23.42.42.241, 2600:1415:18:283::2e31, 2600:1415:18:286::2e31
+Connecting to dev.mysql.com (dev.mysql.com)|23.42.42.241|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://cdn.mysql.com//Downloads/Connector-J/mysql-connector-j-8.0.33.tar.gz [following]
+--2024-08-05 19:09:25--  https://cdn.mysql.com//Downloads/Connector-J/mysql-connector-j-8.0.33.tar.gz
+Resolving cdn.mysql.com (cdn.mysql.com)... 23.198.26.30, 2600:1415:18:282::1d68, 2600:1415:18:284::1d68
+Connecting to cdn.mysql.com (cdn.mysql.com)|23.198.26.30|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4236147 (4.0M) [application/x-tar-gz]
+Saving to: ‘mysql-connector-j-8.0.33.tar.gz’
+
+mysql-connector-j-8.0.33.tar. 100%[===============================================>]   4.04M  4.55MB/s    in 0.9s    
+
+2024-08-05 19:09:29 (4.55 MB/s) - ‘mysql-connector-j-8.0.33.tar.gz’ saved [4236147/4236147]
+
+[root@AKL-1425 src]# tar -xf mysql-connector-j-8.0.33.tar.gz
+[root@AKL-1425 src]# sudo mv mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar /etc/guacamole/lib/
+Activate the web console with: systemctl enable --now cockpit.socket
+[root@AKL-1425 src]# sudo nano /etc/guacamole/guacamole.properties
+Last failed login: Mon Aug  5 19:26:40 NZST 2024 from 195.154.94.231 on ssh:notty
+There were 41 failed login attempts since the last successful login.
+Last login: Mon Aug  5 18:22:31 2024 from 202.7.251.31
+[root@AKL-1425 ~]# # sudo nano /etc/tomcat/server.xml
+[root@AKL-1425 ~]# sudo nano /etc/tomcat/server.xml
+[root@AKL-1425 ~]# sudo systemctl restart tomcat
+[root@AKL-1425 ~]# sudo nano /etc/nginx/conf.d/guacamole.conf
+[root@AKL-1425 ~]# sudo nginx -t
+nginx: [emerg] unknown directive "   " in /etc/nginx/conf.d/guacamole.conf:2
+nginx: configuration file /etc/nginx/nginx.conf test failed
+[root@AKL-1425 ~]# sudo nano /etc/nginx/conf.d/guacamole.conf
+[root@AKL-1425 ~]# sudo nginx -t
+nginx: [emerg] unknown directive "   " in /etc/nginx/conf.d/guacamole.conf:3
+nginx: configuration file /etc/nginx/nginx.conf test failed
+[root@AKL-1425 ~]# sudo nano /etc/nginx/conf.d/guacamole.conf
+[root@AKL-1425 ~]# sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+[root@AKL-1425 ~]# sudo systemctl restart nginx
+[root@AKL-1425 ~]# sudo certbot --nginx --agree-tos --no-eff-email  --redirect --hsts --staple-ocsp --email alice@howtoforge.local -d guacamole.technoharshu.com
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+There seem to be problems with that address. Enter email address (used for
+urgent renewal and security notices)
+
+
+If you really want to skip this, you can run the client with
+--register-unsafely-without-email but you will then be unable to receive notice
+about impending expiration or revocation of your certificates or problems with
+your Certbot installation that will lead to failure to renew.
+
+ (Enter 'c' to cancel): harshavardhan@technoharshu.com
+Account registered.
+Requesting a certificate for guacamole.technoharshu.com
+
+Certbot failed to authenticate some domains (authenticator: nginx). The Certificate Authority reported these problems:
+  Domain: guacamole.technoharshu.com
+  Type:   dns
+  Detail: DNS problem: NXDOMAIN looking up A for guacamole.technoharshu.com - check that a DNS record exists for this domain; DNS problem: NXDOMAIN looking up AAAA for guacamole.technoharshu.com - check that a DNS record exists for this domain
+
+Hint: The Certificate Authority failed to verify the temporary nginx configuration changes made by Certbot. Ensure the listed domains point to this nginx server and that it is accessible from the internet.
+
+Some challenges have failed.
+Ask for help or search for solutions at https://community.letsencrypt.org. See the logfile /var/log/letsencrypt/letsencrypt.log or re-run Certbot with -v for more details.
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Mon Aug  5 20:11:40 NZST 2024 from 104.28.206.182 on ssh:notty
+There were 117 failed login attempts since the last successful login.
+Last login: Mon Aug  5 19:26:59 2024 from 120.21.53.173
+[root@AKL-1425 ~]# sudo certbot --nginx --agree-tos --no-eff-email  --redirect --hsts --staple-ocsp --email alice@howtoforge.local -d guacamole.technoharshu.com
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Requesting a certificate for guacamole.technoharshu.com
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/guacamole.technoharshu.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/guacamole.technoharshu.com/privkey.pem
+This certificate expires on 2024-11-03.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+Deploying certificate
+Successfully deployed certificate for guacamole.technoharshu.com to /etc/nginx/conf.d/guacamole.conf
+Congratulations! You have successfully enabled HTTPS on https://guacamole.technoharshu.com
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[root@AKL-1425 ~]# sudo systemctl restart nginx
+[root@AKL-1425 ~]# sudo systemctl restart tomcat
+[root@AKL-1425 ~]# sudo systemctl status guacd
+● guacd.service - Guacamole Server
+     Loaded: loaded (/etc/systemd/system/guacd.service; enabled; preset: disabled)
+     Active: active (running) since Mon 2024-08-05 18:40:29 NZST; 2h 27min ago
+       Docs: man:guacd(8)
+   Main PID: 66714 (guacd)
+      Tasks: 1 (limit: 99206)
+     Memory: 10.2M
+        CPU: 24ms
+     CGroup: /system.slice/guacd.service
+             └─66714 /usr/local/sbin/guacd -f
+
+Aug 05 20:59:48 AKL-1425 guacd[66714]: Guacamole protocol violation. Perhaps the version of guacamole-client is incom>
+Aug 05 20:59:48 AKL-1425 guacd[66714]: guacd[66714]: ERROR:        Guacamole protocol violation. Perhaps the version >
+Aug 05 20:59:48 AKL-1425 guacd[66714]: Guacamole protocol violation. Perhaps the version of guacamole-client is incom>
+Aug 05 20:59:48 AKL-1425 guacd[66714]: guacd[66714]: ERROR:        Guacamole protocol violation. Perhaps the version >
+Aug 05 20:59:48 AKL-1425 guacd[66714]: Guacamole protocol violation. Perhaps the version of guacamole-client is incom>
+Aug 05 20:59:48 AKL-1425 guacd[66714]: guacd[66714]: ERROR:        Guacamole protocol violation. Perhaps the version >
+Aug 05 20:59:48 AKL-1425 guacd[66714]: Guacamole protocol violation. Perhaps the version of guacamole-client is incom>
+Aug 05 20:59:48 AKL-1425 guacd[66714]: guacd[66714]: ERROR:        Guacamole protocol violation. Perhaps the version >
+Aug 05 20:59:48 AKL-1425 guacd[66714]: Guacamole protocol violation. Perhaps the version of guacamole-client is incom>
+Aug 05 20:59:48 AKL-1425 guacd[66714]: guacd[66714]: ERROR:        Guacamole protocol violation. Perhaps the version >
+lines 1-21/21 (END)Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Mon Aug  5 21:27:38 NZST 2024 from 116.105.216.192 on ssh:notty
+There were 22 failed login attempts since the last successful login.
+Last login: Mon Aug  5 20:48:50 2024 from 120.21.53.173
