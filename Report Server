@@ -1,0 +1,167 @@
+Last login: Mon Aug  5 15:48:43 on console
+
+harshutammina@HarshavdhansAir ~ %
+
+[Restored 9 Aug 2024 at 3:42:43 pm]
+
+Last login: Mon Aug  5 16:20:34 on ttys000
+
+/Users/harshutammina/.zsh_sessions/D61988B0-732E-4E1F-9766-CC5B5BC1E289.session:2: command not found: Saving
+
+harshutammina@HarshavdhansAir ~ % ssh root@103.108.94.226
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+
+It is also possible that a host key has just been changed.
+
+The fingerprint for the ED25519 key sent by the remote host is
+
+SHA256:QpXy9zbkRNLUSoi3Z7RiyQ2cf+KDcndR8vDzfbsph3s.
+
+Please contact your system administrator.
+
+Add correct host key in /Users/harshutammina/.ssh/known_hosts to get rid of this message.
+
+Offending ECDSA key in /Users/harshutammina/.ssh/known_hosts:6
+
+Host key for 103.108.94.226 has changed and you have requested strict checking.
+
+Host key verification failed.
+
+harshutammina@HarshavdhansAir ~ % cd /Users/harshutammina/.ssh/known_hosts
+
+cd: not a directory: /Users/harshutammina/.ssh/known_hosts
+
+harshutammina@HarshavdhansAir ~ % /Users/harshutammina/.ssh/known_host
+
+zsh: no such file or directory: /Users/harshutammina/.ssh/known_host
+
+harshutammina@HarshavdhansAir ~ % /Users/harshutammina/.ssh/known_hosts
+
+zsh: permission denied: /Users/harshutammina/.ssh/known_hosts
+
+harshutammina@HarshavdhansAir ~ % nano /Users/harshutammina/.ssh/known_hosts
+
+harshutammina@HarshavdhansAir ~ % ssh root@103.108.94.226
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+
+It is also possible that a host key has just been changed.
+
+The fingerprint for the ECDSA key sent by the remote host is
+
+SHA256:pjCeb8pu0MPXPYCcXNzI91MjXHuKu86WrAkzlIspFaQ.
+
+Please contact your system administrator.
+
+Add correct host key in /Users/harshutammina/.ssh/known_hosts to get rid of this message.
+
+Offending ECDSA key in /Users/harshutammina/.ssh/known_hosts:4
+
+Host key for 103.108.94.226 has changed and you have requested strict checking.
+
+Host key verification failed.
+
+harshutammina@HarshavdhansAir ~ % nano /Users/harshutammina/.ssh/known_hosts
+
+harshutammina@HarshavdhansAir ~ % ssh root@103.108.94.226
+
+The authenticity of host '103.108.94.226 (103.108.94.226)' can't be established.
+
+ED25519 key fingerprint is SHA256:QpXy9zbkRNLUSoi3Z7RiyQ2cf+KDcndR8vDzfbsph3s.
+
+This key is not known by any other names
+
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+
+Please type 'yes', 'no' or the fingerprint: yes
+
+Warning: Permanently added '103.108.94.226' (ED25519) to the list of known hosts.
+
+root@103.108.94.226's password:
+
+Permission denied, please try again.
+
+root@103.108.94.226's password:
+
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Fri Aug  9 15:45:29 AEST 2024 from 202.7.251.31 on ssh:notty
+
+There were 5917 failed login attempts since the last successful login.
+
+Last login: Thu Aug  8 18:26:25 2024 from 202.7.251.31
+
+[root@AKL-1425 ~]# /Users/harshutammina/.ssh/known_hosts
+
+- bash: /Users/harshutammina/.ssh/known_hosts: No such file or directory
+
+[root@AKL-1425 ~]# sudo yum install bridge-utils
+
+Last metadata expiration check: 2:30:36 ago on Fri 09 Aug 2024 01:15:09 PM AEST.
+
+Dependencies resolved.
+
+==========================================================================================================================================================================================================
+
+Package                                             Architecture                                  Version                                              Repository                                   Size
+
+==========================================================================================================================================================================================================
+
+Installing:
+
+**bridge-utils**                                        x86_64                                        1.7.1-3.el9                                          epel                                         34 k
+
+Transaction Summary
+
+==========================================================================================================================================================================================================
+
+Install  1 Package
+
+Total download size: 34 k
+
+Installed size: 64 k
+
+Is this ok [y/N]: y
+
+Downloading Packages:
+
+bridge-utils-1.7.1-3.el9.x86_64.rpm                                                                                                                                        56 kB/s |  34 kB     00:00
+
+- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Total                                                                                                                                                                      20 kB/s |  34 kB     00:01
+
+Running transaction check
+
+Transaction check succeeded.
+
+Running transaction test
+
+Transaction test succeeded.
+
+Running transaction
+
+Preparing        :                                                                                                                                                                                  1/1
+
+Installing       : bridge-utils-1.7.1-3.el9.x86_64                                                                                                                                                  1/1
+
+Running scriptlet: bridge-utils-1.7.1-3.el9.x86_64                                                                                                                                                  1/1
+
+Verifying        : bridge-utils-1.7.1-3.el9.x86_64                                                                                                                                                  1/1
