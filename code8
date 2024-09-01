@@ -1,0 +1,102 @@
+376  sudo dnf install
+377  sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+378  sudo dnf upgrade
+379  sudo yum install snapd
+380  sudo systemctl enable --now snapd.socketsudo systemctl enable --now snapd.socket
+381  sudo systemctl enable --now snapd.socket
+382  sudo ln -s /var/lib/snapd/snap /snap
+383  sudo snap install p7zip-desktop
+384  logout
+385  sudo snap install p7zip-desktop
+386  sudo snap install snap-store
+387  yum install filezilla
+388  sudo systemctl status owncast
+389  sudo systemctl restart owncast
+390  sudo systemctl status owncast
+391  sudo chmod +x /root/owncast/owncast
+392  sudo chown root:root /root/owncast/owncast
+393  sudo setenforce 0
+394  sudo systemctl restart owncast
+395  sudo systemctl status owncast
+396  nano /etc/systemd/system/owncast.service
+397  sudo systemctl restart owncast
+398  sudo systemctl daemon-reload
+399  sudo systemctl restart owncast
+400  sudo systemctl daemon-reload
+401  nano /etc/systemd/system/owncast.service
+402  sudo systemctl start owncast
+403  sudo journalctl -xeu owncast.service
+404  cd /root/owncast
+405  ./owncast
+406  sudo lsof -i :8080
+407  sudo kill 1150
+408  sudo lsof -i :8080
+409  ./owncast
+410  sudo systemctl start owncast
+411  sudo systemctl status owncast
+412  nano  /var/log/auth.log
+413  Y
+414  history
+415  +
+416  history
+[root@AKL-1425 owncast]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 03:35:28 AEST 2024 from 180.101.88.228 on ssh:notty
+There were 2022 failed login attempts since the last successful login.
+Last login: Wed Aug  7 19:28:43 2024 from 202.7.251.31
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 04:56:27 AEST 2024 from 180.101.88.228 on ssh:notty
+There were 235 failed login attempts since the last successful login.
+Last login: Thu Aug  8 03:36:17 2024 from 202.7.251.31
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 06:44:40 AEST 2024 from 180.101.88.228 on ssh:notty
+There were 514 failed login attempts since the last successful login.
+Last login: Thu Aug  8 04:56:42 2024 from 202.7.251.31
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 07:30:36 AEST 2024 from 167.172.79.30 on ssh:notty
+There were 246 failed login attempts since the last successful login.
+Last login: Thu Aug  8 06:45:36 2024 from 202.7.251.31
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 08:58:36 AEST 2024 from 200.175.17.42 on ssh:notty
+There were 739 failed login attempts since the last successful login.
+Last login: Thu Aug  8 07:30:40 2024 from 202.7.251.31
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 09:51:49 AEST 2024 from 61.177.172.140 on ssh:notty
+There were 283 failed login attempts since the last successful login.
+Last login: Thu Aug  8 08:58:48 2024 from 203.37.238.80
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 11:06:26 AEST 2024 from 180.101.88.228 on ssh:notty
+There were 449 failed login attempts since the last successful login.
+Last login: Thu Aug  8 09:51:59 2024 from 203.37.238.80
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 12:34:40 AEST 2024 from 180.101.88.228 on ssh:notty
+There were 410 failed login attempts since the last successful login.
+Last login: Thu Aug  8 11:07:18 2024 from 203.37.238.80
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 13:21:13 AEST 2024 from 159.89.175.24 on ssh:notty
+There were 294 failed login attempts since the last successful login.
+Last login: Thu Aug  8 12:35:00 2024 from 203.37.238.80
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 14:27:23 AEST 2024 from 180.101.88.228 on ssh:notty
+There were 460 failed login attempts since the last successful login.
+Last login: Thu Aug  8 13:21:18 2024 from 203.37.238.80
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 15:22:54 AEST 2024 from 180.101.88.228 on ssh:notty
+There were 168 failed login attempts since the last successful login.
+Last login: Thu Aug  8 14:28:00 2024 from 203.37.238.80
+[root@AKL-1425 ~]# Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Aug  8 18:26:23 AEST 2024 from 154.83.13.243 on ssh:notty
+There were 578 failed login attempts since the last successful login.
+Last login: Thu Aug  8 15:23:25 2024 from 202.7.251.31
+[root@AKL-1425 ~]#
